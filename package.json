@@ -1,0 +1,36 @@
+{
+    "name": "by-email-notification",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cuemby/by-email-notification"
+    },
+    "keywords": [
+        "email",
+        "notification",
+        "node",
+        "service"
+    ],
+    "dependencies": {
+        "@grpc/grpc-js": "^1.5.3",
+        "@grpc/proto-loader": "^0.6.9",
+        "@sendgrid/mail": "^7.6.0",
+        "grpc": "^1.24.11",
+        "joi": "^17.5.0",
+        "mailgun-js": "^0.22.0",
+        "mali": "^0.46.0",
+        "node-grpc-client": "^1.5.0",
+        "postmark": "^2.8.1"
+    },
+    "devDependencies": {
+        "assert": "^2.0.0",
+        "mocha": "^9.1.4"
+    },
+    "author": "Santiago Yepes T <santiago.yepes@cuemby.com>",
+    "license": "ISC"
+}
