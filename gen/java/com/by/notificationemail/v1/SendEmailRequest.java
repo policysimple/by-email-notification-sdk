@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SendEmailRequest() {
-    to_ = java.util.Collections.emptyList();
+    receiver_ = java.util.Collections.emptyList();
     cc_ = java.util.Collections.emptyList();
     bbc_ = java.util.Collections.emptyList();
     replyTo_ = java.util.Collections.emptyList();
@@ -63,38 +63,38 @@ private static final long serialVersionUID = 0L;
             break;
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              to_ = new java.util.ArrayList<com.by.notificationemail.v1.To>();
+              receiver_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>();
               mutable_bitField0_ |= 0x00000001;
             }
-            to_.add(
-                input.readMessage(com.by.notificationemail.v1.To.parser(), extensionRegistry));
+            receiver_.add(
+                input.readMessage(com.by.notificationemail.v1.EmailStruct.parser(), extensionRegistry));
             break;
           }
           case 18: {
             if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              cc_ = new java.util.ArrayList<com.by.notificationemail.v1.Cc>();
+              cc_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>();
               mutable_bitField0_ |= 0x00000002;
             }
             cc_.add(
-                input.readMessage(com.by.notificationemail.v1.Cc.parser(), extensionRegistry));
+                input.readMessage(com.by.notificationemail.v1.EmailStruct.parser(), extensionRegistry));
             break;
           }
           case 26: {
             if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              bbc_ = new java.util.ArrayList<com.by.notificationemail.v1.Bbc>();
+              bbc_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>();
               mutable_bitField0_ |= 0x00000004;
             }
             bbc_.add(
-                input.readMessage(com.by.notificationemail.v1.Bbc.parser(), extensionRegistry));
+                input.readMessage(com.by.notificationemail.v1.EmailStruct.parser(), extensionRegistry));
             break;
           }
           case 34: {
             if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              replyTo_ = new java.util.ArrayList<com.by.notificationemail.v1.ReplyTo>();
+              replyTo_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>();
               mutable_bitField0_ |= 0x00000008;
             }
             replyTo_.add(
-                input.readMessage(com.by.notificationemail.v1.ReplyTo.parser(), extensionRegistry));
+                input.readMessage(com.by.notificationemail.v1.EmailStruct.parser(), extensionRegistry));
             break;
           }
           case 42: {
@@ -137,7 +137,7 @@ private static final long serialVersionUID = 0L;
           e).setUnfinishedMessage(this);
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        to_ = java.util.Collections.unmodifiableList(to_);
+        receiver_ = java.util.Collections.unmodifiableList(receiver_);
       }
       if (((mutable_bitField0_ & 0x00000002) != 0)) {
         cc_ = java.util.Collections.unmodifiableList(cc_);
@@ -165,162 +165,162 @@ private static final long serialVersionUID = 0L;
             com.by.notificationemail.v1.SendEmailRequest.class, com.by.notificationemail.v1.SendEmailRequest.Builder.class);
   }
 
-  public static final int TO_FIELD_NUMBER = 1;
-  private java.util.List<com.by.notificationemail.v1.To> to_;
+  public static final int RECEIVER_FIELD_NUMBER = 1;
+  private java.util.List<com.by.notificationemail.v1.EmailStruct> receiver_;
   /**
-   * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.by.notificationemail.v1.To> getToList() {
-    return to_;
+  public java.util.List<com.by.notificationemail.v1.EmailStruct> getReceiverList() {
+    return receiver_;
   }
   /**
-   * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.by.notificationemail.v1.ToOrBuilder> 
-      getToOrBuilderList() {
-    return to_;
+  public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+      getReceiverOrBuilderList() {
+    return receiver_;
   }
   /**
-   * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
    */
   @java.lang.Override
-  public int getToCount() {
-    return to_.size();
+  public int getReceiverCount() {
+    return receiver_.size();
   }
   /**
-   * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
    */
   @java.lang.Override
-  public com.by.notificationemail.v1.To getTo(int index) {
-    return to_.get(index);
+  public com.by.notificationemail.v1.EmailStruct getReceiver(int index) {
+    return receiver_.get(index);
   }
   /**
-   * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
    */
   @java.lang.Override
-  public com.by.notificationemail.v1.ToOrBuilder getToOrBuilder(
+  public com.by.notificationemail.v1.EmailStructOrBuilder getReceiverOrBuilder(
       int index) {
-    return to_.get(index);
+    return receiver_.get(index);
   }
 
   public static final int CC_FIELD_NUMBER = 2;
-  private java.util.List<com.by.notificationemail.v1.Cc> cc_;
+  private java.util.List<com.by.notificationemail.v1.EmailStruct> cc_;
   /**
-   * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.by.notificationemail.v1.Cc> getCcList() {
+  public java.util.List<com.by.notificationemail.v1.EmailStruct> getCcList() {
     return cc_;
   }
   /**
-   * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.by.notificationemail.v1.CcOrBuilder> 
+  public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
       getCcOrBuilderList() {
     return cc_;
   }
   /**
-   * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
    */
   @java.lang.Override
   public int getCcCount() {
     return cc_.size();
   }
   /**
-   * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
    */
   @java.lang.Override
-  public com.by.notificationemail.v1.Cc getCc(int index) {
+  public com.by.notificationemail.v1.EmailStruct getCc(int index) {
     return cc_.get(index);
   }
   /**
-   * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
    */
   @java.lang.Override
-  public com.by.notificationemail.v1.CcOrBuilder getCcOrBuilder(
+  public com.by.notificationemail.v1.EmailStructOrBuilder getCcOrBuilder(
       int index) {
     return cc_.get(index);
   }
 
   public static final int BBC_FIELD_NUMBER = 3;
-  private java.util.List<com.by.notificationemail.v1.Bbc> bbc_;
+  private java.util.List<com.by.notificationemail.v1.EmailStruct> bbc_;
   /**
-   * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.by.notificationemail.v1.Bbc> getBbcList() {
+  public java.util.List<com.by.notificationemail.v1.EmailStruct> getBbcList() {
     return bbc_;
   }
   /**
-   * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.by.notificationemail.v1.BbcOrBuilder> 
+  public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
       getBbcOrBuilderList() {
     return bbc_;
   }
   /**
-   * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
    */
   @java.lang.Override
   public int getBbcCount() {
     return bbc_.size();
   }
   /**
-   * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
    */
   @java.lang.Override
-  public com.by.notificationemail.v1.Bbc getBbc(int index) {
+  public com.by.notificationemail.v1.EmailStruct getBbc(int index) {
     return bbc_.get(index);
   }
   /**
-   * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
    */
   @java.lang.Override
-  public com.by.notificationemail.v1.BbcOrBuilder getBbcOrBuilder(
+  public com.by.notificationemail.v1.EmailStructOrBuilder getBbcOrBuilder(
       int index) {
     return bbc_.get(index);
   }
 
   public static final int REPLY_TO_FIELD_NUMBER = 4;
-  private java.util.List<com.by.notificationemail.v1.ReplyTo> replyTo_;
+  private java.util.List<com.by.notificationemail.v1.EmailStruct> replyTo_;
   /**
-   * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.by.notificationemail.v1.ReplyTo> getReplyToList() {
+  public java.util.List<com.by.notificationemail.v1.EmailStruct> getReplyToList() {
     return replyTo_;
   }
   /**
-   * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.by.notificationemail.v1.ReplyToOrBuilder> 
+  public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
       getReplyToOrBuilderList() {
     return replyTo_;
   }
   /**
-   * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
    */
   @java.lang.Override
   public int getReplyToCount() {
     return replyTo_.size();
   }
   /**
-   * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
    */
   @java.lang.Override
-  public com.by.notificationemail.v1.ReplyTo getReplyTo(int index) {
+  public com.by.notificationemail.v1.EmailStruct getReplyTo(int index) {
     return replyTo_.get(index);
   }
   /**
-   * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
    */
   @java.lang.Override
-  public com.by.notificationemail.v1.ReplyToOrBuilder getReplyToOrBuilder(
+  public com.by.notificationemail.v1.EmailStructOrBuilder getReplyToOrBuilder(
       int index) {
     return replyTo_.get(index);
   }
@@ -491,8 +491,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < to_.size(); i++) {
-      output.writeMessage(1, to_.get(i));
+    for (int i = 0; i < receiver_.size(); i++) {
+      output.writeMessage(1, receiver_.get(i));
     }
     for (int i = 0; i < cc_.size(); i++) {
       output.writeMessage(2, cc_.get(i));
@@ -524,9 +524,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    for (int i = 0; i < to_.size(); i++) {
+    for (int i = 0; i < receiver_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, to_.get(i));
+        .computeMessageSize(1, receiver_.get(i));
     }
     for (int i = 0; i < cc_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -567,8 +567,8 @@ private static final long serialVersionUID = 0L;
     }
     com.by.notificationemail.v1.SendEmailRequest other = (com.by.notificationemail.v1.SendEmailRequest) obj;
 
-    if (!getToList()
-        .equals(other.getToList())) return false;
+    if (!getReceiverList()
+        .equals(other.getReceiverList())) return false;
     if (!getCcList()
         .equals(other.getCcList())) return false;
     if (!getBbcList()
@@ -594,9 +594,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getToCount() > 0) {
-      hash = (37 * hash) + TO_FIELD_NUMBER;
-      hash = (53 * hash) + getToList().hashCode();
+    if (getReceiverCount() > 0) {
+      hash = (37 * hash) + RECEIVER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverList().hashCode();
     }
     if (getCcCount() > 0) {
       hash = (37 * hash) + CC_FIELD_NUMBER;
@@ -750,7 +750,7 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
-        getToFieldBuilder();
+        getReceiverFieldBuilder();
         getCcFieldBuilder();
         getBbcFieldBuilder();
         getReplyToFieldBuilder();
@@ -759,11 +759,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (toBuilder_ == null) {
-        to_ = java.util.Collections.emptyList();
+      if (receiverBuilder_ == null) {
+        receiver_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        toBuilder_.clear();
+        receiverBuilder_.clear();
       }
       if (ccBuilder_ == null) {
         cc_ = java.util.Collections.emptyList();
@@ -818,14 +818,14 @@ private static final long serialVersionUID = 0L;
     public com.by.notificationemail.v1.SendEmailRequest buildPartial() {
       com.by.notificationemail.v1.SendEmailRequest result = new com.by.notificationemail.v1.SendEmailRequest(this);
       int from_bitField0_ = bitField0_;
-      if (toBuilder_ == null) {
+      if (receiverBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
-          to_ = java.util.Collections.unmodifiableList(to_);
+          receiver_ = java.util.Collections.unmodifiableList(receiver_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.to_ = to_;
+        result.receiver_ = receiver_;
       } else {
-        result.to_ = toBuilder_.build();
+        result.receiver_ = receiverBuilder_.build();
       }
       if (ccBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0)) {
@@ -906,29 +906,29 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.by.notificationemail.v1.SendEmailRequest other) {
       if (other == com.by.notificationemail.v1.SendEmailRequest.getDefaultInstance()) return this;
-      if (toBuilder_ == null) {
-        if (!other.to_.isEmpty()) {
-          if (to_.isEmpty()) {
-            to_ = other.to_;
+      if (receiverBuilder_ == null) {
+        if (!other.receiver_.isEmpty()) {
+          if (receiver_.isEmpty()) {
+            receiver_ = other.receiver_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureToIsMutable();
-            to_.addAll(other.to_);
+            ensureReceiverIsMutable();
+            receiver_.addAll(other.receiver_);
           }
           onChanged();
         }
       } else {
-        if (!other.to_.isEmpty()) {
-          if (toBuilder_.isEmpty()) {
-            toBuilder_.dispose();
-            toBuilder_ = null;
-            to_ = other.to_;
+        if (!other.receiver_.isEmpty()) {
+          if (receiverBuilder_.isEmpty()) {
+            receiverBuilder_.dispose();
+            receiverBuilder_ = null;
+            receiver_ = other.receiver_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            toBuilder_ = 
+            receiverBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getToFieldBuilder() : null;
+                 getReceiverFieldBuilder() : null;
           } else {
-            toBuilder_.addAllMessages(other.to_);
+            receiverBuilder_.addAllMessages(other.receiver_);
           }
         }
       }
@@ -1056,262 +1056,262 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.by.notificationemail.v1.To> to_ =
+    private java.util.List<com.by.notificationemail.v1.EmailStruct> receiver_ =
       java.util.Collections.emptyList();
-    private void ensureToIsMutable() {
+    private void ensureReceiverIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        to_ = new java.util.ArrayList<com.by.notificationemail.v1.To>(to_);
+        receiver_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>(receiver_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.by.notificationemail.v1.To, com.by.notificationemail.v1.To.Builder, com.by.notificationemail.v1.ToOrBuilder> toBuilder_;
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> receiverBuilder_;
 
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public java.util.List<com.by.notificationemail.v1.To> getToList() {
-      if (toBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(to_);
+    public java.util.List<com.by.notificationemail.v1.EmailStruct> getReceiverList() {
+      if (receiverBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(receiver_);
       } else {
-        return toBuilder_.getMessageList();
+        return receiverBuilder_.getMessageList();
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public int getToCount() {
-      if (toBuilder_ == null) {
-        return to_.size();
+    public int getReceiverCount() {
+      if (receiverBuilder_ == null) {
+        return receiver_.size();
       } else {
-        return toBuilder_.getCount();
+        return receiverBuilder_.getCount();
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public com.by.notificationemail.v1.To getTo(int index) {
-      if (toBuilder_ == null) {
-        return to_.get(index);
+    public com.by.notificationemail.v1.EmailStruct getReceiver(int index) {
+      if (receiverBuilder_ == null) {
+        return receiver_.get(index);
       } else {
-        return toBuilder_.getMessage(index);
+        return receiverBuilder_.getMessage(index);
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public Builder setTo(
-        int index, com.by.notificationemail.v1.To value) {
-      if (toBuilder_ == null) {
+    public Builder setReceiver(
+        int index, com.by.notificationemail.v1.EmailStruct value) {
+      if (receiverBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureToIsMutable();
-        to_.set(index, value);
+        ensureReceiverIsMutable();
+        receiver_.set(index, value);
         onChanged();
       } else {
-        toBuilder_.setMessage(index, value);
+        receiverBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public Builder setTo(
-        int index, com.by.notificationemail.v1.To.Builder builderForValue) {
-      if (toBuilder_ == null) {
-        ensureToIsMutable();
-        to_.set(index, builderForValue.build());
+    public Builder setReceiver(
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (receiverBuilder_ == null) {
+        ensureReceiverIsMutable();
+        receiver_.set(index, builderForValue.build());
         onChanged();
       } else {
-        toBuilder_.setMessage(index, builderForValue.build());
+        receiverBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public Builder addTo(com.by.notificationemail.v1.To value) {
-      if (toBuilder_ == null) {
+    public Builder addReceiver(com.by.notificationemail.v1.EmailStruct value) {
+      if (receiverBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureToIsMutable();
-        to_.add(value);
+        ensureReceiverIsMutable();
+        receiver_.add(value);
         onChanged();
       } else {
-        toBuilder_.addMessage(value);
+        receiverBuilder_.addMessage(value);
       }
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public Builder addTo(
-        int index, com.by.notificationemail.v1.To value) {
-      if (toBuilder_ == null) {
+    public Builder addReceiver(
+        int index, com.by.notificationemail.v1.EmailStruct value) {
+      if (receiverBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureToIsMutable();
-        to_.add(index, value);
+        ensureReceiverIsMutable();
+        receiver_.add(index, value);
         onChanged();
       } else {
-        toBuilder_.addMessage(index, value);
+        receiverBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public Builder addTo(
-        com.by.notificationemail.v1.To.Builder builderForValue) {
-      if (toBuilder_ == null) {
-        ensureToIsMutable();
-        to_.add(builderForValue.build());
+    public Builder addReceiver(
+        com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (receiverBuilder_ == null) {
+        ensureReceiverIsMutable();
+        receiver_.add(builderForValue.build());
         onChanged();
       } else {
-        toBuilder_.addMessage(builderForValue.build());
+        receiverBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public Builder addTo(
-        int index, com.by.notificationemail.v1.To.Builder builderForValue) {
-      if (toBuilder_ == null) {
-        ensureToIsMutable();
-        to_.add(index, builderForValue.build());
+    public Builder addReceiver(
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (receiverBuilder_ == null) {
+        ensureReceiverIsMutable();
+        receiver_.add(index, builderForValue.build());
         onChanged();
       } else {
-        toBuilder_.addMessage(index, builderForValue.build());
+        receiverBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public Builder addAllTo(
-        java.lang.Iterable<? extends com.by.notificationemail.v1.To> values) {
-      if (toBuilder_ == null) {
-        ensureToIsMutable();
+    public Builder addAllReceiver(
+        java.lang.Iterable<? extends com.by.notificationemail.v1.EmailStruct> values) {
+      if (receiverBuilder_ == null) {
+        ensureReceiverIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, to_);
+            values, receiver_);
         onChanged();
       } else {
-        toBuilder_.addAllMessages(values);
+        receiverBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public Builder clearTo() {
-      if (toBuilder_ == null) {
-        to_ = java.util.Collections.emptyList();
+    public Builder clearReceiver() {
+      if (receiverBuilder_ == null) {
+        receiver_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
-        toBuilder_.clear();
+        receiverBuilder_.clear();
       }
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public Builder removeTo(int index) {
-      if (toBuilder_ == null) {
-        ensureToIsMutable();
-        to_.remove(index);
+    public Builder removeReceiver(int index) {
+      if (receiverBuilder_ == null) {
+        ensureReceiverIsMutable();
+        receiver_.remove(index);
         onChanged();
       } else {
-        toBuilder_.remove(index);
+        receiverBuilder_.remove(index);
       }
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public com.by.notificationemail.v1.To.Builder getToBuilder(
+    public com.by.notificationemail.v1.EmailStruct.Builder getReceiverBuilder(
         int index) {
-      return getToFieldBuilder().getBuilder(index);
+      return getReceiverFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public com.by.notificationemail.v1.ToOrBuilder getToOrBuilder(
+    public com.by.notificationemail.v1.EmailStructOrBuilder getReceiverOrBuilder(
         int index) {
-      if (toBuilder_ == null) {
-        return to_.get(index);  } else {
-        return toBuilder_.getMessageOrBuilder(index);
+      if (receiverBuilder_ == null) {
+        return receiver_.get(index);  } else {
+        return receiverBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public java.util.List<? extends com.by.notificationemail.v1.ToOrBuilder> 
-         getToOrBuilderList() {
-      if (toBuilder_ != null) {
-        return toBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+         getReceiverOrBuilderList() {
+      if (receiverBuilder_ != null) {
+        return receiverBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(to_);
+        return java.util.Collections.unmodifiableList(receiver_);
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public com.by.notificationemail.v1.To.Builder addToBuilder() {
-      return getToFieldBuilder().addBuilder(
-          com.by.notificationemail.v1.To.getDefaultInstance());
+    public com.by.notificationemail.v1.EmailStruct.Builder addReceiverBuilder() {
+      return getReceiverFieldBuilder().addBuilder(
+          com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public com.by.notificationemail.v1.To.Builder addToBuilder(
+    public com.by.notificationemail.v1.EmailStruct.Builder addReceiverBuilder(
         int index) {
-      return getToFieldBuilder().addBuilder(
-          index, com.by.notificationemail.v1.To.getDefaultInstance());
+      return getReceiverFieldBuilder().addBuilder(
+          index, com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
     }
     /**
-     * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public java.util.List<com.by.notificationemail.v1.To.Builder> 
-         getToBuilderList() {
-      return getToFieldBuilder().getBuilderList();
+    public java.util.List<com.by.notificationemail.v1.EmailStruct.Builder> 
+         getReceiverBuilderList() {
+      return getReceiverFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.by.notificationemail.v1.To, com.by.notificationemail.v1.To.Builder, com.by.notificationemail.v1.ToOrBuilder> 
-        getToFieldBuilder() {
-      if (toBuilder_ == null) {
-        toBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.by.notificationemail.v1.To, com.by.notificationemail.v1.To.Builder, com.by.notificationemail.v1.ToOrBuilder>(
-                to_,
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> 
+        getReceiverFieldBuilder() {
+      if (receiverBuilder_ == null) {
+        receiverBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder>(
+                receiver_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
-        to_ = null;
+        receiver_ = null;
       }
-      return toBuilder_;
+      return receiverBuilder_;
     }
 
-    private java.util.List<com.by.notificationemail.v1.Cc> cc_ =
+    private java.util.List<com.by.notificationemail.v1.EmailStruct> cc_ =
       java.util.Collections.emptyList();
     private void ensureCcIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
-        cc_ = new java.util.ArrayList<com.by.notificationemail.v1.Cc>(cc_);
+        cc_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>(cc_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.by.notificationemail.v1.Cc, com.by.notificationemail.v1.Cc.Builder, com.by.notificationemail.v1.CcOrBuilder> ccBuilder_;
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> ccBuilder_;
 
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
-    public java.util.List<com.by.notificationemail.v1.Cc> getCcList() {
+    public java.util.List<com.by.notificationemail.v1.EmailStruct> getCcList() {
       if (ccBuilder_ == null) {
         return java.util.Collections.unmodifiableList(cc_);
       } else {
@@ -1319,7 +1319,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
     public int getCcCount() {
       if (ccBuilder_ == null) {
@@ -1329,9 +1329,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
-    public com.by.notificationemail.v1.Cc getCc(int index) {
+    public com.by.notificationemail.v1.EmailStruct getCc(int index) {
       if (ccBuilder_ == null) {
         return cc_.get(index);
       } else {
@@ -1339,10 +1339,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
     public Builder setCc(
-        int index, com.by.notificationemail.v1.Cc value) {
+        int index, com.by.notificationemail.v1.EmailStruct value) {
       if (ccBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1356,10 +1356,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
     public Builder setCc(
-        int index, com.by.notificationemail.v1.Cc.Builder builderForValue) {
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
       if (ccBuilder_ == null) {
         ensureCcIsMutable();
         cc_.set(index, builderForValue.build());
@@ -1370,9 +1370,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
-    public Builder addCc(com.by.notificationemail.v1.Cc value) {
+    public Builder addCc(com.by.notificationemail.v1.EmailStruct value) {
       if (ccBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1386,10 +1386,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
     public Builder addCc(
-        int index, com.by.notificationemail.v1.Cc value) {
+        int index, com.by.notificationemail.v1.EmailStruct value) {
       if (ccBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1403,10 +1403,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
     public Builder addCc(
-        com.by.notificationemail.v1.Cc.Builder builderForValue) {
+        com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
       if (ccBuilder_ == null) {
         ensureCcIsMutable();
         cc_.add(builderForValue.build());
@@ -1417,10 +1417,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
     public Builder addCc(
-        int index, com.by.notificationemail.v1.Cc.Builder builderForValue) {
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
       if (ccBuilder_ == null) {
         ensureCcIsMutable();
         cc_.add(index, builderForValue.build());
@@ -1431,10 +1431,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
     public Builder addAllCc(
-        java.lang.Iterable<? extends com.by.notificationemail.v1.Cc> values) {
+        java.lang.Iterable<? extends com.by.notificationemail.v1.EmailStruct> values) {
       if (ccBuilder_ == null) {
         ensureCcIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1446,7 +1446,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
     public Builder clearCc() {
       if (ccBuilder_ == null) {
@@ -1459,7 +1459,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
     public Builder removeCc(int index) {
       if (ccBuilder_ == null) {
@@ -1472,16 +1472,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
-    public com.by.notificationemail.v1.Cc.Builder getCcBuilder(
+    public com.by.notificationemail.v1.EmailStruct.Builder getCcBuilder(
         int index) {
       return getCcFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
-    public com.by.notificationemail.v1.CcOrBuilder getCcOrBuilder(
+    public com.by.notificationemail.v1.EmailStructOrBuilder getCcOrBuilder(
         int index) {
       if (ccBuilder_ == null) {
         return cc_.get(index);  } else {
@@ -1489,9 +1489,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
-    public java.util.List<? extends com.by.notificationemail.v1.CcOrBuilder> 
+    public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
          getCcOrBuilderList() {
       if (ccBuilder_ != null) {
         return ccBuilder_.getMessageOrBuilderList();
@@ -1500,33 +1500,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
-    public com.by.notificationemail.v1.Cc.Builder addCcBuilder() {
+    public com.by.notificationemail.v1.EmailStruct.Builder addCcBuilder() {
       return getCcFieldBuilder().addBuilder(
-          com.by.notificationemail.v1.Cc.getDefaultInstance());
+          com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
-    public com.by.notificationemail.v1.Cc.Builder addCcBuilder(
+    public com.by.notificationemail.v1.EmailStruct.Builder addCcBuilder(
         int index) {
       return getCcFieldBuilder().addBuilder(
-          index, com.by.notificationemail.v1.Cc.getDefaultInstance());
+          index, com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
-    public java.util.List<com.by.notificationemail.v1.Cc.Builder> 
+    public java.util.List<com.by.notificationemail.v1.EmailStruct.Builder> 
          getCcBuilderList() {
       return getCcFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.by.notificationemail.v1.Cc, com.by.notificationemail.v1.Cc.Builder, com.by.notificationemail.v1.CcOrBuilder> 
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> 
         getCcFieldBuilder() {
       if (ccBuilder_ == null) {
         ccBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.by.notificationemail.v1.Cc, com.by.notificationemail.v1.Cc.Builder, com.by.notificationemail.v1.CcOrBuilder>(
+            com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder>(
                 cc_,
                 ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
@@ -1536,22 +1536,22 @@ private static final long serialVersionUID = 0L;
       return ccBuilder_;
     }
 
-    private java.util.List<com.by.notificationemail.v1.Bbc> bbc_ =
+    private java.util.List<com.by.notificationemail.v1.EmailStruct> bbc_ =
       java.util.Collections.emptyList();
     private void ensureBbcIsMutable() {
       if (!((bitField0_ & 0x00000004) != 0)) {
-        bbc_ = new java.util.ArrayList<com.by.notificationemail.v1.Bbc>(bbc_);
+        bbc_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>(bbc_);
         bitField0_ |= 0x00000004;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.by.notificationemail.v1.Bbc, com.by.notificationemail.v1.Bbc.Builder, com.by.notificationemail.v1.BbcOrBuilder> bbcBuilder_;
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> bbcBuilder_;
 
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
-    public java.util.List<com.by.notificationemail.v1.Bbc> getBbcList() {
+    public java.util.List<com.by.notificationemail.v1.EmailStruct> getBbcList() {
       if (bbcBuilder_ == null) {
         return java.util.Collections.unmodifiableList(bbc_);
       } else {
@@ -1559,7 +1559,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
     public int getBbcCount() {
       if (bbcBuilder_ == null) {
@@ -1569,9 +1569,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
-    public com.by.notificationemail.v1.Bbc getBbc(int index) {
+    public com.by.notificationemail.v1.EmailStruct getBbc(int index) {
       if (bbcBuilder_ == null) {
         return bbc_.get(index);
       } else {
@@ -1579,10 +1579,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
     public Builder setBbc(
-        int index, com.by.notificationemail.v1.Bbc value) {
+        int index, com.by.notificationemail.v1.EmailStruct value) {
       if (bbcBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1596,10 +1596,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
     public Builder setBbc(
-        int index, com.by.notificationemail.v1.Bbc.Builder builderForValue) {
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
       if (bbcBuilder_ == null) {
         ensureBbcIsMutable();
         bbc_.set(index, builderForValue.build());
@@ -1610,9 +1610,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
-    public Builder addBbc(com.by.notificationemail.v1.Bbc value) {
+    public Builder addBbc(com.by.notificationemail.v1.EmailStruct value) {
       if (bbcBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1626,10 +1626,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
     public Builder addBbc(
-        int index, com.by.notificationemail.v1.Bbc value) {
+        int index, com.by.notificationemail.v1.EmailStruct value) {
       if (bbcBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1643,10 +1643,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
     public Builder addBbc(
-        com.by.notificationemail.v1.Bbc.Builder builderForValue) {
+        com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
       if (bbcBuilder_ == null) {
         ensureBbcIsMutable();
         bbc_.add(builderForValue.build());
@@ -1657,10 +1657,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
     public Builder addBbc(
-        int index, com.by.notificationemail.v1.Bbc.Builder builderForValue) {
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
       if (bbcBuilder_ == null) {
         ensureBbcIsMutable();
         bbc_.add(index, builderForValue.build());
@@ -1671,10 +1671,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
     public Builder addAllBbc(
-        java.lang.Iterable<? extends com.by.notificationemail.v1.Bbc> values) {
+        java.lang.Iterable<? extends com.by.notificationemail.v1.EmailStruct> values) {
       if (bbcBuilder_ == null) {
         ensureBbcIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1686,7 +1686,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
     public Builder clearBbc() {
       if (bbcBuilder_ == null) {
@@ -1699,7 +1699,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
     public Builder removeBbc(int index) {
       if (bbcBuilder_ == null) {
@@ -1712,16 +1712,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
-    public com.by.notificationemail.v1.Bbc.Builder getBbcBuilder(
+    public com.by.notificationemail.v1.EmailStruct.Builder getBbcBuilder(
         int index) {
       return getBbcFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
-    public com.by.notificationemail.v1.BbcOrBuilder getBbcOrBuilder(
+    public com.by.notificationemail.v1.EmailStructOrBuilder getBbcOrBuilder(
         int index) {
       if (bbcBuilder_ == null) {
         return bbc_.get(index);  } else {
@@ -1729,9 +1729,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
-    public java.util.List<? extends com.by.notificationemail.v1.BbcOrBuilder> 
+    public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
          getBbcOrBuilderList() {
       if (bbcBuilder_ != null) {
         return bbcBuilder_.getMessageOrBuilderList();
@@ -1740,33 +1740,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
-    public com.by.notificationemail.v1.Bbc.Builder addBbcBuilder() {
+    public com.by.notificationemail.v1.EmailStruct.Builder addBbcBuilder() {
       return getBbcFieldBuilder().addBuilder(
-          com.by.notificationemail.v1.Bbc.getDefaultInstance());
+          com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
-    public com.by.notificationemail.v1.Bbc.Builder addBbcBuilder(
+    public com.by.notificationemail.v1.EmailStruct.Builder addBbcBuilder(
         int index) {
       return getBbcFieldBuilder().addBuilder(
-          index, com.by.notificationemail.v1.Bbc.getDefaultInstance());
+          index, com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
     }
     /**
-     * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
      */
-    public java.util.List<com.by.notificationemail.v1.Bbc.Builder> 
+    public java.util.List<com.by.notificationemail.v1.EmailStruct.Builder> 
          getBbcBuilderList() {
       return getBbcFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.by.notificationemail.v1.Bbc, com.by.notificationemail.v1.Bbc.Builder, com.by.notificationemail.v1.BbcOrBuilder> 
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> 
         getBbcFieldBuilder() {
       if (bbcBuilder_ == null) {
         bbcBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.by.notificationemail.v1.Bbc, com.by.notificationemail.v1.Bbc.Builder, com.by.notificationemail.v1.BbcOrBuilder>(
+            com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder>(
                 bbc_,
                 ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
@@ -1776,22 +1776,22 @@ private static final long serialVersionUID = 0L;
       return bbcBuilder_;
     }
 
-    private java.util.List<com.by.notificationemail.v1.ReplyTo> replyTo_ =
+    private java.util.List<com.by.notificationemail.v1.EmailStruct> replyTo_ =
       java.util.Collections.emptyList();
     private void ensureReplyToIsMutable() {
       if (!((bitField0_ & 0x00000008) != 0)) {
-        replyTo_ = new java.util.ArrayList<com.by.notificationemail.v1.ReplyTo>(replyTo_);
+        replyTo_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>(replyTo_);
         bitField0_ |= 0x00000008;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.by.notificationemail.v1.ReplyTo, com.by.notificationemail.v1.ReplyTo.Builder, com.by.notificationemail.v1.ReplyToOrBuilder> replyToBuilder_;
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> replyToBuilder_;
 
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
-    public java.util.List<com.by.notificationemail.v1.ReplyTo> getReplyToList() {
+    public java.util.List<com.by.notificationemail.v1.EmailStruct> getReplyToList() {
       if (replyToBuilder_ == null) {
         return java.util.Collections.unmodifiableList(replyTo_);
       } else {
@@ -1799,7 +1799,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
     public int getReplyToCount() {
       if (replyToBuilder_ == null) {
@@ -1809,9 +1809,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
-    public com.by.notificationemail.v1.ReplyTo getReplyTo(int index) {
+    public com.by.notificationemail.v1.EmailStruct getReplyTo(int index) {
       if (replyToBuilder_ == null) {
         return replyTo_.get(index);
       } else {
@@ -1819,10 +1819,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
     public Builder setReplyTo(
-        int index, com.by.notificationemail.v1.ReplyTo value) {
+        int index, com.by.notificationemail.v1.EmailStruct value) {
       if (replyToBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1836,10 +1836,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
     public Builder setReplyTo(
-        int index, com.by.notificationemail.v1.ReplyTo.Builder builderForValue) {
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
       if (replyToBuilder_ == null) {
         ensureReplyToIsMutable();
         replyTo_.set(index, builderForValue.build());
@@ -1850,9 +1850,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
-    public Builder addReplyTo(com.by.notificationemail.v1.ReplyTo value) {
+    public Builder addReplyTo(com.by.notificationemail.v1.EmailStruct value) {
       if (replyToBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1866,10 +1866,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
     public Builder addReplyTo(
-        int index, com.by.notificationemail.v1.ReplyTo value) {
+        int index, com.by.notificationemail.v1.EmailStruct value) {
       if (replyToBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1883,10 +1883,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
     public Builder addReplyTo(
-        com.by.notificationemail.v1.ReplyTo.Builder builderForValue) {
+        com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
       if (replyToBuilder_ == null) {
         ensureReplyToIsMutable();
         replyTo_.add(builderForValue.build());
@@ -1897,10 +1897,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
     public Builder addReplyTo(
-        int index, com.by.notificationemail.v1.ReplyTo.Builder builderForValue) {
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
       if (replyToBuilder_ == null) {
         ensureReplyToIsMutable();
         replyTo_.add(index, builderForValue.build());
@@ -1911,10 +1911,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
     public Builder addAllReplyTo(
-        java.lang.Iterable<? extends com.by.notificationemail.v1.ReplyTo> values) {
+        java.lang.Iterable<? extends com.by.notificationemail.v1.EmailStruct> values) {
       if (replyToBuilder_ == null) {
         ensureReplyToIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1926,7 +1926,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
     public Builder clearReplyTo() {
       if (replyToBuilder_ == null) {
@@ -1939,7 +1939,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
     public Builder removeReplyTo(int index) {
       if (replyToBuilder_ == null) {
@@ -1952,16 +1952,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
-    public com.by.notificationemail.v1.ReplyTo.Builder getReplyToBuilder(
+    public com.by.notificationemail.v1.EmailStruct.Builder getReplyToBuilder(
         int index) {
       return getReplyToFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
-    public com.by.notificationemail.v1.ReplyToOrBuilder getReplyToOrBuilder(
+    public com.by.notificationemail.v1.EmailStructOrBuilder getReplyToOrBuilder(
         int index) {
       if (replyToBuilder_ == null) {
         return replyTo_.get(index);  } else {
@@ -1969,9 +1969,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
-    public java.util.List<? extends com.by.notificationemail.v1.ReplyToOrBuilder> 
+    public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
          getReplyToOrBuilderList() {
       if (replyToBuilder_ != null) {
         return replyToBuilder_.getMessageOrBuilderList();
@@ -1980,33 +1980,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
-    public com.by.notificationemail.v1.ReplyTo.Builder addReplyToBuilder() {
+    public com.by.notificationemail.v1.EmailStruct.Builder addReplyToBuilder() {
       return getReplyToFieldBuilder().addBuilder(
-          com.by.notificationemail.v1.ReplyTo.getDefaultInstance());
+          com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
-    public com.by.notificationemail.v1.ReplyTo.Builder addReplyToBuilder(
+    public com.by.notificationemail.v1.EmailStruct.Builder addReplyToBuilder(
         int index) {
       return getReplyToFieldBuilder().addBuilder(
-          index, com.by.notificationemail.v1.ReplyTo.getDefaultInstance());
+          index, com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
     }
     /**
-     * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
      */
-    public java.util.List<com.by.notificationemail.v1.ReplyTo.Builder> 
+    public java.util.List<com.by.notificationemail.v1.EmailStruct.Builder> 
          getReplyToBuilderList() {
       return getReplyToFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.by.notificationemail.v1.ReplyTo, com.by.notificationemail.v1.ReplyTo.Builder, com.by.notificationemail.v1.ReplyToOrBuilder> 
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> 
         getReplyToFieldBuilder() {
       if (replyToBuilder_ == null) {
         replyToBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.by.notificationemail.v1.ReplyTo, com.by.notificationemail.v1.ReplyTo.Builder, com.by.notificationemail.v1.ReplyToOrBuilder>(
+            com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder>(
                 replyTo_,
                 ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),

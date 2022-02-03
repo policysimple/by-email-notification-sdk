@@ -8,99 +8,99 @@ public interface SendEmailRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
    */
-  java.util.List<com.by.notificationemail.v1.To> 
-      getToList();
+  java.util.List<com.by.notificationemail.v1.EmailStruct> 
+      getReceiverList();
   /**
-   * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
    */
-  com.by.notificationemail.v1.To getTo(int index);
+  com.by.notificationemail.v1.EmailStruct getReceiver(int index);
   /**
-   * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
    */
-  int getToCount();
+  int getReceiverCount();
   /**
-   * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
    */
-  java.util.List<? extends com.by.notificationemail.v1.ToOrBuilder> 
-      getToOrBuilderList();
+  java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+      getReceiverOrBuilderList();
   /**
-   * <code>repeated .by.notificationemail.v1.To to = 1 [json_name = "to"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
    */
-  com.by.notificationemail.v1.ToOrBuilder getToOrBuilder(
+  com.by.notificationemail.v1.EmailStructOrBuilder getReceiverOrBuilder(
       int index);
 
   /**
-   * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
    */
-  java.util.List<com.by.notificationemail.v1.Cc> 
+  java.util.List<com.by.notificationemail.v1.EmailStruct> 
       getCcList();
   /**
-   * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
    */
-  com.by.notificationemail.v1.Cc getCc(int index);
+  com.by.notificationemail.v1.EmailStruct getCc(int index);
   /**
-   * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
    */
   int getCcCount();
   /**
-   * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
    */
-  java.util.List<? extends com.by.notificationemail.v1.CcOrBuilder> 
+  java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
       getCcOrBuilderList();
   /**
-   * <code>repeated .by.notificationemail.v1.Cc cc = 2 [json_name = "cc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
    */
-  com.by.notificationemail.v1.CcOrBuilder getCcOrBuilder(
+  com.by.notificationemail.v1.EmailStructOrBuilder getCcOrBuilder(
       int index);
 
   /**
-   * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
    */
-  java.util.List<com.by.notificationemail.v1.Bbc> 
+  java.util.List<com.by.notificationemail.v1.EmailStruct> 
       getBbcList();
   /**
-   * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
    */
-  com.by.notificationemail.v1.Bbc getBbc(int index);
+  com.by.notificationemail.v1.EmailStruct getBbc(int index);
   /**
-   * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
    */
   int getBbcCount();
   /**
-   * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
    */
-  java.util.List<? extends com.by.notificationemail.v1.BbcOrBuilder> 
+  java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
       getBbcOrBuilderList();
   /**
-   * <code>repeated .by.notificationemail.v1.Bbc bbc = 3 [json_name = "bbc"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
    */
-  com.by.notificationemail.v1.BbcOrBuilder getBbcOrBuilder(
+  com.by.notificationemail.v1.EmailStructOrBuilder getBbcOrBuilder(
       int index);
 
   /**
-   * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
    */
-  java.util.List<com.by.notificationemail.v1.ReplyTo> 
+  java.util.List<com.by.notificationemail.v1.EmailStruct> 
       getReplyToList();
   /**
-   * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
    */
-  com.by.notificationemail.v1.ReplyTo getReplyTo(int index);
+  com.by.notificationemail.v1.EmailStruct getReplyTo(int index);
   /**
-   * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
    */
   int getReplyToCount();
   /**
-   * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
    */
-  java.util.List<? extends com.by.notificationemail.v1.ReplyToOrBuilder> 
+  java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
       getReplyToOrBuilderList();
   /**
-   * <code>repeated .by.notificationemail.v1.ReplyTo reply_to = 4 [json_name = "replyTo"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
    */
-  com.by.notificationemail.v1.ReplyToOrBuilder getReplyToOrBuilder(
+  com.by.notificationemail.v1.EmailStructOrBuilder getReplyToOrBuilder(
       int index);
 
   /**

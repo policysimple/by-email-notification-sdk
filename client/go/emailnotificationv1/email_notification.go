@@ -26,17 +26,6 @@ type EmailStruct struct {
 	Email string
 }
 
-type EmailData struct {
-	To      []EmailStruct
-	Cc      []EmailStruct
-	Bbc     []EmailStruct
-	ReplyTo []EmailStruct
-	Subject string
-	Tag     string
-	Text    string
-	Html    string
-}
-
 func init() {
 	doOnce.Do(func() {
 		byEmailNotificationServiceTimeout = os.Getenv("BY_EMAIL_NOTIFICATION_SERVICE_TIMEOUT")
@@ -52,7 +41,16 @@ func init() {
 	})
 }
 
-func SendEmail(data EmailData) (response *notificationemailv1.SendEmailResponse, err error) {
+func SendEmail(
+	receiver []EmailStruct,
+	cc []EmailStruct,
+	bbc []EmailStruct,
+	replyTo []EmailStruct,
+	subject string,
+	tag string,
+	text string,
+	html string,
+) (response *notificationemailv1.SendEmailResponse, err error) {
 	d, err := time.ParseDuration(byEmailNotificationServiceTimeout)
 	if err != nil {
 		return
@@ -60,12 +58,12 @@ func SendEmail(data EmailData) (response *notificationemailv1.SendEmailResponse,
 	ctx, cancel := context.WithDeadline(context.Background(), time.Now().Add(d))
 	defer cancel()
 
-	var arrayEmailTo []*notificationemailv1.To
-	var arrayEmailCc []*notificationemailv1.Cc
-	var arrayEmailBbc []*notificationemailv1.Bbc
-	var arrayEmailReplyTo []*notificationemailv1.ReplyTo
+	var arrayEmailReceiver []*notificationemailv1.EmailStruct
+	var arrayEmailCc []*notificationemailv1.EmailStruct
+	var arrayEmailBbc []*notificationemailv1.EmailStruct
+	var arrayEmailReplyTo []*notificationemailv1.EmailStruct
 
-	if len(data.To) == 0 {
+	if len(receiver) == 0 {
 		log.Printf("%s: ", "To is required")
 		return nil, status.Errorf(
 			codes.InvalidArgument,
@@ -73,43 +71,43 @@ func SendEmail(data EmailData) (response *notificationemailv1.SendEmailResponse,
 		)
 	}
 
-	for _, item := range data.To {
-		arrayEmailTo = append(arrayEmailTo, &notificationemailv1.To{
+	for _, item := range receiver {
+		arrayEmailReceiver = append(arrayEmailReceiver, &notificationemailv1.EmailStruct{
 			Name:  item.Name,
 			Email: item.Email,
 		})
 	}
 
-	for _, item := range data.Cc {
-		arrayEmailCc = append(arrayEmailCc, &notificationemailv1.Cc{
+	for _, item := range cc {
+		arrayEmailCc = append(arrayEmailCc, &notificationemailv1.EmailStruct{
 			Name:  item.Name,
 			Email: item.Email,
 		})
 	}
 
-	for _, item := range data.Bbc {
-		arrayEmailBbc = append(arrayEmailBbc, &notificationemailv1.Bbc{
+	for _, item := range bbc {
+		arrayEmailBbc = append(arrayEmailBbc, &notificationemailv1.EmailStruct{
 			Name:  item.Name,
 			Email: item.Email,
 		})
 	}
 
-	for _, item := range data.ReplyTo {
-		arrayEmailReplyTo = append(arrayEmailReplyTo, &notificationemailv1.ReplyTo{
+	for _, item := range replyTo {
+		arrayEmailReplyTo = append(arrayEmailReplyTo, &notificationemailv1.EmailStruct{
 			Name:  item.Name,
 			Email: item.Email,
 		})
 	}
 
 	response, err = client.SendEmail(ctx, &notificationemailv1.SendEmailRequest{
-		To:      arrayEmailTo,
-		Cc:      arrayEmailCc,
-		Bbc:     arrayEmailBbc,
-		ReplyTo: arrayEmailReplyTo,
-		Subject: data.Subject,
-		Tag:     data.Tag,
-		Text:    data.Text,
-		Html:    data.Html,
+		Receiver: arrayEmailReceiver,
+		Cc:       arrayEmailCc,
+		Bbc:      arrayEmailBbc,
+		ReplyTo:  arrayEmailReplyTo,
+		Subject:  subject,
+		Tag:      tag,
+		Text:     text,
+		Html:     html,
 	})
 
 	if err != nil {
