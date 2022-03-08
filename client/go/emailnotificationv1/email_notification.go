@@ -101,14 +101,14 @@ func SendEmail(
 
 	response, err = client.SendEmail(ctx, &notificationemailv1.SendEmailRequest{
 		EmailData: &notificationemailv1.EmailData{
-			Receiver: arrayEmailReceiver,
-			Cc:       arrayEmailCc,
-			Bbc:      arrayEmailBbc,
-			ReplyTo:  arrayEmailReplyTo,
-			Subject:  subject,
-			Tag:      tag,
-			Text:     text,
-			Html:     html,
+			To:      arrayEmailReceiver,
+			Cc:      arrayEmailCc,
+			Bbc:     arrayEmailBbc,
+			ReplyTo: arrayEmailReplyTo,
+			Subject: subject,
+			Tag:     tag,
+			Text:    text,
+			Html:    html,
 		},
 	})
 

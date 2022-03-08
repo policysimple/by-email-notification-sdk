@@ -362,7 +362,7 @@ class EmailData final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kReceiverFieldNumber = 1,
+    kToFieldNumber = 1,
     kCcFieldNumber = 2,
     kBbcFieldNumber = 3,
     kReplyToFieldNumber = 4,
@@ -371,23 +371,23 @@ class EmailData final :
     kTextFieldNumber = 7,
     kHtmlFieldNumber = 8,
   };
-  // repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];
-  int receiver_size() const;
+  // repeated .by.notificationemail.v1.EmailStruct to = 1 [json_name = "to"];
+  int to_size() const;
   private:
-  int _internal_receiver_size() const;
+  int _internal_to_size() const;
   public:
-  void clear_receiver();
-  ::by::notificationemail::v1::EmailStruct* mutable_receiver(int index);
+  void clear_to();
+  ::by::notificationemail::v1::EmailStruct* mutable_to(int index);
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::by::notificationemail::v1::EmailStruct >*
-      mutable_receiver();
+      mutable_to();
   private:
-  const ::by::notificationemail::v1::EmailStruct& _internal_receiver(int index) const;
-  ::by::notificationemail::v1::EmailStruct* _internal_add_receiver();
+  const ::by::notificationemail::v1::EmailStruct& _internal_to(int index) const;
+  ::by::notificationemail::v1::EmailStruct* _internal_add_to();
   public:
-  const ::by::notificationemail::v1::EmailStruct& receiver(int index) const;
-  ::by::notificationemail::v1::EmailStruct* add_receiver();
+  const ::by::notificationemail::v1::EmailStruct& to(int index) const;
+  ::by::notificationemail::v1::EmailStruct* add_to();
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::by::notificationemail::v1::EmailStruct >&
-      receiver() const;
+      to() const;
 
   // repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];
   int cc_size() const;
@@ -506,7 +506,7 @@ class EmailData final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::by::notificationemail::v1::EmailStruct > receiver_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::by::notificationemail::v1::EmailStruct > to_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::by::notificationemail::v1::EmailStruct > cc_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::by::notificationemail::v1::EmailStruct > bbc_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::by::notificationemail::v1::EmailStruct > reply_to_;
@@ -1107,44 +1107,44 @@ inline void EmailStruct::set_allocated_email(std::string* email) {
 
 // EmailData
 
-// repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];
-inline int EmailData::_internal_receiver_size() const {
-  return receiver_.size();
+// repeated .by.notificationemail.v1.EmailStruct to = 1 [json_name = "to"];
+inline int EmailData::_internal_to_size() const {
+  return to_.size();
 }
-inline int EmailData::receiver_size() const {
-  return _internal_receiver_size();
+inline int EmailData::to_size() const {
+  return _internal_to_size();
 }
-inline void EmailData::clear_receiver() {
-  receiver_.Clear();
+inline void EmailData::clear_to() {
+  to_.Clear();
 }
-inline ::by::notificationemail::v1::EmailStruct* EmailData::mutable_receiver(int index) {
-  // @@protoc_insertion_point(field_mutable:by.notificationemail.v1.EmailData.receiver)
-  return receiver_.Mutable(index);
+inline ::by::notificationemail::v1::EmailStruct* EmailData::mutable_to(int index) {
+  // @@protoc_insertion_point(field_mutable:by.notificationemail.v1.EmailData.to)
+  return to_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::by::notificationemail::v1::EmailStruct >*
-EmailData::mutable_receiver() {
-  // @@protoc_insertion_point(field_mutable_list:by.notificationemail.v1.EmailData.receiver)
-  return &receiver_;
+EmailData::mutable_to() {
+  // @@protoc_insertion_point(field_mutable_list:by.notificationemail.v1.EmailData.to)
+  return &to_;
 }
-inline const ::by::notificationemail::v1::EmailStruct& EmailData::_internal_receiver(int index) const {
-  return receiver_.Get(index);
+inline const ::by::notificationemail::v1::EmailStruct& EmailData::_internal_to(int index) const {
+  return to_.Get(index);
 }
-inline const ::by::notificationemail::v1::EmailStruct& EmailData::receiver(int index) const {
-  // @@protoc_insertion_point(field_get:by.notificationemail.v1.EmailData.receiver)
-  return _internal_receiver(index);
+inline const ::by::notificationemail::v1::EmailStruct& EmailData::to(int index) const {
+  // @@protoc_insertion_point(field_get:by.notificationemail.v1.EmailData.to)
+  return _internal_to(index);
 }
-inline ::by::notificationemail::v1::EmailStruct* EmailData::_internal_add_receiver() {
-  return receiver_.Add();
+inline ::by::notificationemail::v1::EmailStruct* EmailData::_internal_add_to() {
+  return to_.Add();
 }
-inline ::by::notificationemail::v1::EmailStruct* EmailData::add_receiver() {
-  ::by::notificationemail::v1::EmailStruct* _add = _internal_add_receiver();
-  // @@protoc_insertion_point(field_add:by.notificationemail.v1.EmailData.receiver)
+inline ::by::notificationemail::v1::EmailStruct* EmailData::add_to() {
+  ::by::notificationemail::v1::EmailStruct* _add = _internal_add_to();
+  // @@protoc_insertion_point(field_add:by.notificationemail.v1.EmailData.to)
   return _add;
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::by::notificationemail::v1::EmailStruct >&
-EmailData::receiver() const {
-  // @@protoc_insertion_point(field_list:by.notificationemail.v1.EmailData.receiver)
-  return receiver_;
+EmailData::to() const {
+  // @@protoc_insertion_point(field_list:by.notificationemail.v1.EmailData.to)
+  return to_;
 }
 
 // repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];

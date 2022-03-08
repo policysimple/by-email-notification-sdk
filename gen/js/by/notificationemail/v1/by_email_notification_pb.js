@@ -324,7 +324,7 @@ proto.by.notificationemail.v1.EmailData.prototype.toObject = function(opt_includ
  */
 proto.by.notificationemail.v1.EmailData.toObject = function(includeInstance, msg) {
   var f, obj = {
-    receiverList: jspb.Message.toObjectList(msg.getReceiverList(),
+    toList: jspb.Message.toObjectList(msg.getToList(),
     proto.by.notificationemail.v1.EmailStruct.toObject, includeInstance),
     ccList: jspb.Message.toObjectList(msg.getCcList(),
     proto.by.notificationemail.v1.EmailStruct.toObject, includeInstance),
@@ -375,7 +375,7 @@ proto.by.notificationemail.v1.EmailData.deserializeBinaryFromReader = function(m
     case 1:
       var value = new proto.by.notificationemail.v1.EmailStruct;
       reader.readMessage(value,proto.by.notificationemail.v1.EmailStruct.deserializeBinaryFromReader);
-      msg.addReceiver(value);
+      msg.addTo(value);
       break;
     case 2:
       var value = new proto.by.notificationemail.v1.EmailStruct;
@@ -437,7 +437,7 @@ proto.by.notificationemail.v1.EmailData.prototype.serializeBinary = function() {
  */
 proto.by.notificationemail.v1.EmailData.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getReceiverList();
+  f = message.getToList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
@@ -501,10 +501,10 @@ proto.by.notificationemail.v1.EmailData.serializeBinaryToWriter = function(messa
 
 
 /**
- * repeated EmailStruct receiver = 1;
+ * repeated EmailStruct to = 1;
  * @return {!Array<!proto.by.notificationemail.v1.EmailStruct>}
  */
-proto.by.notificationemail.v1.EmailData.prototype.getReceiverList = function() {
+proto.by.notificationemail.v1.EmailData.prototype.getToList = function() {
   return /** @type{!Array<!proto.by.notificationemail.v1.EmailStruct>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.by.notificationemail.v1.EmailStruct, 1));
 };
@@ -514,7 +514,7 @@ proto.by.notificationemail.v1.EmailData.prototype.getReceiverList = function() {
  * @param {!Array<!proto.by.notificationemail.v1.EmailStruct>} value
  * @return {!proto.by.notificationemail.v1.EmailData} returns this
 */
-proto.by.notificationemail.v1.EmailData.prototype.setReceiverList = function(value) {
+proto.by.notificationemail.v1.EmailData.prototype.setToList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
@@ -524,7 +524,7 @@ proto.by.notificationemail.v1.EmailData.prototype.setReceiverList = function(val
  * @param {number=} opt_index
  * @return {!proto.by.notificationemail.v1.EmailStruct}
  */
-proto.by.notificationemail.v1.EmailData.prototype.addReceiver = function(opt_value, opt_index) {
+proto.by.notificationemail.v1.EmailData.prototype.addTo = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.by.notificationemail.v1.EmailStruct, opt_index);
 };
 
@@ -533,8 +533,8 @@ proto.by.notificationemail.v1.EmailData.prototype.addReceiver = function(opt_val
  * Clears the list making it empty but non-null.
  * @return {!proto.by.notificationemail.v1.EmailData} returns this
  */
-proto.by.notificationemail.v1.EmailData.prototype.clearReceiverList = function() {
-  return this.setReceiverList([]);
+proto.by.notificationemail.v1.EmailData.prototype.clearToList = function() {
+  return this.setToList([]);
 };
 
 

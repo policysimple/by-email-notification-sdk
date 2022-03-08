@@ -34,7 +34,7 @@ struct EmailStructDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EmailStructDefaultTypeInternal _EmailStruct_default_instance_;
 constexpr EmailData::EmailData(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : receiver_()
+  : to_()
   , cc_()
   , bbc_()
   , reply_to_()
@@ -110,7 +110,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_by_2fnotificationemail_2fv1_2f
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailData, receiver_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailData, to_),
   PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailData, cc_),
   PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailData, bbc_),
   PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailData, reply_to_),
@@ -160,35 +160,35 @@ const char descriptor_table_protodef_by_2fnotificationemail_2fv1_2fby_5femail_5f
   "\n3by/notificationemail/v1/by_email_notif"
   "ication.proto\022\027by.notificationemail.v1\"7"
   "\n\013EmailStruct\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005ema"
-  "il\030\002 \001(\tR\005email\"\320\002\n\tEmailData\022@\n\010receive"
-  "r\030\001 \003(\0132$.by.notificationemail.v1.EmailS"
-  "tructR\010receiver\0224\n\002cc\030\002 \003(\0132$.by.notific"
-  "ationemail.v1.EmailStructR\002cc\0226\n\003bbc\030\003 \003"
-  "(\0132$.by.notificationemail.v1.EmailStruct"
-  "R\003bbc\022\?\n\010reply_to\030\004 \003(\0132$.by.notificatio"
-  "nemail.v1.EmailStructR\007replyTo\022\030\n\007subjec"
-  "t\030\005 \001(\tR\007subject\022\020\n\003tag\030\006 \001(\tR\003tag\022\022\n\004te"
-  "xt\030\007 \001(\tR\004text\022\022\n\004html\030\010 \001(\tR\004html\"U\n\020Se"
-  "ndEmailRequest\022A\n\nemail_data\030\001 \001(\0132\".by."
-  "notificationemail.v1.EmailDataR\temailDat"
-  "a\"+\n\025SendEmailInfoResponse\022\022\n\004send\030\001 \001(\010"
-  "R\004send\"\237\001\n\021SendEmailResponse\022\026\n\006status\030\001"
-  " \001(\tR\006status\022\030\n\007message\030\002 \001(\tR\007message\022B"
-  "\n\004info\030\003 \001(\0132..by.notificationemail.v1.S"
-  "endEmailInfoResponseR\004info\022\024\n\005error\030\004 \001("
-  "\tR\005error2\201\001\n\033NotificationEmailAPIService"
-  "\022b\n\tSendEmail\022).by.notificationemail.v1."
-  "SendEmailRequest\032*.by.notificationemail."
-  "v1.SendEmailResponseB\304\001\n\033com.by.notifica"
-  "tionemail.v1B\035NotificationdataemailApiPr"
-  "otoP\001ZJgithub.com/cuemby/by-email-notifi"
-  "cations-sdk/gen/go/by/notificationemailv"
-  "1\242\002\003ANX\252\002\027By.Notificationemail.V1\312\002\027By\\N"
-  "otificationemail\\V1b\006proto3"
+  "il\030\002 \001(\tR\005email\"\304\002\n\tEmailData\0224\n\002to\030\001 \003("
+  "\0132$.by.notificationemail.v1.EmailStructR"
+  "\002to\0224\n\002cc\030\002 \003(\0132$.by.notificationemail.v"
+  "1.EmailStructR\002cc\0226\n\003bbc\030\003 \003(\0132$.by.noti"
+  "ficationemail.v1.EmailStructR\003bbc\022\?\n\010rep"
+  "ly_to\030\004 \003(\0132$.by.notificationemail.v1.Em"
+  "ailStructR\007replyTo\022\030\n\007subject\030\005 \001(\tR\007sub"
+  "ject\022\020\n\003tag\030\006 \001(\tR\003tag\022\022\n\004text\030\007 \001(\tR\004te"
+  "xt\022\022\n\004html\030\010 \001(\tR\004html\"U\n\020SendEmailReque"
+  "st\022A\n\nemail_data\030\001 \001(\0132\".by.notification"
+  "email.v1.EmailDataR\temailData\"+\n\025SendEma"
+  "ilInfoResponse\022\022\n\004send\030\001 \001(\010R\004send\"\237\001\n\021S"
+  "endEmailResponse\022\026\n\006status\030\001 \001(\tR\006status"
+  "\022\030\n\007message\030\002 \001(\tR\007message\022B\n\004info\030\003 \001(\013"
+  "2..by.notificationemail.v1.SendEmailInfo"
+  "ResponseR\004info\022\024\n\005error\030\004 \001(\tR\005error2\201\001\n"
+  "\033NotificationEmailAPIService\022b\n\tSendEmai"
+  "l\022).by.notificationemail.v1.SendEmailReq"
+  "uest\032*.by.notificationemail.v1.SendEmail"
+  "ResponseB\304\001\n\033com.by.notificationemail.v1"
+  "B\035NotificationdataemailApiProtoP\001ZJgithu"
+  "b.com/cuemby/by-email-notifications-sdk/"
+  "gen/go/by/notificationemailv1\242\002\003ANX\252\002\027By"
+  ".Notificationemail.V1\312\002\027By\\Notificatione"
+  "mail\\V1b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto = {
-  false, false, 1107, descriptor_table_protodef_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto, "by/notificationemail/v1/by_email_notification.proto", 
+  false, false, 1095, descriptor_table_protodef_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto, "by/notificationemail/v1/by_email_notification.proto", 
   &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once, nullptr, 0, 5,
   schemas, file_default_instances, TableStruct_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto::offsets,
   file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto, file_level_enum_descriptors_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto, file_level_service_descriptors_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto,
@@ -454,7 +454,7 @@ class EmailData::_Internal {
 EmailData::EmailData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
-  receiver_(arena),
+  to_(arena),
   cc_(arena),
   bbc_(arena),
   reply_to_(arena) {
@@ -466,7 +466,7 @@ EmailData::EmailData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
 }
 EmailData::EmailData(const EmailData& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      receiver_(from.receiver_),
+      to_(from.to_),
       cc_(from.cc_),
       bbc_(from.bbc_),
       reply_to_(from.reply_to_) {
@@ -532,7 +532,7 @@ void EmailData::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  receiver_.Clear();
+  to_.Clear();
   cc_.Clear();
   bbc_.Clear();
   reply_to_.Clear();
@@ -549,13 +549,13 @@ const char* EmailData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];
+      // repeated .by.notificationemail.v1.EmailStruct to = 1 [json_name = "to"];
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_receiver(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_to(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
@@ -662,12 +662,12 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];
+  // repeated .by.notificationemail.v1.EmailStruct to = 1 [json_name = "to"];
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_receiver_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_to_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_receiver(i), target, stream);
+      InternalWriteMessage(1, this->_internal_to(i), target, stream);
   }
 
   // repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];
@@ -750,9 +750,9 @@ size_t EmailData::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];
-  total_size += 1UL * this->_internal_receiver_size();
-  for (const auto& msg : this->receiver_) {
+  // repeated .by.notificationemail.v1.EmailStruct to = 1 [json_name = "to"];
+  total_size += 1UL * this->_internal_to_size();
+  for (const auto& msg : this->to_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
@@ -834,7 +834,7 @@ void EmailData::MergeFrom(const EmailData& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  receiver_.MergeFrom(from.receiver_);
+  to_.MergeFrom(from.to_);
   cc_.MergeFrom(from.cc_);
   bbc_.MergeFrom(from.bbc_);
   reply_to_.MergeFrom(from.reply_to_);
@@ -867,7 +867,7 @@ bool EmailData::IsInitialized() const {
 void EmailData::InternalSwap(EmailData* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  receiver_.InternalSwap(&other->receiver_);
+  to_.InternalSwap(&other->to_);
   cc_.InternalSwap(&other->cc_);
   bbc_.InternalSwap(&other->bbc_);
   reply_to_.InternalSwap(&other->reply_to_);

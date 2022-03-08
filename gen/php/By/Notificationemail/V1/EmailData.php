@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class EmailData extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     * Generated from protobuf field <code>repeated .by.notificationemail.v1.EmailStruct to = 1 [json_name = "to"];</code>
      */
-    private $receiver;
+    private $to;
     /**
      * Generated from protobuf field <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
      */
@@ -52,7 +52,7 @@ class EmailData extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type \By\Notificationemail\V1\EmailStruct[]|\Google\Protobuf\Internal\RepeatedField $receiver
+     *     @type \By\Notificationemail\V1\EmailStruct[]|\Google\Protobuf\Internal\RepeatedField $to
      *     @type \By\Notificationemail\V1\EmailStruct[]|\Google\Protobuf\Internal\RepeatedField $cc
      *     @type \By\Notificationemail\V1\EmailStruct[]|\Google\Protobuf\Internal\RepeatedField $bbc
      *     @type \By\Notificationemail\V1\EmailStruct[]|\Google\Protobuf\Internal\RepeatedField $reply_to
@@ -68,23 +68,23 @@ class EmailData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     * Generated from protobuf field <code>repeated .by.notificationemail.v1.EmailStruct to = 1 [json_name = "to"];</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
-    public function getReceiver()
+    public function getTo()
     {
-        return $this->receiver;
+        return $this->to;
     }
 
     /**
-     * Generated from protobuf field <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     * Generated from protobuf field <code>repeated .by.notificationemail.v1.EmailStruct to = 1 [json_name = "to"];</code>
      * @param \By\Notificationemail\V1\EmailStruct[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
-    public function setReceiver($var)
+    public function setTo($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \By\Notificationemail\V1\EmailStruct::class);
-        $this->receiver = $arr;
+        $this->to = $arr;
 
         return $this;
     }

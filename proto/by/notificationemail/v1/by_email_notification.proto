@@ -32,7 +32,7 @@ message EmailStruct {
 }
 
 message EmailData {
-    repeated EmailStruct receiver = 1;
+    repeated EmailStruct to = 1;
     repeated EmailStruct cc = 2;
     repeated EmailStruct bbc = 3;
     repeated EmailStruct reply_to = 4;

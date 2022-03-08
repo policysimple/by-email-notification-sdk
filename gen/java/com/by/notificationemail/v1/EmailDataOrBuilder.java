@@ -8,27 +8,27 @@ public interface EmailDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct to = 1 [json_name = "to"];</code>
    */
   java.util.List<com.by.notificationemail.v1.EmailStruct> 
-      getReceiverList();
+      getToList();
   /**
-   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct to = 1 [json_name = "to"];</code>
    */
-  com.by.notificationemail.v1.EmailStruct getReceiver(int index);
+  com.by.notificationemail.v1.EmailStruct getTo(int index);
   /**
-   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct to = 1 [json_name = "to"];</code>
    */
-  int getReceiverCount();
+  int getToCount();
   /**
-   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct to = 1 [json_name = "to"];</code>
    */
   java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
-      getReceiverOrBuilderList();
+      getToOrBuilderList();
   /**
-   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+   * <code>repeated .by.notificationemail.v1.EmailStruct to = 1 [json_name = "to"];</code>
    */
-  com.by.notificationemail.v1.EmailStructOrBuilder getReceiverOrBuilder(
+  com.by.notificationemail.v1.EmailStructOrBuilder getToOrBuilder(
       int index);
 
   /**

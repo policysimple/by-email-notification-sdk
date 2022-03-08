@@ -16,13 +16,13 @@ class ByEmailNotification
         }
         $pool->internalAddGeneratedFile(
             '
-Ó
+Ç
 3by/notificationemail/v1/by_email_notification.protoby.notificationemail.v1"7
 EmailStruct
 name (	Rname
-email (	Remail"Ð
-	EmailData@
-receiver (2$.by.notificationemail.v1.EmailStructRreceiver4
+email (	Remail"Ä
+	EmailData4
+to (2$.by.notificationemail.v1.EmailStructRto4
 cc (2$.by.notificationemail.v1.EmailStructRcc6
 bbc (2$.by.notificationemail.v1.EmailStructRbbc?
 reply_to (2$.by.notificationemail.v1.EmailStructRreplyTo
