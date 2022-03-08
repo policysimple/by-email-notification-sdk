@@ -8,26 +8,146 @@ public interface EmailDataOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The name.
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
    */
-  java.lang.String getName();
+  java.util.List<com.by.notificationemail.v1.EmailStruct> 
+      getReceiverList();
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The bytes for name.
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
    */
-  com.google.protobuf.ByteString
-      getNameBytes();
+  com.by.notificationemail.v1.EmailStruct getReceiver(int index);
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+   */
+  int getReceiverCount();
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+   */
+  java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+      getReceiverOrBuilderList();
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+   */
+  com.by.notificationemail.v1.EmailStructOrBuilder getReceiverOrBuilder(
+      int index);
 
   /**
-   * <code>string email = 2 [json_name = "email"];</code>
-   * @return The email.
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
    */
-  java.lang.String getEmail();
+  java.util.List<com.by.notificationemail.v1.EmailStruct> 
+      getCcList();
   /**
-   * <code>string email = 2 [json_name = "email"];</code>
-   * @return The bytes for email.
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+   */
+  com.by.notificationemail.v1.EmailStruct getCc(int index);
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+   */
+  int getCcCount();
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+   */
+  java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+      getCcOrBuilderList();
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+   */
+  com.by.notificationemail.v1.EmailStructOrBuilder getCcOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+   */
+  java.util.List<com.by.notificationemail.v1.EmailStruct> 
+      getBbcList();
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+   */
+  com.by.notificationemail.v1.EmailStruct getBbc(int index);
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+   */
+  int getBbcCount();
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+   */
+  java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+      getBbcOrBuilderList();
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+   */
+  com.by.notificationemail.v1.EmailStructOrBuilder getBbcOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+   */
+  java.util.List<com.by.notificationemail.v1.EmailStruct> 
+      getReplyToList();
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+   */
+  com.by.notificationemail.v1.EmailStruct getReplyTo(int index);
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+   */
+  int getReplyToCount();
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+   */
+  java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+      getReplyToOrBuilderList();
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+   */
+  com.by.notificationemail.v1.EmailStructOrBuilder getReplyToOrBuilder(
+      int index);
+
+  /**
+   * <code>string subject = 5 [json_name = "subject"];</code>
+   * @return The subject.
+   */
+  java.lang.String getSubject();
+  /**
+   * <code>string subject = 5 [json_name = "subject"];</code>
+   * @return The bytes for subject.
    */
   com.google.protobuf.ByteString
-      getEmailBytes();
+      getSubjectBytes();
+
+  /**
+   * <code>string tag = 6 [json_name = "tag"];</code>
+   * @return The tag.
+   */
+  java.lang.String getTag();
+  /**
+   * <code>string tag = 6 [json_name = "tag"];</code>
+   * @return The bytes for tag.
+   */
+  com.google.protobuf.ByteString
+      getTagBytes();
+
+  /**
+   * <code>string text = 7 [json_name = "text"];</code>
+   * @return The text.
+   */
+  java.lang.String getText();
+  /**
+   * <code>string text = 7 [json_name = "text"];</code>
+   * @return The bytes for text.
+   */
+  com.google.protobuf.ByteString
+      getTextBytes();
+
+  /**
+   * <code>string html = 8 [json_name = "html"];</code>
+   * @return The html.
+   */
+  java.lang.String getHtml();
+  /**
+   * <code>string html = 8 [json_name = "html"];</code>
+   * @return The bytes for html.
+   */
+  com.google.protobuf.ByteString
+      getHtmlBytes();
 }

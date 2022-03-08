@@ -20,6 +20,11 @@ public final class NotificationdataemailApiProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_by_notificationemail_v1_EmailStruct_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_by_notificationemail_v1_EmailData_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_by_notificationemail_v1_EmailData_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_by_notificationemail_v1_SendEmailRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -46,16 +51,18 @@ public final class NotificationdataemailApiProto {
       "\n3by/notificationemail/v1/by_email_notif" +
       "ication.proto\022\027by.notificationemail.v1\"7" +
       "\n\013EmailStruct\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005ema" +
-      "il\030\002 \001(\tR\005email\"\327\002\n\020SendEmailRequest\022@\n\010" +
-      "receiver\030\001 \003(\0132$.by.notificationemail.v1" +
-      ".EmailStructR\010receiver\0224\n\002cc\030\002 \003(\0132$.by." +
-      "notificationemail.v1.EmailStructR\002cc\0226\n\003" +
-      "bbc\030\003 \003(\0132$.by.notificationemail.v1.Emai" +
-      "lStructR\003bbc\022?\n\010reply_to\030\004 \003(\0132$.by.noti" +
-      "ficationemail.v1.EmailStructR\007replyTo\022\030\n" +
-      "\007subject\030\005 \001(\tR\007subject\022\020\n\003tag\030\006 \001(\tR\003ta" +
-      "g\022\022\n\004text\030\007 \001(\tR\004text\022\022\n\004html\030\010 \001(\tR\004htm" +
-      "l\"+\n\025SendEmailInfoResponse\022\022\n\004send\030\001 \001(\010" +
+      "il\030\002 \001(\tR\005email\"\320\002\n\tEmailData\022@\n\010receive" +
+      "r\030\001 \003(\0132$.by.notificationemail.v1.EmailS" +
+      "tructR\010receiver\0224\n\002cc\030\002 \003(\0132$.by.notific" +
+      "ationemail.v1.EmailStructR\002cc\0226\n\003bbc\030\003 \003" +
+      "(\0132$.by.notificationemail.v1.EmailStruct" +
+      "R\003bbc\022?\n\010reply_to\030\004 \003(\0132$.by.notificatio" +
+      "nemail.v1.EmailStructR\007replyTo\022\030\n\007subjec" +
+      "t\030\005 \001(\tR\007subject\022\020\n\003tag\030\006 \001(\tR\003tag\022\022\n\004te" +
+      "xt\030\007 \001(\tR\004text\022\022\n\004html\030\010 \001(\tR\004html\"U\n\020Se" +
+      "ndEmailRequest\022A\n\nemail_data\030\001 \001(\0132\".by." +
+      "notificationemail.v1.EmailDataR\temailDat" +
+      "a\"+\n\025SendEmailInfoResponse\022\022\n\004send\030\001 \001(\010" +
       "R\004send\"\237\001\n\021SendEmailResponse\022\026\n\006status\030\001" +
       " \001(\tR\006status\022\030\n\007message\030\002 \001(\tR\007message\022B" +
       "\n\004info\030\003 \001(\0132..by.notificationemail.v1.S" +
@@ -80,20 +87,26 @@ public final class NotificationdataemailApiProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_by_notificationemail_v1_EmailStruct_descriptor,
         new java.lang.String[] { "Name", "Email", });
-    internal_static_by_notificationemail_v1_SendEmailRequest_descriptor =
+    internal_static_by_notificationemail_v1_EmailData_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_by_notificationemail_v1_EmailData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_by_notificationemail_v1_EmailData_descriptor,
+        new java.lang.String[] { "Receiver", "Cc", "Bbc", "ReplyTo", "Subject", "Tag", "Text", "Html", });
+    internal_static_by_notificationemail_v1_SendEmailRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_by_notificationemail_v1_SendEmailRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_by_notificationemail_v1_SendEmailRequest_descriptor,
-        new java.lang.String[] { "Receiver", "Cc", "Bbc", "ReplyTo", "Subject", "Tag", "Text", "Html", });
+        new java.lang.String[] { "EmailData", });
     internal_static_by_notificationemail_v1_SendEmailInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_by_notificationemail_v1_SendEmailInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_by_notificationemail_v1_SendEmailInfoResponse_descriptor,
         new java.lang.String[] { "Send", });
     internal_static_by_notificationemail_v1_SendEmailResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_by_notificationemail_v1_SendEmailResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_by_notificationemail_v1_SendEmailResponse_descriptor,

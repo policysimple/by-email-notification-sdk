@@ -31,8 +31,7 @@ message EmailStruct {
     string email = 2;
 }
 
-// SendEmailRequest ...
-message SendEmailRequest {
+message EmailData {
     repeated EmailStruct receiver = 1;
     repeated EmailStruct cc = 2;
     repeated EmailStruct bbc = 3;
@@ -41,6 +40,11 @@ message SendEmailRequest {
     string tag = 6;
     string text = 7;
     string html = 8;
+}
+
+// SendEmailRequest ...
+message SendEmailRequest {
+    EmailData email_data = 1;
 }
 
 // SendEmailInfoResponse ...

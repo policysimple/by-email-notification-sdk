@@ -35,6 +35,9 @@ ENV GO_PATH=$HOME/go
 ENV GOBIN=$GOPATH/bin
 ENV PATH=$PATH:/usr/local/go/bin
 ENV GO111MODULE=on
+ENV CGO_ENABLED=0 
+ENV GOOS=linux 
+ENV GOARCH=amd64
 RUN go get -u github.com/golang/protobuf/proto
 RUN go get -u github.com/golang/protobuf/protoc-gen-go
 RUN go get google.golang.org/grpc

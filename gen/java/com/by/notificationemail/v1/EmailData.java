@@ -4,10 +4,6 @@
 package com.by.notificationemail.v1;
 
 /**
- * <pre>
- * Email Data
- * </pre>
- *
  * Protobuf type {@code by.notificationemail.v1.EmailData}
  */
 public final class EmailData extends
@@ -20,8 +16,14 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private EmailData() {
-    name_ = "";
-    email_ = "";
+    receiver_ = java.util.Collections.emptyList();
+    cc_ = java.util.Collections.emptyList();
+    bbc_ = java.util.Collections.emptyList();
+    replyTo_ = java.util.Collections.emptyList();
+    subject_ = "";
+    tag_ = "";
+    text_ = "";
+    html_ = "";
   }
 
   @java.lang.Override
@@ -44,6 +46,7 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
+    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -55,15 +58,63 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              receiver_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            receiver_.add(
+                input.readMessage(com.by.notificationemail.v1.EmailStruct.parser(), extensionRegistry));
             break;
           }
           case 18: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              cc_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            cc_.add(
+                input.readMessage(com.by.notificationemail.v1.EmailStruct.parser(), extensionRegistry));
+            break;
+          }
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              bbc_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            bbc_.add(
+                input.readMessage(com.by.notificationemail.v1.EmailStruct.parser(), extensionRegistry));
+            break;
+          }
+          case 34: {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              replyTo_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>();
+              mutable_bitField0_ |= 0x00000008;
+            }
+            replyTo_.add(
+                input.readMessage(com.by.notificationemail.v1.EmailStruct.parser(), extensionRegistry));
+            break;
+          }
+          case 42: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            email_ = s;
+            subject_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            tag_ = s;
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            text_ = s;
+            break;
+          }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            html_ = s;
             break;
           }
           default: {
@@ -81,6 +132,18 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        receiver_ = java.util.Collections.unmodifiableList(receiver_);
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        cc_ = java.util.Collections.unmodifiableList(cc_);
+      }
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        bbc_ = java.util.Collections.unmodifiableList(bbc_);
+      }
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        replyTo_ = java.util.Collections.unmodifiableList(replyTo_);
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -98,76 +161,312 @@ private static final long serialVersionUID = 0L;
             com.by.notificationemail.v1.EmailData.class, com.by.notificationemail.v1.EmailData.Builder.class);
   }
 
-  public static final int NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object name_;
+  public static final int RECEIVER_FIELD_NUMBER = 1;
+  private java.util.List<com.by.notificationemail.v1.EmailStruct> receiver_;
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The name.
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
    */
   @java.lang.Override
-  public java.lang.String getName() {
-    java.lang.Object ref = name_;
+  public java.util.List<com.by.notificationemail.v1.EmailStruct> getReceiverList() {
+    return receiver_;
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+      getReceiverOrBuilderList() {
+    return receiver_;
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+   */
+  @java.lang.Override
+  public int getReceiverCount() {
+    return receiver_.size();
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+   */
+  @java.lang.Override
+  public com.by.notificationemail.v1.EmailStruct getReceiver(int index) {
+    return receiver_.get(index);
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+   */
+  @java.lang.Override
+  public com.by.notificationemail.v1.EmailStructOrBuilder getReceiverOrBuilder(
+      int index) {
+    return receiver_.get(index);
+  }
+
+  public static final int CC_FIELD_NUMBER = 2;
+  private java.util.List<com.by.notificationemail.v1.EmailStruct> cc_;
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.by.notificationemail.v1.EmailStruct> getCcList() {
+    return cc_;
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+      getCcOrBuilderList() {
+    return cc_;
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+   */
+  @java.lang.Override
+  public int getCcCount() {
+    return cc_.size();
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+   */
+  @java.lang.Override
+  public com.by.notificationemail.v1.EmailStruct getCc(int index) {
+    return cc_.get(index);
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+   */
+  @java.lang.Override
+  public com.by.notificationemail.v1.EmailStructOrBuilder getCcOrBuilder(
+      int index) {
+    return cc_.get(index);
+  }
+
+  public static final int BBC_FIELD_NUMBER = 3;
+  private java.util.List<com.by.notificationemail.v1.EmailStruct> bbc_;
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.by.notificationemail.v1.EmailStruct> getBbcList() {
+    return bbc_;
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+      getBbcOrBuilderList() {
+    return bbc_;
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+   */
+  @java.lang.Override
+  public int getBbcCount() {
+    return bbc_.size();
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+   */
+  @java.lang.Override
+  public com.by.notificationemail.v1.EmailStruct getBbc(int index) {
+    return bbc_.get(index);
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+   */
+  @java.lang.Override
+  public com.by.notificationemail.v1.EmailStructOrBuilder getBbcOrBuilder(
+      int index) {
+    return bbc_.get(index);
+  }
+
+  public static final int REPLY_TO_FIELD_NUMBER = 4;
+  private java.util.List<com.by.notificationemail.v1.EmailStruct> replyTo_;
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.by.notificationemail.v1.EmailStruct> getReplyToList() {
+    return replyTo_;
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+      getReplyToOrBuilderList() {
+    return replyTo_;
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+   */
+  @java.lang.Override
+  public int getReplyToCount() {
+    return replyTo_.size();
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+   */
+  @java.lang.Override
+  public com.by.notificationemail.v1.EmailStruct getReplyTo(int index) {
+    return replyTo_.get(index);
+  }
+  /**
+   * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+   */
+  @java.lang.Override
+  public com.by.notificationemail.v1.EmailStructOrBuilder getReplyToOrBuilder(
+      int index) {
+    return replyTo_.get(index);
+  }
+
+  public static final int SUBJECT_FIELD_NUMBER = 5;
+  private volatile java.lang.Object subject_;
+  /**
+   * <code>string subject = 5 [json_name = "subject"];</code>
+   * @return The subject.
+   */
+  @java.lang.Override
+  public java.lang.String getSubject() {
+    java.lang.Object ref = subject_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      name_ = s;
+      subject_ = s;
       return s;
     }
   }
   /**
-   * <code>string name = 1 [json_name = "name"];</code>
-   * @return The bytes for name.
+   * <code>string subject = 5 [json_name = "subject"];</code>
+   * @return The bytes for subject.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getNameBytes() {
-    java.lang.Object ref = name_;
+      getSubjectBytes() {
+    java.lang.Object ref = subject_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      name_ = b;
+      subject_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int EMAIL_FIELD_NUMBER = 2;
-  private volatile java.lang.Object email_;
+  public static final int TAG_FIELD_NUMBER = 6;
+  private volatile java.lang.Object tag_;
   /**
-   * <code>string email = 2 [json_name = "email"];</code>
-   * @return The email.
+   * <code>string tag = 6 [json_name = "tag"];</code>
+   * @return The tag.
    */
   @java.lang.Override
-  public java.lang.String getEmail() {
-    java.lang.Object ref = email_;
+  public java.lang.String getTag() {
+    java.lang.Object ref = tag_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      email_ = s;
+      tag_ = s;
       return s;
     }
   }
   /**
-   * <code>string email = 2 [json_name = "email"];</code>
-   * @return The bytes for email.
+   * <code>string tag = 6 [json_name = "tag"];</code>
+   * @return The bytes for tag.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getEmailBytes() {
-    java.lang.Object ref = email_;
+      getTagBytes() {
+    java.lang.Object ref = tag_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      email_ = b;
+      tag_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TEXT_FIELD_NUMBER = 7;
+  private volatile java.lang.Object text_;
+  /**
+   * <code>string text = 7 [json_name = "text"];</code>
+   * @return The text.
+   */
+  @java.lang.Override
+  public java.lang.String getText() {
+    java.lang.Object ref = text_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      text_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string text = 7 [json_name = "text"];</code>
+   * @return The bytes for text.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTextBytes() {
+    java.lang.Object ref = text_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      text_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int HTML_FIELD_NUMBER = 8;
+  private volatile java.lang.Object html_;
+  /**
+   * <code>string html = 8 [json_name = "html"];</code>
+   * @return The html.
+   */
+  @java.lang.Override
+  public java.lang.String getHtml() {
+    java.lang.Object ref = html_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      html_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string html = 8 [json_name = "html"];</code>
+   * @return The bytes for html.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getHtmlBytes() {
+    java.lang.Object ref = html_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      html_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -188,11 +487,29 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getNameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+    for (int i = 0; i < receiver_.size(); i++) {
+      output.writeMessage(1, receiver_.get(i));
     }
-    if (!getEmailBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, email_);
+    for (int i = 0; i < cc_.size(); i++) {
+      output.writeMessage(2, cc_.get(i));
+    }
+    for (int i = 0; i < bbc_.size(); i++) {
+      output.writeMessage(3, bbc_.get(i));
+    }
+    for (int i = 0; i < replyTo_.size(); i++) {
+      output.writeMessage(4, replyTo_.get(i));
+    }
+    if (!getSubjectBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, subject_);
+    }
+    if (!getTagBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, tag_);
+    }
+    if (!getTextBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, text_);
+    }
+    if (!getHtmlBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, html_);
     }
     unknownFields.writeTo(output);
   }
@@ -203,11 +520,33 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getNameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+    for (int i = 0; i < receiver_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(1, receiver_.get(i));
     }
-    if (!getEmailBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, email_);
+    for (int i = 0; i < cc_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, cc_.get(i));
+    }
+    for (int i = 0; i < bbc_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, bbc_.get(i));
+    }
+    for (int i = 0; i < replyTo_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, replyTo_.get(i));
+    }
+    if (!getSubjectBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, subject_);
+    }
+    if (!getTagBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, tag_);
+    }
+    if (!getTextBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, text_);
+    }
+    if (!getHtmlBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, html_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -224,10 +563,22 @@ private static final long serialVersionUID = 0L;
     }
     com.by.notificationemail.v1.EmailData other = (com.by.notificationemail.v1.EmailData) obj;
 
-    if (!getName()
-        .equals(other.getName())) return false;
-    if (!getEmail()
-        .equals(other.getEmail())) return false;
+    if (!getReceiverList()
+        .equals(other.getReceiverList())) return false;
+    if (!getCcList()
+        .equals(other.getCcList())) return false;
+    if (!getBbcList()
+        .equals(other.getBbcList())) return false;
+    if (!getReplyToList()
+        .equals(other.getReplyToList())) return false;
+    if (!getSubject()
+        .equals(other.getSubject())) return false;
+    if (!getTag()
+        .equals(other.getTag())) return false;
+    if (!getText()
+        .equals(other.getText())) return false;
+    if (!getHtml()
+        .equals(other.getHtml())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -239,10 +590,30 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getName().hashCode();
-    hash = (37 * hash) + EMAIL_FIELD_NUMBER;
-    hash = (53 * hash) + getEmail().hashCode();
+    if (getReceiverCount() > 0) {
+      hash = (37 * hash) + RECEIVER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverList().hashCode();
+    }
+    if (getCcCount() > 0) {
+      hash = (37 * hash) + CC_FIELD_NUMBER;
+      hash = (53 * hash) + getCcList().hashCode();
+    }
+    if (getBbcCount() > 0) {
+      hash = (37 * hash) + BBC_FIELD_NUMBER;
+      hash = (53 * hash) + getBbcList().hashCode();
+    }
+    if (getReplyToCount() > 0) {
+      hash = (37 * hash) + REPLY_TO_FIELD_NUMBER;
+      hash = (53 * hash) + getReplyToList().hashCode();
+    }
+    hash = (37 * hash) + SUBJECT_FIELD_NUMBER;
+    hash = (53 * hash) + getSubject().hashCode();
+    hash = (37 * hash) + TAG_FIELD_NUMBER;
+    hash = (53 * hash) + getTag().hashCode();
+    hash = (37 * hash) + TEXT_FIELD_NUMBER;
+    hash = (53 * hash) + getText().hashCode();
+    hash = (37 * hash) + HTML_FIELD_NUMBER;
+    hash = (53 * hash) + getHtml().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -339,10 +710,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * Email Data
-   * </pre>
-   *
    * Protobuf type {@code by.notificationemail.v1.EmailData}
    */
   public static final class Builder extends
@@ -375,14 +742,46 @@ private static final long serialVersionUID = 0L;
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+        getReceiverFieldBuilder();
+        getCcFieldBuilder();
+        getBbcFieldBuilder();
+        getReplyToFieldBuilder();
       }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      name_ = "";
+      if (receiverBuilder_ == null) {
+        receiver_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      } else {
+        receiverBuilder_.clear();
+      }
+      if (ccBuilder_ == null) {
+        cc_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      } else {
+        ccBuilder_.clear();
+      }
+      if (bbcBuilder_ == null) {
+        bbc_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+      } else {
+        bbcBuilder_.clear();
+      }
+      if (replyToBuilder_ == null) {
+        replyTo_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      } else {
+        replyToBuilder_.clear();
+      }
+      subject_ = "";
 
-      email_ = "";
+      tag_ = "";
+
+      text_ = "";
+
+      html_ = "";
 
       return this;
     }
@@ -410,8 +809,47 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.by.notificationemail.v1.EmailData buildPartial() {
       com.by.notificationemail.v1.EmailData result = new com.by.notificationemail.v1.EmailData(this);
-      result.name_ = name_;
-      result.email_ = email_;
+      int from_bitField0_ = bitField0_;
+      if (receiverBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          receiver_ = java.util.Collections.unmodifiableList(receiver_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.receiver_ = receiver_;
+      } else {
+        result.receiver_ = receiverBuilder_.build();
+      }
+      if (ccBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          cc_ = java.util.Collections.unmodifiableList(cc_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.cc_ = cc_;
+      } else {
+        result.cc_ = ccBuilder_.build();
+      }
+      if (bbcBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          bbc_ = java.util.Collections.unmodifiableList(bbc_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.bbc_ = bbc_;
+      } else {
+        result.bbc_ = bbcBuilder_.build();
+      }
+      if (replyToBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          replyTo_ = java.util.Collections.unmodifiableList(replyTo_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.replyTo_ = replyTo_;
+      } else {
+        result.replyTo_ = replyToBuilder_.build();
+      }
+      result.subject_ = subject_;
+      result.tag_ = tag_;
+      result.text_ = text_;
+      result.html_ = html_;
       onBuilt();
       return result;
     }
@@ -460,12 +898,124 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.by.notificationemail.v1.EmailData other) {
       if (other == com.by.notificationemail.v1.EmailData.getDefaultInstance()) return this;
-      if (!other.getName().isEmpty()) {
-        name_ = other.name_;
+      if (receiverBuilder_ == null) {
+        if (!other.receiver_.isEmpty()) {
+          if (receiver_.isEmpty()) {
+            receiver_ = other.receiver_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureReceiverIsMutable();
+            receiver_.addAll(other.receiver_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.receiver_.isEmpty()) {
+          if (receiverBuilder_.isEmpty()) {
+            receiverBuilder_.dispose();
+            receiverBuilder_ = null;
+            receiver_ = other.receiver_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            receiverBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getReceiverFieldBuilder() : null;
+          } else {
+            receiverBuilder_.addAllMessages(other.receiver_);
+          }
+        }
+      }
+      if (ccBuilder_ == null) {
+        if (!other.cc_.isEmpty()) {
+          if (cc_.isEmpty()) {
+            cc_ = other.cc_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureCcIsMutable();
+            cc_.addAll(other.cc_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.cc_.isEmpty()) {
+          if (ccBuilder_.isEmpty()) {
+            ccBuilder_.dispose();
+            ccBuilder_ = null;
+            cc_ = other.cc_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            ccBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getCcFieldBuilder() : null;
+          } else {
+            ccBuilder_.addAllMessages(other.cc_);
+          }
+        }
+      }
+      if (bbcBuilder_ == null) {
+        if (!other.bbc_.isEmpty()) {
+          if (bbc_.isEmpty()) {
+            bbc_ = other.bbc_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureBbcIsMutable();
+            bbc_.addAll(other.bbc_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.bbc_.isEmpty()) {
+          if (bbcBuilder_.isEmpty()) {
+            bbcBuilder_.dispose();
+            bbcBuilder_ = null;
+            bbc_ = other.bbc_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            bbcBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getBbcFieldBuilder() : null;
+          } else {
+            bbcBuilder_.addAllMessages(other.bbc_);
+          }
+        }
+      }
+      if (replyToBuilder_ == null) {
+        if (!other.replyTo_.isEmpty()) {
+          if (replyTo_.isEmpty()) {
+            replyTo_ = other.replyTo_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureReplyToIsMutable();
+            replyTo_.addAll(other.replyTo_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.replyTo_.isEmpty()) {
+          if (replyToBuilder_.isEmpty()) {
+            replyToBuilder_.dispose();
+            replyToBuilder_ = null;
+            replyTo_ = other.replyTo_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+            replyToBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getReplyToFieldBuilder() : null;
+          } else {
+            replyToBuilder_.addAllMessages(other.replyTo_);
+          }
+        }
+      }
+      if (!other.getSubject().isEmpty()) {
+        subject_ = other.subject_;
         onChanged();
       }
-      if (!other.getEmail().isEmpty()) {
-        email_ = other.email_;
+      if (!other.getTag().isEmpty()) {
+        tag_ = other.tag_;
+        onChanged();
+      }
+      if (!other.getText().isEmpty()) {
+        text_ = other.text_;
+        onChanged();
+      }
+      if (!other.getHtml().isEmpty()) {
+        html_ = other.html_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -496,155 +1046,1268 @@ private static final long serialVersionUID = 0L;
       }
       return this;
     }
+    private int bitField0_;
 
-    private java.lang.Object name_ = "";
+    private java.util.List<com.by.notificationemail.v1.EmailStruct> receiver_ =
+      java.util.Collections.emptyList();
+    private void ensureReceiverIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        receiver_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>(receiver_);
+        bitField0_ |= 0x00000001;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> receiverBuilder_;
+
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The name.
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
      */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
+    public java.util.List<com.by.notificationemail.v1.EmailStruct> getReceiverList() {
+      if (receiverBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(receiver_);
+      } else {
+        return receiverBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public int getReceiverCount() {
+      if (receiverBuilder_ == null) {
+        return receiver_.size();
+      } else {
+        return receiverBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct getReceiver(int index) {
+      if (receiverBuilder_ == null) {
+        return receiver_.get(index);
+      } else {
+        return receiverBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public Builder setReceiver(
+        int index, com.by.notificationemail.v1.EmailStruct value) {
+      if (receiverBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverIsMutable();
+        receiver_.set(index, value);
+        onChanged();
+      } else {
+        receiverBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public Builder setReceiver(
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (receiverBuilder_ == null) {
+        ensureReceiverIsMutable();
+        receiver_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        receiverBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public Builder addReceiver(com.by.notificationemail.v1.EmailStruct value) {
+      if (receiverBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverIsMutable();
+        receiver_.add(value);
+        onChanged();
+      } else {
+        receiverBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public Builder addReceiver(
+        int index, com.by.notificationemail.v1.EmailStruct value) {
+      if (receiverBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverIsMutable();
+        receiver_.add(index, value);
+        onChanged();
+      } else {
+        receiverBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public Builder addReceiver(
+        com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (receiverBuilder_ == null) {
+        ensureReceiverIsMutable();
+        receiver_.add(builderForValue.build());
+        onChanged();
+      } else {
+        receiverBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public Builder addReceiver(
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (receiverBuilder_ == null) {
+        ensureReceiverIsMutable();
+        receiver_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        receiverBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public Builder addAllReceiver(
+        java.lang.Iterable<? extends com.by.notificationemail.v1.EmailStruct> values) {
+      if (receiverBuilder_ == null) {
+        ensureReceiverIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, receiver_);
+        onChanged();
+      } else {
+        receiverBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public Builder clearReceiver() {
+      if (receiverBuilder_ == null) {
+        receiver_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        receiverBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public Builder removeReceiver(int index) {
+      if (receiverBuilder_ == null) {
+        ensureReceiverIsMutable();
+        receiver_.remove(index);
+        onChanged();
+      } else {
+        receiverBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct.Builder getReceiverBuilder(
+        int index) {
+      return getReceiverFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStructOrBuilder getReceiverOrBuilder(
+        int index) {
+      if (receiverBuilder_ == null) {
+        return receiver_.get(index);  } else {
+        return receiverBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+         getReceiverOrBuilderList() {
+      if (receiverBuilder_ != null) {
+        return receiverBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(receiver_);
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct.Builder addReceiverBuilder() {
+      return getReceiverFieldBuilder().addBuilder(
+          com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct.Builder addReceiverBuilder(
+        int index) {
+      return getReceiverFieldBuilder().addBuilder(
+          index, com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct receiver = 1 [json_name = "receiver"];</code>
+     */
+    public java.util.List<com.by.notificationemail.v1.EmailStruct.Builder> 
+         getReceiverBuilderList() {
+      return getReceiverFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> 
+        getReceiverFieldBuilder() {
+      if (receiverBuilder_ == null) {
+        receiverBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder>(
+                receiver_,
+                ((bitField0_ & 0x00000001) != 0),
+                getParentForChildren(),
+                isClean());
+        receiver_ = null;
+      }
+      return receiverBuilder_;
+    }
+
+    private java.util.List<com.by.notificationemail.v1.EmailStruct> cc_ =
+      java.util.Collections.emptyList();
+    private void ensureCcIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        cc_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>(cc_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> ccBuilder_;
+
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public java.util.List<com.by.notificationemail.v1.EmailStruct> getCcList() {
+      if (ccBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(cc_);
+      } else {
+        return ccBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public int getCcCount() {
+      if (ccBuilder_ == null) {
+        return cc_.size();
+      } else {
+        return ccBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct getCc(int index) {
+      if (ccBuilder_ == null) {
+        return cc_.get(index);
+      } else {
+        return ccBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public Builder setCc(
+        int index, com.by.notificationemail.v1.EmailStruct value) {
+      if (ccBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCcIsMutable();
+        cc_.set(index, value);
+        onChanged();
+      } else {
+        ccBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public Builder setCc(
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (ccBuilder_ == null) {
+        ensureCcIsMutable();
+        cc_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        ccBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public Builder addCc(com.by.notificationemail.v1.EmailStruct value) {
+      if (ccBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCcIsMutable();
+        cc_.add(value);
+        onChanged();
+      } else {
+        ccBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public Builder addCc(
+        int index, com.by.notificationemail.v1.EmailStruct value) {
+      if (ccBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCcIsMutable();
+        cc_.add(index, value);
+        onChanged();
+      } else {
+        ccBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public Builder addCc(
+        com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (ccBuilder_ == null) {
+        ensureCcIsMutable();
+        cc_.add(builderForValue.build());
+        onChanged();
+      } else {
+        ccBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public Builder addCc(
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (ccBuilder_ == null) {
+        ensureCcIsMutable();
+        cc_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        ccBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public Builder addAllCc(
+        java.lang.Iterable<? extends com.by.notificationemail.v1.EmailStruct> values) {
+      if (ccBuilder_ == null) {
+        ensureCcIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, cc_);
+        onChanged();
+      } else {
+        ccBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public Builder clearCc() {
+      if (ccBuilder_ == null) {
+        cc_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        ccBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public Builder removeCc(int index) {
+      if (ccBuilder_ == null) {
+        ensureCcIsMutable();
+        cc_.remove(index);
+        onChanged();
+      } else {
+        ccBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct.Builder getCcBuilder(
+        int index) {
+      return getCcFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStructOrBuilder getCcOrBuilder(
+        int index) {
+      if (ccBuilder_ == null) {
+        return cc_.get(index);  } else {
+        return ccBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+         getCcOrBuilderList() {
+      if (ccBuilder_ != null) {
+        return ccBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(cc_);
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct.Builder addCcBuilder() {
+      return getCcFieldBuilder().addBuilder(
+          com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct.Builder addCcBuilder(
+        int index) {
+      return getCcFieldBuilder().addBuilder(
+          index, com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct cc = 2 [json_name = "cc"];</code>
+     */
+    public java.util.List<com.by.notificationemail.v1.EmailStruct.Builder> 
+         getCcBuilderList() {
+      return getCcFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> 
+        getCcFieldBuilder() {
+      if (ccBuilder_ == null) {
+        ccBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder>(
+                cc_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        cc_ = null;
+      }
+      return ccBuilder_;
+    }
+
+    private java.util.List<com.by.notificationemail.v1.EmailStruct> bbc_ =
+      java.util.Collections.emptyList();
+    private void ensureBbcIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        bbc_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>(bbc_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> bbcBuilder_;
+
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public java.util.List<com.by.notificationemail.v1.EmailStruct> getBbcList() {
+      if (bbcBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(bbc_);
+      } else {
+        return bbcBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public int getBbcCount() {
+      if (bbcBuilder_ == null) {
+        return bbc_.size();
+      } else {
+        return bbcBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct getBbc(int index) {
+      if (bbcBuilder_ == null) {
+        return bbc_.get(index);
+      } else {
+        return bbcBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public Builder setBbc(
+        int index, com.by.notificationemail.v1.EmailStruct value) {
+      if (bbcBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureBbcIsMutable();
+        bbc_.set(index, value);
+        onChanged();
+      } else {
+        bbcBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public Builder setBbc(
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (bbcBuilder_ == null) {
+        ensureBbcIsMutable();
+        bbc_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        bbcBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public Builder addBbc(com.by.notificationemail.v1.EmailStruct value) {
+      if (bbcBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureBbcIsMutable();
+        bbc_.add(value);
+        onChanged();
+      } else {
+        bbcBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public Builder addBbc(
+        int index, com.by.notificationemail.v1.EmailStruct value) {
+      if (bbcBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureBbcIsMutable();
+        bbc_.add(index, value);
+        onChanged();
+      } else {
+        bbcBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public Builder addBbc(
+        com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (bbcBuilder_ == null) {
+        ensureBbcIsMutable();
+        bbc_.add(builderForValue.build());
+        onChanged();
+      } else {
+        bbcBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public Builder addBbc(
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (bbcBuilder_ == null) {
+        ensureBbcIsMutable();
+        bbc_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        bbcBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public Builder addAllBbc(
+        java.lang.Iterable<? extends com.by.notificationemail.v1.EmailStruct> values) {
+      if (bbcBuilder_ == null) {
+        ensureBbcIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, bbc_);
+        onChanged();
+      } else {
+        bbcBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public Builder clearBbc() {
+      if (bbcBuilder_ == null) {
+        bbc_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        bbcBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public Builder removeBbc(int index) {
+      if (bbcBuilder_ == null) {
+        ensureBbcIsMutable();
+        bbc_.remove(index);
+        onChanged();
+      } else {
+        bbcBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct.Builder getBbcBuilder(
+        int index) {
+      return getBbcFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStructOrBuilder getBbcOrBuilder(
+        int index) {
+      if (bbcBuilder_ == null) {
+        return bbc_.get(index);  } else {
+        return bbcBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+         getBbcOrBuilderList() {
+      if (bbcBuilder_ != null) {
+        return bbcBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(bbc_);
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct.Builder addBbcBuilder() {
+      return getBbcFieldBuilder().addBuilder(
+          com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct.Builder addBbcBuilder(
+        int index) {
+      return getBbcFieldBuilder().addBuilder(
+          index, com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct bbc = 3 [json_name = "bbc"];</code>
+     */
+    public java.util.List<com.by.notificationemail.v1.EmailStruct.Builder> 
+         getBbcBuilderList() {
+      return getBbcFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> 
+        getBbcFieldBuilder() {
+      if (bbcBuilder_ == null) {
+        bbcBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder>(
+                bbc_,
+                ((bitField0_ & 0x00000004) != 0),
+                getParentForChildren(),
+                isClean());
+        bbc_ = null;
+      }
+      return bbcBuilder_;
+    }
+
+    private java.util.List<com.by.notificationemail.v1.EmailStruct> replyTo_ =
+      java.util.Collections.emptyList();
+    private void ensureReplyToIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        replyTo_ = new java.util.ArrayList<com.by.notificationemail.v1.EmailStruct>(replyTo_);
+        bitField0_ |= 0x00000008;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> replyToBuilder_;
+
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public java.util.List<com.by.notificationemail.v1.EmailStruct> getReplyToList() {
+      if (replyToBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(replyTo_);
+      } else {
+        return replyToBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public int getReplyToCount() {
+      if (replyToBuilder_ == null) {
+        return replyTo_.size();
+      } else {
+        return replyToBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct getReplyTo(int index) {
+      if (replyToBuilder_ == null) {
+        return replyTo_.get(index);
+      } else {
+        return replyToBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public Builder setReplyTo(
+        int index, com.by.notificationemail.v1.EmailStruct value) {
+      if (replyToBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReplyToIsMutable();
+        replyTo_.set(index, value);
+        onChanged();
+      } else {
+        replyToBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public Builder setReplyTo(
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (replyToBuilder_ == null) {
+        ensureReplyToIsMutable();
+        replyTo_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        replyToBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public Builder addReplyTo(com.by.notificationemail.v1.EmailStruct value) {
+      if (replyToBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReplyToIsMutable();
+        replyTo_.add(value);
+        onChanged();
+      } else {
+        replyToBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public Builder addReplyTo(
+        int index, com.by.notificationemail.v1.EmailStruct value) {
+      if (replyToBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReplyToIsMutable();
+        replyTo_.add(index, value);
+        onChanged();
+      } else {
+        replyToBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public Builder addReplyTo(
+        com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (replyToBuilder_ == null) {
+        ensureReplyToIsMutable();
+        replyTo_.add(builderForValue.build());
+        onChanged();
+      } else {
+        replyToBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public Builder addReplyTo(
+        int index, com.by.notificationemail.v1.EmailStruct.Builder builderForValue) {
+      if (replyToBuilder_ == null) {
+        ensureReplyToIsMutable();
+        replyTo_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        replyToBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public Builder addAllReplyTo(
+        java.lang.Iterable<? extends com.by.notificationemail.v1.EmailStruct> values) {
+      if (replyToBuilder_ == null) {
+        ensureReplyToIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, replyTo_);
+        onChanged();
+      } else {
+        replyToBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public Builder clearReplyTo() {
+      if (replyToBuilder_ == null) {
+        replyTo_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+      } else {
+        replyToBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public Builder removeReplyTo(int index) {
+      if (replyToBuilder_ == null) {
+        ensureReplyToIsMutable();
+        replyTo_.remove(index);
+        onChanged();
+      } else {
+        replyToBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct.Builder getReplyToBuilder(
+        int index) {
+      return getReplyToFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStructOrBuilder getReplyToOrBuilder(
+        int index) {
+      if (replyToBuilder_ == null) {
+        return replyTo_.get(index);  } else {
+        return replyToBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public java.util.List<? extends com.by.notificationemail.v1.EmailStructOrBuilder> 
+         getReplyToOrBuilderList() {
+      if (replyToBuilder_ != null) {
+        return replyToBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(replyTo_);
+      }
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct.Builder addReplyToBuilder() {
+      return getReplyToFieldBuilder().addBuilder(
+          com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public com.by.notificationemail.v1.EmailStruct.Builder addReplyToBuilder(
+        int index) {
+      return getReplyToFieldBuilder().addBuilder(
+          index, com.by.notificationemail.v1.EmailStruct.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .by.notificationemail.v1.EmailStruct reply_to = 4 [json_name = "replyTo"];</code>
+     */
+    public java.util.List<com.by.notificationemail.v1.EmailStruct.Builder> 
+         getReplyToBuilderList() {
+      return getReplyToFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder> 
+        getReplyToFieldBuilder() {
+      if (replyToBuilder_ == null) {
+        replyToBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.by.notificationemail.v1.EmailStruct, com.by.notificationemail.v1.EmailStruct.Builder, com.by.notificationemail.v1.EmailStructOrBuilder>(
+                replyTo_,
+                ((bitField0_ & 0x00000008) != 0),
+                getParentForChildren(),
+                isClean());
+        replyTo_ = null;
+      }
+      return replyToBuilder_;
+    }
+
+    private java.lang.Object subject_ = "";
+    /**
+     * <code>string subject = 5 [json_name = "subject"];</code>
+     * @return The subject.
+     */
+    public java.lang.String getSubject() {
+      java.lang.Object ref = subject_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        name_ = s;
+        subject_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @return The bytes for name.
+     * <code>string subject = 5 [json_name = "subject"];</code>
+     * @return The bytes for subject.
      */
     public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
+        getSubjectBytes() {
+      java.lang.Object ref = subject_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        name_ = b;
+        subject_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @param value The name to set.
+     * <code>string subject = 5 [json_name = "subject"];</code>
+     * @param value The subject to set.
      * @return This builder for chaining.
      */
-    public Builder setName(
+    public Builder setSubject(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      name_ = value;
+      subject_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string subject = 5 [json_name = "subject"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearName() {
+    public Builder clearSubject() {
       
-      name_ = getDefaultInstance().getName();
+      subject_ = getDefaultInstance().getSubject();
       onChanged();
       return this;
     }
     /**
-     * <code>string name = 1 [json_name = "name"];</code>
-     * @param value The bytes for name to set.
+     * <code>string subject = 5 [json_name = "subject"];</code>
+     * @param value The bytes for subject to set.
      * @return This builder for chaining.
      */
-    public Builder setNameBytes(
+    public Builder setSubjectBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      name_ = value;
+      subject_ = value;
       onChanged();
       return this;
     }
 
-    private java.lang.Object email_ = "";
+    private java.lang.Object tag_ = "";
     /**
-     * <code>string email = 2 [json_name = "email"];</code>
-     * @return The email.
+     * <code>string tag = 6 [json_name = "tag"];</code>
+     * @return The tag.
      */
-    public java.lang.String getEmail() {
-      java.lang.Object ref = email_;
+    public java.lang.String getTag() {
+      java.lang.Object ref = tag_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        email_ = s;
+        tag_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string email = 2 [json_name = "email"];</code>
-     * @return The bytes for email.
+     * <code>string tag = 6 [json_name = "tag"];</code>
+     * @return The bytes for tag.
      */
     public com.google.protobuf.ByteString
-        getEmailBytes() {
-      java.lang.Object ref = email_;
+        getTagBytes() {
+      java.lang.Object ref = tag_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        email_ = b;
+        tag_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string email = 2 [json_name = "email"];</code>
-     * @param value The email to set.
+     * <code>string tag = 6 [json_name = "tag"];</code>
+     * @param value The tag to set.
      * @return This builder for chaining.
      */
-    public Builder setEmail(
+    public Builder setTag(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      email_ = value;
+      tag_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string email = 2 [json_name = "email"];</code>
+     * <code>string tag = 6 [json_name = "tag"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearEmail() {
+    public Builder clearTag() {
       
-      email_ = getDefaultInstance().getEmail();
+      tag_ = getDefaultInstance().getTag();
       onChanged();
       return this;
     }
     /**
-     * <code>string email = 2 [json_name = "email"];</code>
-     * @param value The bytes for email to set.
+     * <code>string tag = 6 [json_name = "tag"];</code>
+     * @param value The bytes for tag to set.
      * @return This builder for chaining.
      */
-    public Builder setEmailBytes(
+    public Builder setTagBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      email_ = value;
+      tag_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object text_ = "";
+    /**
+     * <code>string text = 7 [json_name = "text"];</code>
+     * @return The text.
+     */
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string text = 7 [json_name = "text"];</code>
+     * @return The bytes for text.
+     */
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string text = 7 [json_name = "text"];</code>
+     * @param value The text to set.
+     * @return This builder for chaining.
+     */
+    public Builder setText(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      text_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string text = 7 [json_name = "text"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearText() {
+      
+      text_ = getDefaultInstance().getText();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string text = 7 [json_name = "text"];</code>
+     * @param value The bytes for text to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTextBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      text_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object html_ = "";
+    /**
+     * <code>string html = 8 [json_name = "html"];</code>
+     * @return The html.
+     */
+    public java.lang.String getHtml() {
+      java.lang.Object ref = html_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        html_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string html = 8 [json_name = "html"];</code>
+     * @return The bytes for html.
+     */
+    public com.google.protobuf.ByteString
+        getHtmlBytes() {
+      java.lang.Object ref = html_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        html_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string html = 8 [json_name = "html"];</code>
+     * @param value The html to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHtml(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      html_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string html = 8 [json_name = "html"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHtml() {
+      
+      html_ = getDefaultInstance().getHtml();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string html = 8 [json_name = "html"];</code>
+     * @param value The bytes for html to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHtmlBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      html_ = value;
       onChanged();
       return this;
     }

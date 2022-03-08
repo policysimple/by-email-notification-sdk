@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n\033com.by.notificationemail.v1B\035NotificationdataemailApiProtoP\001ZJgithub.com/cuemby/by-email-notifications-sdk/gen/go/by/notificationemailv1\242\002\003ANX\252\002\027By.Notificationemail.V1\312\002\027By\\Notificationemail\\V1',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n3by/notificationemail/v1/by_email_notification.proto\x12\x17\x62y.notificationemail.v1\"7\n\x0b\x45mailStruct\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x14\n\x05\x65mail\x18\x02 \x01(\tR\x05\x65mail\"\xd7\x02\n\x10SendEmailRequest\x12@\n\x08receiver\x18\x01 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x08receiver\x12\x34\n\x02\x63\x63\x18\x02 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x02\x63\x63\x12\x36\n\x03\x62\x62\x63\x18\x03 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x03\x62\x62\x63\x12?\n\x08reply_to\x18\x04 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x07replyTo\x12\x18\n\x07subject\x18\x05 \x01(\tR\x07subject\x12\x10\n\x03tag\x18\x06 \x01(\tR\x03tag\x12\x12\n\x04text\x18\x07 \x01(\tR\x04text\x12\x12\n\x04html\x18\x08 \x01(\tR\x04html\"+\n\x15SendEmailInfoResponse\x12\x12\n\x04send\x18\x01 \x01(\x08R\x04send\"\x9f\x01\n\x11SendEmailResponse\x12\x16\n\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n\x07message\x18\x02 \x01(\tR\x07message\x12\x42\n\x04info\x18\x03 \x01(\x0b\x32..by.notificationemail.v1.SendEmailInfoResponseR\x04info\x12\x14\n\x05\x65rror\x18\x04 \x01(\tR\x05\x65rror2\x81\x01\n\x1bNotificationEmailAPIService\x12\x62\n\tSendEmail\x12).by.notificationemail.v1.SendEmailRequest\x1a*.by.notificationemail.v1.SendEmailResponseB\xc4\x01\n\x1b\x63om.by.notificationemail.v1B\x1dNotificationdataemailApiProtoP\x01ZJgithub.com/cuemby/by-email-notifications-sdk/gen/go/by/notificationemailv1\xa2\x02\x03\x41NX\xaa\x02\x17\x42y.Notificationemail.V1\xca\x02\x17\x42y\\Notificationemail\\V1b\x06proto3'
+  serialized_pb=b'\n3by/notificationemail/v1/by_email_notification.proto\x12\x17\x62y.notificationemail.v1\"7\n\x0b\x45mailStruct\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x14\n\x05\x65mail\x18\x02 \x01(\tR\x05\x65mail\"\xd0\x02\n\tEmailData\x12@\n\x08receiver\x18\x01 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x08receiver\x12\x34\n\x02\x63\x63\x18\x02 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x02\x63\x63\x12\x36\n\x03\x62\x62\x63\x18\x03 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x03\x62\x62\x63\x12?\n\x08reply_to\x18\x04 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x07replyTo\x12\x18\n\x07subject\x18\x05 \x01(\tR\x07subject\x12\x10\n\x03tag\x18\x06 \x01(\tR\x03tag\x12\x12\n\x04text\x18\x07 \x01(\tR\x04text\x12\x12\n\x04html\x18\x08 \x01(\tR\x04html\"U\n\x10SendEmailRequest\x12\x41\n\nemail_data\x18\x01 \x01(\x0b\x32\".by.notificationemail.v1.EmailDataR\temailData\"+\n\x15SendEmailInfoResponse\x12\x12\n\x04send\x18\x01 \x01(\x08R\x04send\"\x9f\x01\n\x11SendEmailResponse\x12\x16\n\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n\x07message\x18\x02 \x01(\tR\x07message\x12\x42\n\x04info\x18\x03 \x01(\x0b\x32..by.notificationemail.v1.SendEmailInfoResponseR\x04info\x12\x14\n\x05\x65rror\x18\x04 \x01(\tR\x05\x65rror2\x81\x01\n\x1bNotificationEmailAPIService\x12\x62\n\tSendEmail\x12).by.notificationemail.v1.SendEmailRequest\x1a*.by.notificationemail.v1.SendEmailResponseB\xc4\x01\n\x1b\x63om.by.notificationemail.v1B\x1dNotificationdataemailApiProtoP\x01ZJgithub.com/cuemby/by-email-notifications-sdk/gen/go/by/notificationemailv1\xa2\x02\x03\x41NX\xaa\x02\x17\x42y.Notificationemail.V1\xca\x02\x17\x42y\\Notificationemail\\V1b\x06proto3'
 )
 
 
@@ -64,65 +64,65 @@ _EMAILSTRUCT = _descriptor.Descriptor(
 )
 
 
-_SENDEMAILREQUEST = _descriptor.Descriptor(
-  name='SendEmailRequest',
-  full_name='by.notificationemail.v1.SendEmailRequest',
+_EMAILDATA = _descriptor.Descriptor(
+  name='EmailData',
+  full_name='by.notificationemail.v1.EmailData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='receiver', full_name='by.notificationemail.v1.SendEmailRequest.receiver', index=0,
+      name='receiver', full_name='by.notificationemail.v1.EmailData.receiver', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='receiver', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='cc', full_name='by.notificationemail.v1.SendEmailRequest.cc', index=1,
+      name='cc', full_name='by.notificationemail.v1.EmailData.cc', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='cc', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='bbc', full_name='by.notificationemail.v1.SendEmailRequest.bbc', index=2,
+      name='bbc', full_name='by.notificationemail.v1.EmailData.bbc', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='bbc', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='reply_to', full_name='by.notificationemail.v1.SendEmailRequest.reply_to', index=3,
+      name='reply_to', full_name='by.notificationemail.v1.EmailData.reply_to', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='replyTo', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='subject', full_name='by.notificationemail.v1.SendEmailRequest.subject', index=4,
+      name='subject', full_name='by.notificationemail.v1.EmailData.subject', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='subject', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='tag', full_name='by.notificationemail.v1.SendEmailRequest.tag', index=5,
+      name='tag', full_name='by.notificationemail.v1.EmailData.tag', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='tag', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='text', full_name='by.notificationemail.v1.SendEmailRequest.text', index=6,
+      name='text', full_name='by.notificationemail.v1.EmailData.text', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='text', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='html', full_name='by.notificationemail.v1.SendEmailRequest.html', index=7,
+      name='html', full_name='by.notificationemail.v1.EmailData.html', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -141,7 +141,39 @@ _SENDEMAILREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=138,
-  serialized_end=481,
+  serialized_end=474,
+)
+
+
+_SENDEMAILREQUEST = _descriptor.Descriptor(
+  name='SendEmailRequest',
+  full_name='by.notificationemail.v1.SendEmailRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='email_data', full_name='by.notificationemail.v1.SendEmailRequest.email_data', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, json_name='emailData', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=476,
+  serialized_end=561,
 )
 
 
@@ -172,8 +204,8 @@ _SENDEMAILINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=483,
-  serialized_end=526,
+  serialized_start=563,
+  serialized_end=606,
 )
 
 
@@ -225,16 +257,18 @@ _SENDEMAILRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=529,
-  serialized_end=688,
+  serialized_start=609,
+  serialized_end=768,
 )
 
-_SENDEMAILREQUEST.fields_by_name['receiver'].message_type = _EMAILSTRUCT
-_SENDEMAILREQUEST.fields_by_name['cc'].message_type = _EMAILSTRUCT
-_SENDEMAILREQUEST.fields_by_name['bbc'].message_type = _EMAILSTRUCT
-_SENDEMAILREQUEST.fields_by_name['reply_to'].message_type = _EMAILSTRUCT
+_EMAILDATA.fields_by_name['receiver'].message_type = _EMAILSTRUCT
+_EMAILDATA.fields_by_name['cc'].message_type = _EMAILSTRUCT
+_EMAILDATA.fields_by_name['bbc'].message_type = _EMAILSTRUCT
+_EMAILDATA.fields_by_name['reply_to'].message_type = _EMAILSTRUCT
+_SENDEMAILREQUEST.fields_by_name['email_data'].message_type = _EMAILDATA
 _SENDEMAILRESPONSE.fields_by_name['info'].message_type = _SENDEMAILINFORESPONSE
 DESCRIPTOR.message_types_by_name['EmailStruct'] = _EMAILSTRUCT
+DESCRIPTOR.message_types_by_name['EmailData'] = _EMAILDATA
 DESCRIPTOR.message_types_by_name['SendEmailRequest'] = _SENDEMAILREQUEST
 DESCRIPTOR.message_types_by_name['SendEmailInfoResponse'] = _SENDEMAILINFORESPONSE
 DESCRIPTOR.message_types_by_name['SendEmailResponse'] = _SENDEMAILRESPONSE
@@ -246,6 +280,13 @@ EmailStruct = _reflection.GeneratedProtocolMessageType('EmailStruct', (_message.
   # @@protoc_insertion_point(class_scope:by.notificationemail.v1.EmailStruct)
   })
 _sym_db.RegisterMessage(EmailStruct)
+
+EmailData = _reflection.GeneratedProtocolMessageType('EmailData', (_message.Message,), {
+  'DESCRIPTOR' : _EMAILDATA,
+  '__module__' : 'by.notificationemail.v1.by_email_notification_pb2'
+  # @@protoc_insertion_point(class_scope:by.notificationemail.v1.EmailData)
+  })
+_sym_db.RegisterMessage(EmailData)
 
 SendEmailRequest = _reflection.GeneratedProtocolMessageType('SendEmailRequest', (_message.Message,), {
   'DESCRIPTOR' : _SENDEMAILREQUEST,
@@ -278,8 +319,8 @@ _NOTIFICATIONEMAILAPISERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=691,
-  serialized_end=820,
+  serialized_start=771,
+  serialized_end=900,
   methods=[
   _descriptor.MethodDescriptor(
     name='SendEmail',
