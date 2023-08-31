@@ -121,3 +121,45 @@ func SendEmail(
 	}
 	return response, nil
 }
+
+func SendEmailWithCustomDomain(data *notificationemailv1.SendEmailWithCustomDomainRequest) (*notificationemailv1.SendEmailWithCustomDomainResponse, error) {
+	d, err := time.ParseDuration(byEmailNotificationServiceTimeout)
+	if err != nil {
+		return nil, err
+	}
+	ctx, cancel := context.WithDeadline(context.Background(), time.Now().Add(d))
+	defer cancel()
+	var msg string
+	if len(data.EmailData.From) == 0 {
+		msg = "'From' is required"
+		log.Printf("%s: ", msg)
+		return nil, status.Errorf(
+			codes.InvalidArgument,
+			fmt.Sprintf("%s: ", msg),
+		)
+	}
+
+	if len(data.EmailData.To) == 0 {
+		msg = "'To' is required"
+		log.Printf("%s: ", msg)
+		return nil, status.Errorf(
+			codes.InvalidArgument,
+			fmt.Sprintf("%s: ", msg),
+		)
+	}
+
+	response, err := client.SendEmailWithCustomDomain(ctx, &notificationemailv1.SendEmailWithCustomDomainRequest{
+		EmailData: data.EmailData,
+		SmtpData:  data.SmtpData,
+	})
+	if err != nil {
+		msg = "Error send email"
+		log.Printf("%s: %v", msg, err)
+		return nil, status.Errorf(
+			codes.InvalidArgument,
+			fmt.Sprintf("%s: %v", msg, err),
+		)
+	}
+
+	return response, nil
+}
