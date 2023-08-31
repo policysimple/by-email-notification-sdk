@@ -16,7 +16,7 @@ class ByEmailNotification
         }
         $pool->internalAddGeneratedFile(
             '
-«
+º
 3by/notificationemail/v1/by_email_notification.protoby.notificationemail.v1"7
 EmailStruct
 name (	Rname
@@ -29,7 +29,27 @@ class ByEmailNotification
 subject (	Rsubject
 tag (	Rtag
 text (	Rtext
-html (	Rhtml"U
+html (	Rhtml"Ñ
+EmailDataParams8
+from (2$.by.notificationemail.v1.EmailStructRfrom4
+to (2$.by.notificationemail.v1.EmailStructRto4
+cc (2$.by.notificationemail.v1.EmailStructRcc6
+bbc (2$.by.notificationemail.v1.EmailStructRbbc?
+reply_to (2$.by.notificationemail.v1.EmailStructRreplyTo
+subject (	Rsubject
+tag (	Rtag
+text (	Rtext
+html	 (	Rhtml"w
+SmtpData
+user (	Ruser
+pass (	Rpass
+host (	Rhost
+port (Rport
+	use_start (RuseStart"´
+ SendEmailWithCustomDomainRequestG
+
+email_data (2(.by.notificationemail.v1.EmailDataParamsR	emailData>
+	smtp_data (2!.by.notificationemail.v1.SmtpDataRsmtpData"U
 SendEmailRequestA
 
 email_data (2".by.notificationemail.v1.EmailDataR	emailData"+
@@ -39,9 +59,15 @@ email_data (2".by.notificationemail.v1.EmailDataR	emailData"+
 status (	Rstatus
 message (	RmessageB
 info (2..by.notificationemail.v1.SendEmailInfoResponseRinfo
-error (	Rerror2Å
+error (	Rerror"Ø
+!SendEmailWithCustomDomainResponse
+status (	Rstatus
+message (	RmessageB
+info (2..by.notificationemail.v1.SendEmailInfoResponseRinfo
+error (	Rerror2ñ
 NotificationEmailAPIServiceb
-	SendEmail).by.notificationemail.v1.SendEmailRequest*.by.notificationemail.v1.SendEmailResponseBƒ
+	SendEmail).by.notificationemail.v1.SendEmailRequest*.by.notificationemail.v1.SendEmailResponseí
+SendEmailWithCustomDomain9.by.notificationemail.v1.SendEmailWithCustomDomainRequest:.by.notificationemail.v1.SendEmailWithCustomDomainResponseBƒ
 com.by.notificationemail.v1BNotificationdataemailApiProtoPZJgithub.com/cuemby/by-email-notifications-sdk/gen/go/by/notificationemailv1¢ANX™By.Notificationemail.V1 By\\Notificationemail\\V1bproto3'
         , true);
 

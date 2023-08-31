@@ -51,6 +51,55 @@ struct EmailDataDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EmailDataDefaultTypeInternal _EmailData_default_instance_;
+constexpr EmailDataParams::EmailDataParams(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : from_()
+  , to_()
+  , cc_()
+  , bbc_()
+  , reply_to_()
+  , subject_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , tag_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , text_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , html_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct EmailDataParamsDefaultTypeInternal {
+  constexpr EmailDataParamsDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~EmailDataParamsDefaultTypeInternal() {}
+  union {
+    EmailDataParams _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EmailDataParamsDefaultTypeInternal _EmailDataParams_default_instance_;
+constexpr SmtpData::SmtpData(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : user_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , pass_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , host_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , port_(0)
+  , use_start_(false){}
+struct SmtpDataDefaultTypeInternal {
+  constexpr SmtpDataDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SmtpDataDefaultTypeInternal() {}
+  union {
+    SmtpData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SmtpDataDefaultTypeInternal _SmtpData_default_instance_;
+constexpr SendEmailWithCustomDomainRequest::SendEmailWithCustomDomainRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : email_data_(nullptr)
+  , smtp_data_(nullptr){}
+struct SendEmailWithCustomDomainRequestDefaultTypeInternal {
+  constexpr SendEmailWithCustomDomainRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SendEmailWithCustomDomainRequestDefaultTypeInternal() {}
+  union {
+    SendEmailWithCustomDomainRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SendEmailWithCustomDomainRequestDefaultTypeInternal _SendEmailWithCustomDomainRequest_default_instance_;
 constexpr SendEmailRequest::SendEmailRequest(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : email_data_(nullptr){}
@@ -90,10 +139,25 @@ struct SendEmailResponseDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SendEmailResponseDefaultTypeInternal _SendEmailResponse_default_instance_;
+constexpr SendEmailWithCustomDomainResponse::SendEmailWithCustomDomainResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : status_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , message_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , error_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , info_(nullptr){}
+struct SendEmailWithCustomDomainResponseDefaultTypeInternal {
+  constexpr SendEmailWithCustomDomainResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SendEmailWithCustomDomainResponseDefaultTypeInternal() {}
+  union {
+    SendEmailWithCustomDomainResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SendEmailWithCustomDomainResponseDefaultTypeInternal _SendEmailWithCustomDomainResponse_default_instance_;
 }  // namespace v1
 }  // namespace notificationemail
 }  // namespace by
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto[5];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto[9];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto = nullptr;
 
@@ -119,6 +183,37 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_by_2fnotificationemail_2fv1_2f
   PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailData, text_),
   PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailData, html_),
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailDataParams, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailDataParams, from_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailDataParams, to_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailDataParams, cc_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailDataParams, bbc_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailDataParams, reply_to_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailDataParams, subject_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailDataParams, tag_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailDataParams, text_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::EmailDataParams, html_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SmtpData, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SmtpData, user_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SmtpData, pass_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SmtpData, host_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SmtpData, port_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SmtpData, use_start_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SendEmailWithCustomDomainRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SendEmailWithCustomDomainRequest, email_data_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SendEmailWithCustomDomainRequest, smtp_data_),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SendEmailRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -139,21 +234,38 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_by_2fnotificationemail_2fv1_2f
   PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SendEmailResponse, message_),
   PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SendEmailResponse, info_),
   PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SendEmailResponse, error_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SendEmailWithCustomDomainResponse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SendEmailWithCustomDomainResponse, status_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SendEmailWithCustomDomainResponse, message_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SendEmailWithCustomDomainResponse, info_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SendEmailWithCustomDomainResponse, error_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::by::notificationemail::v1::EmailStruct)},
   { 7, -1, sizeof(::by::notificationemail::v1::EmailData)},
-  { 20, -1, sizeof(::by::notificationemail::v1::SendEmailRequest)},
-  { 26, -1, sizeof(::by::notificationemail::v1::SendEmailInfoResponse)},
-  { 32, -1, sizeof(::by::notificationemail::v1::SendEmailResponse)},
+  { 20, -1, sizeof(::by::notificationemail::v1::EmailDataParams)},
+  { 34, -1, sizeof(::by::notificationemail::v1::SmtpData)},
+  { 44, -1, sizeof(::by::notificationemail::v1::SendEmailWithCustomDomainRequest)},
+  { 51, -1, sizeof(::by::notificationemail::v1::SendEmailRequest)},
+  { 57, -1, sizeof(::by::notificationemail::v1::SendEmailInfoResponse)},
+  { 63, -1, sizeof(::by::notificationemail::v1::SendEmailResponse)},
+  { 72, -1, sizeof(::by::notificationemail::v1::SendEmailWithCustomDomainResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::by::notificationemail::v1::_EmailStruct_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::by::notificationemail::v1::_EmailData_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::by::notificationemail::v1::_EmailDataParams_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::by::notificationemail::v1::_SmtpData_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::by::notificationemail::v1::_SendEmailWithCustomDomainRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::by::notificationemail::v1::_SendEmailRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::by::notificationemail::v1::_SendEmailInfoResponse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::by::notificationemail::v1::_SendEmailResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::by::notificationemail::v1::_SendEmailWithCustomDomainResponse_default_instance_),
 };
 
 const char descriptor_table_protodef_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -168,28 +280,53 @@ const char descriptor_table_protodef_by_2fnotificationemail_2fv1_2fby_5femail_5f
   "ly_to\030\004 \003(\0132$.by.notificationemail.v1.Em"
   "ailStructR\007replyTo\022\030\n\007subject\030\005 \001(\tR\007sub"
   "ject\022\020\n\003tag\030\006 \001(\tR\003tag\022\022\n\004text\030\007 \001(\tR\004te"
-  "xt\022\022\n\004html\030\010 \001(\tR\004html\"U\n\020SendEmailReque"
-  "st\022A\n\nemail_data\030\001 \001(\0132\".by.notification"
-  "email.v1.EmailDataR\temailData\"+\n\025SendEma"
-  "ilInfoResponse\022\022\n\004send\030\001 \001(\010R\004send\"\237\001\n\021S"
-  "endEmailResponse\022\026\n\006status\030\001 \001(\tR\006status"
-  "\022\030\n\007message\030\002 \001(\tR\007message\022B\n\004info\030\003 \001(\013"
-  "2..by.notificationemail.v1.SendEmailInfo"
-  "ResponseR\004info\022\024\n\005error\030\004 \001(\tR\005error2\201\001\n"
-  "\033NotificationEmailAPIService\022b\n\tSendEmai"
-  "l\022).by.notificationemail.v1.SendEmailReq"
-  "uest\032*.by.notificationemail.v1.SendEmail"
-  "ResponseB\304\001\n\033com.by.notificationemail.v1"
-  "B\035NotificationdataemailApiProtoP\001ZJgithu"
-  "b.com/cuemby/by-email-notifications-sdk/"
-  "gen/go/by/notificationemailv1\242\002\003ANX\252\002\027By"
-  ".Notificationemail.V1\312\002\027By\\Notificatione"
-  "mail\\V1b\006proto3"
+  "xt\022\022\n\004html\030\010 \001(\tR\004html\"\204\003\n\017EmailDataPara"
+  "ms\0228\n\004from\030\001 \003(\0132$.by.notificationemail."
+  "v1.EmailStructR\004from\0224\n\002to\030\002 \003(\0132$.by.no"
+  "tificationemail.v1.EmailStructR\002to\0224\n\002cc"
+  "\030\003 \003(\0132$.by.notificationemail.v1.EmailSt"
+  "ructR\002cc\0226\n\003bbc\030\004 \003(\0132$.by.notificatione"
+  "mail.v1.EmailStructR\003bbc\022\?\n\010reply_to\030\005 \003"
+  "(\0132$.by.notificationemail.v1.EmailStruct"
+  "R\007replyTo\022\030\n\007subject\030\006 \001(\tR\007subject\022\020\n\003t"
+  "ag\030\007 \001(\tR\003tag\022\022\n\004text\030\010 \001(\tR\004text\022\022\n\004htm"
+  "l\030\t \001(\tR\004html\"w\n\010SmtpData\022\022\n\004user\030\001 \001(\tR"
+  "\004user\022\022\n\004pass\030\002 \001(\tR\004pass\022\022\n\004host\030\003 \001(\tR"
+  "\004host\022\022\n\004port\030\004 \001(\005R\004port\022\033\n\tuse_start\030\005"
+  " \001(\010R\010useStart\"\253\001\n SendEmailWithCustomDo"
+  "mainRequest\022G\n\nemail_data\030\001 \001(\0132(.by.not"
+  "ificationemail.v1.EmailDataParamsR\temail"
+  "Data\022>\n\tsmtp_data\030\002 \001(\0132!.by.notificatio"
+  "nemail.v1.SmtpDataR\010smtpData\"U\n\020SendEmai"
+  "lRequest\022A\n\nemail_data\030\001 \001(\0132\".by.notifi"
+  "cationemail.v1.EmailDataR\temailData\"+\n\025S"
+  "endEmailInfoResponse\022\022\n\004send\030\001 \001(\010R\004send"
+  "\"\237\001\n\021SendEmailResponse\022\026\n\006status\030\001 \001(\tR\006"
+  "status\022\030\n\007message\030\002 \001(\tR\007message\022B\n\004info"
+  "\030\003 \001(\0132..by.notificationemail.v1.SendEma"
+  "ilInfoResponseR\004info\022\024\n\005error\030\004 \001(\tR\005err"
+  "or\"\257\001\n!SendEmailWithCustomDomainResponse"
+  "\022\026\n\006status\030\001 \001(\tR\006status\022\030\n\007message\030\002 \001("
+  "\tR\007message\022B\n\004info\030\003 \001(\0132..by.notificati"
+  "onemail.v1.SendEmailInfoResponseR\004info\022\024"
+  "\n\005error\030\004 \001(\tR\005error2\226\002\n\033NotificationEma"
+  "ilAPIService\022b\n\tSendEmail\022).by.notificat"
+  "ionemail.v1.SendEmailRequest\032*.by.notifi"
+  "cationemail.v1.SendEmailResponse\022\222\001\n\031Sen"
+  "dEmailWithCustomDomain\0229.by.notification"
+  "email.v1.SendEmailWithCustomDomainReques"
+  "t\032:.by.notificationemail.v1.SendEmailWit"
+  "hCustomDomainResponseB\304\001\n\033com.by.notific"
+  "ationemail.v1B\035NotificationdataemailApiP"
+  "rotoP\001ZJgithub.com/cuemby/by-email-notif"
+  "ications-sdk/gen/go/by/notificationemail"
+  "v1\242\002\003ANX\252\002\027By.Notificationemail.V1\312\002\027By\\"
+  "Notificationemail\\V1b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto = {
-  false, false, 1095, descriptor_table_protodef_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto, "by/notificationemail/v1/by_email_notification.proto", 
-  &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once, nullptr, 0, 5,
+  false, false, 2108, descriptor_table_protodef_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto, "by/notificationemail/v1/by_email_notification.proto", 
+  &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once, nullptr, 0, 9,
   schemas, file_default_instances, TableStruct_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto::offsets,
   file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto, file_level_enum_descriptors_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto, file_level_service_descriptors_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto,
 };
@@ -901,6 +1038,1084 @@ void EmailData::InternalSwap(EmailData* other) {
 
 // ===================================================================
 
+class EmailDataParams::_Internal {
+ public:
+};
+
+EmailDataParams::EmailDataParams(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned),
+  from_(arena),
+  to_(arena),
+  cc_(arena),
+  bbc_(arena),
+  reply_to_(arena) {
+  SharedCtor();
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
+  // @@protoc_insertion_point(arena_constructor:by.notificationemail.v1.EmailDataParams)
+}
+EmailDataParams::EmailDataParams(const EmailDataParams& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      from_(from.from_),
+      to_(from.to_),
+      cc_(from.cc_),
+      bbc_(from.bbc_),
+      reply_to_(from.reply_to_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  subject_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_subject().empty()) {
+    subject_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_subject(), 
+      GetArenaForAllocation());
+  }
+  tag_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_tag().empty()) {
+    tag_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_tag(), 
+      GetArenaForAllocation());
+  }
+  text_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_text().empty()) {
+    text_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_text(), 
+      GetArenaForAllocation());
+  }
+  html_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_html().empty()) {
+    html_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_html(), 
+      GetArenaForAllocation());
+  }
+  // @@protoc_insertion_point(copy_constructor:by.notificationemail.v1.EmailDataParams)
+}
+
+inline void EmailDataParams::SharedCtor() {
+subject_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+tag_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+text_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+html_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+EmailDataParams::~EmailDataParams() {
+  // @@protoc_insertion_point(destructor:by.notificationemail.v1.EmailDataParams)
+  if (GetArenaForAllocation() != nullptr) return;
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+inline void EmailDataParams::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  subject_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  tag_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  text_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  html_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void EmailDataParams::ArenaDtor(void* object) {
+  EmailDataParams* _this = reinterpret_cast< EmailDataParams* >(object);
+  (void)_this;
+}
+void EmailDataParams::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void EmailDataParams::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void EmailDataParams::Clear() {
+// @@protoc_insertion_point(message_clear_start:by.notificationemail.v1.EmailDataParams)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  from_.Clear();
+  to_.Clear();
+  cc_.Clear();
+  bbc_.Clear();
+  reply_to_.Clear();
+  subject_.ClearToEmpty();
+  tag_.ClearToEmpty();
+  text_.ClearToEmpty();
+  html_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* EmailDataParams::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // repeated .by.notificationemail.v1.EmailStruct from = 1 [json_name = "from"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_from(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // repeated .by.notificationemail.v1.EmailStruct to = 2 [json_name = "to"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_to(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // repeated .by.notificationemail.v1.EmailStruct cc = 3 [json_name = "cc"];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_cc(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // repeated .by.notificationemail.v1.EmailStruct bbc = 4 [json_name = "bbc"];
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_bbc(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // repeated .by.notificationemail.v1.EmailStruct reply_to = 5 [json_name = "replyTo"];
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_reply_to(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // string subject = 6 [json_name = "subject"];
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          auto str = _internal_mutable_subject();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "by.notificationemail.v1.EmailDataParams.subject"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string tag = 7 [json_name = "tag"];
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          auto str = _internal_mutable_tag();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "by.notificationemail.v1.EmailDataParams.tag"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string text = 8 [json_name = "text"];
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          auto str = _internal_mutable_text();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "by.notificationemail.v1.EmailDataParams.text"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string html = 9 [json_name = "html"];
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+          auto str = _internal_mutable_html();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "by.notificationemail.v1.EmailDataParams.html"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* EmailDataParams::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:by.notificationemail.v1.EmailDataParams)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .by.notificationemail.v1.EmailStruct from = 1 [json_name = "from"];
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_from_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, this->_internal_from(i), target, stream);
+  }
+
+  // repeated .by.notificationemail.v1.EmailStruct to = 2 [json_name = "to"];
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_to_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, this->_internal_to(i), target, stream);
+  }
+
+  // repeated .by.notificationemail.v1.EmailStruct cc = 3 [json_name = "cc"];
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_cc_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, this->_internal_cc(i), target, stream);
+  }
+
+  // repeated .by.notificationemail.v1.EmailStruct bbc = 4 [json_name = "bbc"];
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_bbc_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, this->_internal_bbc(i), target, stream);
+  }
+
+  // repeated .by.notificationemail.v1.EmailStruct reply_to = 5 [json_name = "replyTo"];
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_reply_to_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, this->_internal_reply_to(i), target, stream);
+  }
+
+  // string subject = 6 [json_name = "subject"];
+  if (!this->_internal_subject().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_subject().data(), static_cast<int>(this->_internal_subject().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "by.notificationemail.v1.EmailDataParams.subject");
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_subject(), target);
+  }
+
+  // string tag = 7 [json_name = "tag"];
+  if (!this->_internal_tag().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_tag().data(), static_cast<int>(this->_internal_tag().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "by.notificationemail.v1.EmailDataParams.tag");
+    target = stream->WriteStringMaybeAliased(
+        7, this->_internal_tag(), target);
+  }
+
+  // string text = 8 [json_name = "text"];
+  if (!this->_internal_text().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_text().data(), static_cast<int>(this->_internal_text().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "by.notificationemail.v1.EmailDataParams.text");
+    target = stream->WriteStringMaybeAliased(
+        8, this->_internal_text(), target);
+  }
+
+  // string html = 9 [json_name = "html"];
+  if (!this->_internal_html().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_html().data(), static_cast<int>(this->_internal_html().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "by.notificationemail.v1.EmailDataParams.html");
+    target = stream->WriteStringMaybeAliased(
+        9, this->_internal_html(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:by.notificationemail.v1.EmailDataParams)
+  return target;
+}
+
+size_t EmailDataParams::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:by.notificationemail.v1.EmailDataParams)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .by.notificationemail.v1.EmailStruct from = 1 [json_name = "from"];
+  total_size += 1UL * this->_internal_from_size();
+  for (const auto& msg : this->from_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // repeated .by.notificationemail.v1.EmailStruct to = 2 [json_name = "to"];
+  total_size += 1UL * this->_internal_to_size();
+  for (const auto& msg : this->to_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // repeated .by.notificationemail.v1.EmailStruct cc = 3 [json_name = "cc"];
+  total_size += 1UL * this->_internal_cc_size();
+  for (const auto& msg : this->cc_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // repeated .by.notificationemail.v1.EmailStruct bbc = 4 [json_name = "bbc"];
+  total_size += 1UL * this->_internal_bbc_size();
+  for (const auto& msg : this->bbc_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // repeated .by.notificationemail.v1.EmailStruct reply_to = 5 [json_name = "replyTo"];
+  total_size += 1UL * this->_internal_reply_to_size();
+  for (const auto& msg : this->reply_to_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // string subject = 6 [json_name = "subject"];
+  if (!this->_internal_subject().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_subject());
+  }
+
+  // string tag = 7 [json_name = "tag"];
+  if (!this->_internal_tag().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_tag());
+  }
+
+  // string text = 8 [json_name = "text"];
+  if (!this->_internal_text().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_text());
+  }
+
+  // string html = 9 [json_name = "html"];
+  if (!this->_internal_html().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_html());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EmailDataParams::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    EmailDataParams::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EmailDataParams::GetClassData() const { return &_class_data_; }
+
+void EmailDataParams::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<EmailDataParams *>(to)->MergeFrom(
+      static_cast<const EmailDataParams &>(from));
+}
+
+
+void EmailDataParams::MergeFrom(const EmailDataParams& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:by.notificationemail.v1.EmailDataParams)
+  GOOGLE_DCHECK_NE(&from, this);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  from_.MergeFrom(from.from_);
+  to_.MergeFrom(from.to_);
+  cc_.MergeFrom(from.cc_);
+  bbc_.MergeFrom(from.bbc_);
+  reply_to_.MergeFrom(from.reply_to_);
+  if (!from._internal_subject().empty()) {
+    _internal_set_subject(from._internal_subject());
+  }
+  if (!from._internal_tag().empty()) {
+    _internal_set_tag(from._internal_tag());
+  }
+  if (!from._internal_text().empty()) {
+    _internal_set_text(from._internal_text());
+  }
+  if (!from._internal_html().empty()) {
+    _internal_set_html(from._internal_html());
+  }
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void EmailDataParams::CopyFrom(const EmailDataParams& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:by.notificationemail.v1.EmailDataParams)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool EmailDataParams::IsInitialized() const {
+  return true;
+}
+
+void EmailDataParams::InternalSwap(EmailDataParams* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  from_.InternalSwap(&other->from_);
+  to_.InternalSwap(&other->to_);
+  cc_.InternalSwap(&other->cc_);
+  bbc_.InternalSwap(&other->bbc_);
+  reply_to_.InternalSwap(&other->reply_to_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &subject_, GetArenaForAllocation(),
+      &other->subject_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &tag_, GetArenaForAllocation(),
+      &other->tag_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &text_, GetArenaForAllocation(),
+      &other->text_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &html_, GetArenaForAllocation(),
+      &other->html_, other->GetArenaForAllocation()
+  );
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata EmailDataParams::GetMetadata() const {
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_getter, &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once,
+      file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto[2]);
+}
+
+// ===================================================================
+
+class SmtpData::_Internal {
+ public:
+};
+
+SmtpData::SmtpData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
+  // @@protoc_insertion_point(arena_constructor:by.notificationemail.v1.SmtpData)
+}
+SmtpData::SmtpData(const SmtpData& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  user_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_user().empty()) {
+    user_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_user(), 
+      GetArenaForAllocation());
+  }
+  pass_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_pass().empty()) {
+    pass_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_pass(), 
+      GetArenaForAllocation());
+  }
+  host_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_host().empty()) {
+    host_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_host(), 
+      GetArenaForAllocation());
+  }
+  ::memcpy(&port_, &from.port_,
+    static_cast<size_t>(reinterpret_cast<char*>(&use_start_) -
+    reinterpret_cast<char*>(&port_)) + sizeof(use_start_));
+  // @@protoc_insertion_point(copy_constructor:by.notificationemail.v1.SmtpData)
+}
+
+inline void SmtpData::SharedCtor() {
+user_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+pass_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+host_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&port_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&use_start_) -
+    reinterpret_cast<char*>(&port_)) + sizeof(use_start_));
+}
+
+SmtpData::~SmtpData() {
+  // @@protoc_insertion_point(destructor:by.notificationemail.v1.SmtpData)
+  if (GetArenaForAllocation() != nullptr) return;
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+inline void SmtpData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  user_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  pass_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  host_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void SmtpData::ArenaDtor(void* object) {
+  SmtpData* _this = reinterpret_cast< SmtpData* >(object);
+  (void)_this;
+}
+void SmtpData::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void SmtpData::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void SmtpData::Clear() {
+// @@protoc_insertion_point(message_clear_start:by.notificationemail.v1.SmtpData)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  user_.ClearToEmpty();
+  pass_.ClearToEmpty();
+  host_.ClearToEmpty();
+  ::memset(&port_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&use_start_) -
+      reinterpret_cast<char*>(&port_)) + sizeof(use_start_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SmtpData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string user = 1 [json_name = "user"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_user();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "by.notificationemail.v1.SmtpData.user"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string pass = 2 [json_name = "pass"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_pass();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "by.notificationemail.v1.SmtpData.pass"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string host = 3 [json_name = "host"];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_host();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "by.notificationemail.v1.SmtpData.host"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 port = 4 [json_name = "port"];
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          port_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bool use_start = 5 [json_name = "useStart"];
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          use_start_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* SmtpData::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:by.notificationemail.v1.SmtpData)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string user = 1 [json_name = "user"];
+  if (!this->_internal_user().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_user().data(), static_cast<int>(this->_internal_user().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "by.notificationemail.v1.SmtpData.user");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_user(), target);
+  }
+
+  // string pass = 2 [json_name = "pass"];
+  if (!this->_internal_pass().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_pass().data(), static_cast<int>(this->_internal_pass().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "by.notificationemail.v1.SmtpData.pass");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_pass(), target);
+  }
+
+  // string host = 3 [json_name = "host"];
+  if (!this->_internal_host().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_host().data(), static_cast<int>(this->_internal_host().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "by.notificationemail.v1.SmtpData.host");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_host(), target);
+  }
+
+  // int32 port = 4 [json_name = "port"];
+  if (this->_internal_port() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_port(), target);
+  }
+
+  // bool use_start = 5 [json_name = "useStart"];
+  if (this->_internal_use_start() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_use_start(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:by.notificationemail.v1.SmtpData)
+  return target;
+}
+
+size_t SmtpData::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:by.notificationemail.v1.SmtpData)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string user = 1 [json_name = "user"];
+  if (!this->_internal_user().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_user());
+  }
+
+  // string pass = 2 [json_name = "pass"];
+  if (!this->_internal_pass().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_pass());
+  }
+
+  // string host = 3 [json_name = "host"];
+  if (!this->_internal_host().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_host());
+  }
+
+  // int32 port = 4 [json_name = "port"];
+  if (this->_internal_port() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_port());
+  }
+
+  // bool use_start = 5 [json_name = "useStart"];
+  if (this->_internal_use_start() != 0) {
+    total_size += 1 + 1;
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SmtpData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    SmtpData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SmtpData::GetClassData() const { return &_class_data_; }
+
+void SmtpData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<SmtpData *>(to)->MergeFrom(
+      static_cast<const SmtpData &>(from));
+}
+
+
+void SmtpData::MergeFrom(const SmtpData& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:by.notificationemail.v1.SmtpData)
+  GOOGLE_DCHECK_NE(&from, this);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_user().empty()) {
+    _internal_set_user(from._internal_user());
+  }
+  if (!from._internal_pass().empty()) {
+    _internal_set_pass(from._internal_pass());
+  }
+  if (!from._internal_host().empty()) {
+    _internal_set_host(from._internal_host());
+  }
+  if (from._internal_port() != 0) {
+    _internal_set_port(from._internal_port());
+  }
+  if (from._internal_use_start() != 0) {
+    _internal_set_use_start(from._internal_use_start());
+  }
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SmtpData::CopyFrom(const SmtpData& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:by.notificationemail.v1.SmtpData)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SmtpData::IsInitialized() const {
+  return true;
+}
+
+void SmtpData::InternalSwap(SmtpData* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &user_, GetArenaForAllocation(),
+      &other->user_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &pass_, GetArenaForAllocation(),
+      &other->pass_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &host_, GetArenaForAllocation(),
+      &other->host_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SmtpData, use_start_)
+      + sizeof(SmtpData::use_start_)
+      - PROTOBUF_FIELD_OFFSET(SmtpData, port_)>(
+          reinterpret_cast<char*>(&port_),
+          reinterpret_cast<char*>(&other->port_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SmtpData::GetMetadata() const {
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_getter, &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once,
+      file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto[3]);
+}
+
+// ===================================================================
+
+class SendEmailWithCustomDomainRequest::_Internal {
+ public:
+  static const ::by::notificationemail::v1::EmailDataParams& email_data(const SendEmailWithCustomDomainRequest* msg);
+  static const ::by::notificationemail::v1::SmtpData& smtp_data(const SendEmailWithCustomDomainRequest* msg);
+};
+
+const ::by::notificationemail::v1::EmailDataParams&
+SendEmailWithCustomDomainRequest::_Internal::email_data(const SendEmailWithCustomDomainRequest* msg) {
+  return *msg->email_data_;
+}
+const ::by::notificationemail::v1::SmtpData&
+SendEmailWithCustomDomainRequest::_Internal::smtp_data(const SendEmailWithCustomDomainRequest* msg) {
+  return *msg->smtp_data_;
+}
+SendEmailWithCustomDomainRequest::SendEmailWithCustomDomainRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
+  // @@protoc_insertion_point(arena_constructor:by.notificationemail.v1.SendEmailWithCustomDomainRequest)
+}
+SendEmailWithCustomDomainRequest::SendEmailWithCustomDomainRequest(const SendEmailWithCustomDomainRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_email_data()) {
+    email_data_ = new ::by::notificationemail::v1::EmailDataParams(*from.email_data_);
+  } else {
+    email_data_ = nullptr;
+  }
+  if (from._internal_has_smtp_data()) {
+    smtp_data_ = new ::by::notificationemail::v1::SmtpData(*from.smtp_data_);
+  } else {
+    smtp_data_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:by.notificationemail.v1.SendEmailWithCustomDomainRequest)
+}
+
+inline void SendEmailWithCustomDomainRequest::SharedCtor() {
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&email_data_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&smtp_data_) -
+    reinterpret_cast<char*>(&email_data_)) + sizeof(smtp_data_));
+}
+
+SendEmailWithCustomDomainRequest::~SendEmailWithCustomDomainRequest() {
+  // @@protoc_insertion_point(destructor:by.notificationemail.v1.SendEmailWithCustomDomainRequest)
+  if (GetArenaForAllocation() != nullptr) return;
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+inline void SendEmailWithCustomDomainRequest::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete email_data_;
+  if (this != internal_default_instance()) delete smtp_data_;
+}
+
+void SendEmailWithCustomDomainRequest::ArenaDtor(void* object) {
+  SendEmailWithCustomDomainRequest* _this = reinterpret_cast< SendEmailWithCustomDomainRequest* >(object);
+  (void)_this;
+}
+void SendEmailWithCustomDomainRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void SendEmailWithCustomDomainRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void SendEmailWithCustomDomainRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:by.notificationemail.v1.SendEmailWithCustomDomainRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && email_data_ != nullptr) {
+    delete email_data_;
+  }
+  email_data_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && smtp_data_ != nullptr) {
+    delete smtp_data_;
+  }
+  smtp_data_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SendEmailWithCustomDomainRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .by.notificationemail.v1.EmailDataParams email_data = 1 [json_name = "emailData"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_email_data(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .by.notificationemail.v1.SmtpData smtp_data = 2 [json_name = "smtpData"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_smtp_data(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* SendEmailWithCustomDomainRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:by.notificationemail.v1.SendEmailWithCustomDomainRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .by.notificationemail.v1.EmailDataParams email_data = 1 [json_name = "emailData"];
+  if (this->_internal_has_email_data()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::email_data(this), target, stream);
+  }
+
+  // .by.notificationemail.v1.SmtpData smtp_data = 2 [json_name = "smtpData"];
+  if (this->_internal_has_smtp_data()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::smtp_data(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:by.notificationemail.v1.SendEmailWithCustomDomainRequest)
+  return target;
+}
+
+size_t SendEmailWithCustomDomainRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:by.notificationemail.v1.SendEmailWithCustomDomainRequest)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .by.notificationemail.v1.EmailDataParams email_data = 1 [json_name = "emailData"];
+  if (this->_internal_has_email_data()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *email_data_);
+  }
+
+  // .by.notificationemail.v1.SmtpData smtp_data = 2 [json_name = "smtpData"];
+  if (this->_internal_has_smtp_data()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *smtp_data_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SendEmailWithCustomDomainRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    SendEmailWithCustomDomainRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SendEmailWithCustomDomainRequest::GetClassData() const { return &_class_data_; }
+
+void SendEmailWithCustomDomainRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<SendEmailWithCustomDomainRequest *>(to)->MergeFrom(
+      static_cast<const SendEmailWithCustomDomainRequest &>(from));
+}
+
+
+void SendEmailWithCustomDomainRequest::MergeFrom(const SendEmailWithCustomDomainRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:by.notificationemail.v1.SendEmailWithCustomDomainRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_email_data()) {
+    _internal_mutable_email_data()->::by::notificationemail::v1::EmailDataParams::MergeFrom(from._internal_email_data());
+  }
+  if (from._internal_has_smtp_data()) {
+    _internal_mutable_smtp_data()->::by::notificationemail::v1::SmtpData::MergeFrom(from._internal_smtp_data());
+  }
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SendEmailWithCustomDomainRequest::CopyFrom(const SendEmailWithCustomDomainRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:by.notificationemail.v1.SendEmailWithCustomDomainRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SendEmailWithCustomDomainRequest::IsInitialized() const {
+  return true;
+}
+
+void SendEmailWithCustomDomainRequest::InternalSwap(SendEmailWithCustomDomainRequest* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SendEmailWithCustomDomainRequest, smtp_data_)
+      + sizeof(SendEmailWithCustomDomainRequest::smtp_data_)
+      - PROTOBUF_FIELD_OFFSET(SendEmailWithCustomDomainRequest, email_data_)>(
+          reinterpret_cast<char*>(&email_data_),
+          reinterpret_cast<char*>(&other->email_data_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SendEmailWithCustomDomainRequest::GetMetadata() const {
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_getter, &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once,
+      file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto[4]);
+}
+
+// ===================================================================
+
 class SendEmailRequest::_Internal {
  public:
   static const ::by::notificationemail::v1::EmailData& email_data(const SendEmailRequest* msg);
@@ -1096,7 +2311,7 @@ void SendEmailRequest::InternalSwap(SendEmailRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SendEmailRequest::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_getter, &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once,
-      file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto[2]);
+      file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto[5]);
 }
 
 // ===================================================================
@@ -1279,7 +2494,7 @@ void SendEmailInfoResponse::InternalSwap(SendEmailInfoResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SendEmailInfoResponse::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_getter, &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once,
-      file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto[3]);
+      file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto[6]);
 }
 
 // ===================================================================
@@ -1605,7 +2820,333 @@ void SendEmailResponse::InternalSwap(SendEmailResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata SendEmailResponse::GetMetadata() const {
   return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
       &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_getter, &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once,
-      file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto[4]);
+      file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto[7]);
+}
+
+// ===================================================================
+
+class SendEmailWithCustomDomainResponse::_Internal {
+ public:
+  static const ::by::notificationemail::v1::SendEmailInfoResponse& info(const SendEmailWithCustomDomainResponse* msg);
+};
+
+const ::by::notificationemail::v1::SendEmailInfoResponse&
+SendEmailWithCustomDomainResponse::_Internal::info(const SendEmailWithCustomDomainResponse* msg) {
+  return *msg->info_;
+}
+SendEmailWithCustomDomainResponse::SendEmailWithCustomDomainResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor();
+  if (!is_message_owned) {
+    RegisterArenaDtor(arena);
+  }
+  // @@protoc_insertion_point(arena_constructor:by.notificationemail.v1.SendEmailWithCustomDomainResponse)
+}
+SendEmailWithCustomDomainResponse::SendEmailWithCustomDomainResponse(const SendEmailWithCustomDomainResponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_status().empty()) {
+    status_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_status(), 
+      GetArenaForAllocation());
+  }
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_message().empty()) {
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
+      GetArenaForAllocation());
+  }
+  error_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_error().empty()) {
+    error_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_error(), 
+      GetArenaForAllocation());
+  }
+  if (from._internal_has_info()) {
+    info_ = new ::by::notificationemail::v1::SendEmailInfoResponse(*from.info_);
+  } else {
+    info_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:by.notificationemail.v1.SendEmailWithCustomDomainResponse)
+}
+
+inline void SendEmailWithCustomDomainResponse::SharedCtor() {
+status_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+error_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+info_ = nullptr;
+}
+
+SendEmailWithCustomDomainResponse::~SendEmailWithCustomDomainResponse() {
+  // @@protoc_insertion_point(destructor:by.notificationemail.v1.SendEmailWithCustomDomainResponse)
+  if (GetArenaForAllocation() != nullptr) return;
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+inline void SendEmailWithCustomDomainResponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  status_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  error_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete info_;
+}
+
+void SendEmailWithCustomDomainResponse::ArenaDtor(void* object) {
+  SendEmailWithCustomDomainResponse* _this = reinterpret_cast< SendEmailWithCustomDomainResponse* >(object);
+  (void)_this;
+}
+void SendEmailWithCustomDomainResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void SendEmailWithCustomDomainResponse::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void SendEmailWithCustomDomainResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:by.notificationemail.v1.SendEmailWithCustomDomainResponse)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  status_.ClearToEmpty();
+  message_.ClearToEmpty();
+  error_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && info_ != nullptr) {
+    delete info_;
+  }
+  info_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SendEmailWithCustomDomainResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // string status = 1 [json_name = "status"];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_status();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "by.notificationemail.v1.SendEmailWithCustomDomainResponse.status"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string message = 2 [json_name = "message"];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_message();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "by.notificationemail.v1.SendEmailWithCustomDomainResponse.message"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .by.notificationemail.v1.SendEmailInfoResponse info = 3 [json_name = "info"];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_info(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string error = 4 [json_name = "error"];
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          auto str = _internal_mutable_error();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "by.notificationemail.v1.SendEmailWithCustomDomainResponse.error"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag == 0) || ((tag & 7) == 4)) {
+          CHK_(ptr);
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* SendEmailWithCustomDomainResponse::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:by.notificationemail.v1.SendEmailWithCustomDomainResponse)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string status = 1 [json_name = "status"];
+  if (!this->_internal_status().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_status().data(), static_cast<int>(this->_internal_status().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "by.notificationemail.v1.SendEmailWithCustomDomainResponse.status");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_status(), target);
+  }
+
+  // string message = 2 [json_name = "message"];
+  if (!this->_internal_message().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "by.notificationemail.v1.SendEmailWithCustomDomainResponse.message");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_message(), target);
+  }
+
+  // .by.notificationemail.v1.SendEmailInfoResponse info = 3 [json_name = "info"];
+  if (this->_internal_has_info()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::info(this), target, stream);
+  }
+
+  // string error = 4 [json_name = "error"];
+  if (!this->_internal_error().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_error().data(), static_cast<int>(this->_internal_error().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "by.notificationemail.v1.SendEmailWithCustomDomainResponse.error");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_error(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:by.notificationemail.v1.SendEmailWithCustomDomainResponse)
+  return target;
+}
+
+size_t SendEmailWithCustomDomainResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:by.notificationemail.v1.SendEmailWithCustomDomainResponse)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string status = 1 [json_name = "status"];
+  if (!this->_internal_status().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_status());
+  }
+
+  // string message = 2 [json_name = "message"];
+  if (!this->_internal_message().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_message());
+  }
+
+  // string error = 4 [json_name = "error"];
+  if (!this->_internal_error().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_error());
+  }
+
+  // .by.notificationemail.v1.SendEmailInfoResponse info = 3 [json_name = "info"];
+  if (this->_internal_has_info()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *info_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SendEmailWithCustomDomainResponse::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
+    SendEmailWithCustomDomainResponse::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SendEmailWithCustomDomainResponse::GetClassData() const { return &_class_data_; }
+
+void SendEmailWithCustomDomainResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message*to,
+                      const ::PROTOBUF_NAMESPACE_ID::Message&from) {
+  static_cast<SendEmailWithCustomDomainResponse *>(to)->MergeFrom(
+      static_cast<const SendEmailWithCustomDomainResponse &>(from));
+}
+
+
+void SendEmailWithCustomDomainResponse::MergeFrom(const SendEmailWithCustomDomainResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:by.notificationemail.v1.SendEmailWithCustomDomainResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_status().empty()) {
+    _internal_set_status(from._internal_status());
+  }
+  if (!from._internal_message().empty()) {
+    _internal_set_message(from._internal_message());
+  }
+  if (!from._internal_error().empty()) {
+    _internal_set_error(from._internal_error());
+  }
+  if (from._internal_has_info()) {
+    _internal_mutable_info()->::by::notificationemail::v1::SendEmailInfoResponse::MergeFrom(from._internal_info());
+  }
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SendEmailWithCustomDomainResponse::CopyFrom(const SendEmailWithCustomDomainResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:by.notificationemail.v1.SendEmailWithCustomDomainResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SendEmailWithCustomDomainResponse::IsInitialized() const {
+  return true;
+}
+
+void SendEmailWithCustomDomainResponse::InternalSwap(SendEmailWithCustomDomainResponse* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &status_, GetArenaForAllocation(),
+      &other->status_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &message_, GetArenaForAllocation(),
+      &other->message_, other->GetArenaForAllocation()
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      &error_, GetArenaForAllocation(),
+      &other->error_, other->GetArenaForAllocation()
+  );
+  swap(info_, other->info_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SendEmailWithCustomDomainResponse::GetMetadata() const {
+  return ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(
+      &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_getter, &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once,
+      file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto[8]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -1619,6 +3160,15 @@ template<> PROTOBUF_NOINLINE ::by::notificationemail::v1::EmailStruct* Arena::Cr
 template<> PROTOBUF_NOINLINE ::by::notificationemail::v1::EmailData* Arena::CreateMaybeMessage< ::by::notificationemail::v1::EmailData >(Arena* arena) {
   return Arena::CreateMessageInternal< ::by::notificationemail::v1::EmailData >(arena);
 }
+template<> PROTOBUF_NOINLINE ::by::notificationemail::v1::EmailDataParams* Arena::CreateMaybeMessage< ::by::notificationemail::v1::EmailDataParams >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::by::notificationemail::v1::EmailDataParams >(arena);
+}
+template<> PROTOBUF_NOINLINE ::by::notificationemail::v1::SmtpData* Arena::CreateMaybeMessage< ::by::notificationemail::v1::SmtpData >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::by::notificationemail::v1::SmtpData >(arena);
+}
+template<> PROTOBUF_NOINLINE ::by::notificationemail::v1::SendEmailWithCustomDomainRequest* Arena::CreateMaybeMessage< ::by::notificationemail::v1::SendEmailWithCustomDomainRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::by::notificationemail::v1::SendEmailWithCustomDomainRequest >(arena);
+}
 template<> PROTOBUF_NOINLINE ::by::notificationemail::v1::SendEmailRequest* Arena::CreateMaybeMessage< ::by::notificationemail::v1::SendEmailRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::by::notificationemail::v1::SendEmailRequest >(arena);
 }
@@ -1627,6 +3177,9 @@ template<> PROTOBUF_NOINLINE ::by::notificationemail::v1::SendEmailInfoResponse*
 }
 template<> PROTOBUF_NOINLINE ::by::notificationemail::v1::SendEmailResponse* Arena::CreateMaybeMessage< ::by::notificationemail::v1::SendEmailResponse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::by::notificationemail::v1::SendEmailResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::by::notificationemail::v1::SendEmailWithCustomDomainResponse* Arena::CreateMaybeMessage< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

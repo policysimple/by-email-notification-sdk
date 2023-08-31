@@ -21,6 +21,7 @@ namespace v1 {
 
 static const char* NotificationEmailAPIService_method_names[] = {
   "/by.notificationemail.v1.NotificationEmailAPIService/SendEmail",
+  "/by.notificationemail.v1.NotificationEmailAPIService/SendEmailWithCustomDomain",
 };
 
 std::unique_ptr< NotificationEmailAPIService::Stub> NotificationEmailAPIService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -31,6 +32,7 @@ std::unique_ptr< NotificationEmailAPIService::Stub> NotificationEmailAPIService:
 
 NotificationEmailAPIService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
   : channel_(channel), rpcmethod_SendEmail_(NotificationEmailAPIService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_SendEmailWithCustomDomain_(NotificationEmailAPIService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status NotificationEmailAPIService::Stub::SendEmail(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailRequest& request, ::by::notificationemail::v1::SendEmailResponse* response) {
@@ -49,18 +51,46 @@ void NotificationEmailAPIService::Stub::experimental_async::SendEmail(::grpc::Cl
   return ::grpc::internal::ClientAsyncResponseReaderFactory< ::by::notificationemail::v1::SendEmailResponse>::Create(channel_.get(), cq, rpcmethod_SendEmail_, context, request, false);
 }
 
+::grpc::Status NotificationEmailAPIService::Stub::SendEmailWithCustomDomain(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest& request, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_SendEmailWithCustomDomain_, context, request, response);
+}
+
+void NotificationEmailAPIService::Stub::experimental_async::SendEmailWithCustomDomain(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest* request, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse* response, std::function<void(::grpc::Status)> f) {
+  return ::grpc::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_SendEmailWithCustomDomain_, context, request, response, std::move(f));
+}
+
+::grpc::ClientAsyncResponseReader< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>* NotificationEmailAPIService::Stub::AsyncSendEmailWithCustomDomainRaw(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>::Create(channel_.get(), cq, rpcmethod_SendEmailWithCustomDomain_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>* NotificationEmailAPIService::Stub::PrepareAsyncSendEmailWithCustomDomainRaw(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>::Create(channel_.get(), cq, rpcmethod_SendEmailWithCustomDomain_, context, request, false);
+}
+
 NotificationEmailAPIService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       NotificationEmailAPIService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< NotificationEmailAPIService::Service, ::by::notificationemail::v1::SendEmailRequest, ::by::notificationemail::v1::SendEmailResponse>(
           std::mem_fn(&NotificationEmailAPIService::Service::SendEmail), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      NotificationEmailAPIService_method_names[1],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< NotificationEmailAPIService::Service, ::by::notificationemail::v1::SendEmailWithCustomDomainRequest, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>(
+          std::mem_fn(&NotificationEmailAPIService::Service::SendEmailWithCustomDomain), this)));
 }
 
 NotificationEmailAPIService::Service::~Service() {
 }
 
 ::grpc::Status NotificationEmailAPIService::Service::SendEmail(::grpc::ServerContext* context, const ::by::notificationemail::v1::SendEmailRequest* request, ::by::notificationemail::v1::SendEmailResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status NotificationEmailAPIService::Service::SendEmailWithCustomDomain(::grpc::ServerContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest* request, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse* response) {
   (void) context;
   (void) request;
   (void) response;

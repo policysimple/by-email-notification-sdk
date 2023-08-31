@@ -19,6 +19,11 @@ class NotificationEmailAPIServiceStub(object):
         request_serializer=by_dot_notificationemail_dot_v1_dot_by__email__notification__pb2.SendEmailRequest.SerializeToString,
         response_deserializer=by_dot_notificationemail_dot_v1_dot_by__email__notification__pb2.SendEmailResponse.FromString,
         )
+    self.SendEmailWithCustomDomain = channel.unary_unary(
+        '/by.notificationemail.v1.NotificationEmailAPIService/SendEmailWithCustomDomain',
+        request_serializer=by_dot_notificationemail_dot_v1_dot_by__email__notification__pb2.SendEmailWithCustomDomainRequest.SerializeToString,
+        response_deserializer=by_dot_notificationemail_dot_v1_dot_by__email__notification__pb2.SendEmailWithCustomDomainResponse.FromString,
+        )
 
 
 class NotificationEmailAPIServiceServicer(object):
@@ -32,6 +37,13 @@ class NotificationEmailAPIServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def SendEmailWithCustomDomain(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_NotificationEmailAPIServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -39,6 +51,11 @@ def add_NotificationEmailAPIServiceServicer_to_server(servicer, server):
           servicer.SendEmail,
           request_deserializer=by_dot_notificationemail_dot_v1_dot_by__email__notification__pb2.SendEmailRequest.FromString,
           response_serializer=by_dot_notificationemail_dot_v1_dot_by__email__notification__pb2.SendEmailResponse.SerializeToString,
+      ),
+      'SendEmailWithCustomDomain': grpc.unary_unary_rpc_method_handler(
+          servicer.SendEmailWithCustomDomain,
+          request_deserializer=by_dot_notificationemail_dot_v1_dot_by__email__notification__pb2.SendEmailWithCustomDomainRequest.FromString,
+          response_serializer=by_dot_notificationemail_dot_v1_dot_by__email__notification__pb2.SendEmailWithCustomDomainResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

@@ -40,4 +40,17 @@ class NotificationEmailAPIServiceClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \By\Notificationemail\V1\SendEmailWithCustomDomainRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function SendEmailWithCustomDomain(\By\Notificationemail\V1\SendEmailWithCustomDomainRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/by.notificationemail.v1.NotificationEmailAPIService/SendEmailWithCustomDomain',
+        $argument,
+        ['\By\Notificationemail\V1\SendEmailWithCustomDomainResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }
