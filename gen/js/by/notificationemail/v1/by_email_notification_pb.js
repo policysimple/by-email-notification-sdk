@@ -1340,7 +1340,7 @@ proto.by.notificationemail.v1.SmtpData.toObject = function(includeInstance, msg)
     pass: jspb.Message.getFieldWithDefault(msg, 2, ""),
     host: jspb.Message.getFieldWithDefault(msg, 3, ""),
     port: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    useStart: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
+    useStarttls: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
   };
 
   if (includeInstance) {
@@ -1395,7 +1395,7 @@ proto.by.notificationemail.v1.SmtpData.deserializeBinaryFromReader = function(ms
       break;
     case 5:
       var value = /** @type {boolean} */ (reader.readBool());
-      msg.setUseStart(value);
+      msg.setUseStarttls(value);
       break;
     default:
       reader.skipField();
@@ -1454,7 +1454,7 @@ proto.by.notificationemail.v1.SmtpData.serializeBinaryToWriter = function(messag
       f
     );
   }
-  f = message.getUseStart();
+  f = message.getUseStarttls();
   if (f) {
     writer.writeBool(
       5,
@@ -1537,10 +1537,10 @@ proto.by.notificationemail.v1.SmtpData.prototype.setPort = function(value) {
 
 
 /**
- * optional bool use_start = 5;
+ * optional bool use_starttls = 5;
  * @return {boolean}
  */
-proto.by.notificationemail.v1.SmtpData.prototype.getUseStart = function() {
+proto.by.notificationemail.v1.SmtpData.prototype.getUseStarttls = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
 };
 
@@ -1549,7 +1549,7 @@ proto.by.notificationemail.v1.SmtpData.prototype.getUseStart = function() {
  * @param {boolean} value
  * @return {!proto.by.notificationemail.v1.SmtpData} returns this
  */
-proto.by.notificationemail.v1.SmtpData.prototype.setUseStart = function(value) {
+proto.by.notificationemail.v1.SmtpData.prototype.setUseStarttls = function(value) {
   return jspb.Message.setProto3BooleanField(this, 5, value);
 };
 

@@ -50,8 +50,8 @@ public interface SmtpDataOrBuilder extends
   int getPort();
 
   /**
-   * <code>bool use_start = 5 [json_name = "useStart"];</code>
-   * @return The useStart.
+   * <code>bool use_starttls = 5 [json_name = "useStarttls"];</code>
+   * @return The useStarttls.
    */
-  boolean getUseStart();
+  boolean getUseStarttls();
 }

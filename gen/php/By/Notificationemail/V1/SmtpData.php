@@ -30,9 +30,9 @@ class SmtpData extends \Google\Protobuf\Internal\Message
      */
     protected $port = 0;
     /**
-     * Generated from protobuf field <code>bool use_start = 5 [json_name = "useStart"];</code>
+     * Generated from protobuf field <code>bool use_starttls = 5 [json_name = "useStarttls"];</code>
      */
-    protected $use_start = false;
+    protected $use_starttls = false;
 
     /**
      * Constructor.
@@ -44,7 +44,7 @@ class SmtpData extends \Google\Protobuf\Internal\Message
      *     @type string $pass
      *     @type string $host
      *     @type int $port
-     *     @type bool $use_start
+     *     @type bool $use_starttls
      * }
      */
     public function __construct($data = NULL) {
@@ -141,23 +141,23 @@ class SmtpData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>bool use_start = 5 [json_name = "useStart"];</code>
+     * Generated from protobuf field <code>bool use_starttls = 5 [json_name = "useStarttls"];</code>
      * @return bool
      */
-    public function getUseStart()
+    public function getUseStarttls()
     {
-        return $this->use_start;
+        return $this->use_starttls;
     }
 
     /**
-     * Generated from protobuf field <code>bool use_start = 5 [json_name = "useStart"];</code>
+     * Generated from protobuf field <code>bool use_starttls = 5 [json_name = "useStarttls"];</code>
      * @param bool $var
      * @return $this
      */
-    public function setUseStart($var)
+    public function setUseStarttls($var)
     {
         GPBUtil::checkBool($var);
-        $this->use_start = $var;
+        $this->use_starttls = $var;
 
         return $this;
     }

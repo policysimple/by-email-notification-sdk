@@ -946,7 +946,7 @@ class SmtpData final :
     kPassFieldNumber = 2,
     kHostFieldNumber = 3,
     kPortFieldNumber = 4,
-    kUseStartFieldNumber = 5,
+    kUseStarttlsFieldNumber = 5,
   };
   // string user = 1 [json_name = "user"];
   void clear_user();
@@ -999,13 +999,13 @@ class SmtpData final :
   void _internal_set_port(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // bool use_start = 5 [json_name = "useStart"];
-  void clear_use_start();
-  bool use_start() const;
-  void set_use_start(bool value);
+  // bool use_starttls = 5 [json_name = "useStarttls"];
+  void clear_use_starttls();
+  bool use_starttls() const;
+  void set_use_starttls(bool value);
   private:
-  bool _internal_use_start() const;
-  void _internal_set_use_start(bool value);
+  bool _internal_use_starttls() const;
+  void _internal_set_use_starttls(bool value);
   public:
 
   // @@protoc_insertion_point(class_scope:by.notificationemail.v1.SmtpData)
@@ -1019,7 +1019,7 @@ class SmtpData final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr pass_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr host_;
   ::PROTOBUF_NAMESPACE_ID::int32 port_;
-  bool use_start_;
+  bool use_starttls_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto;
 };
@@ -2871,24 +2871,24 @@ inline void SmtpData::set_port(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:by.notificationemail.v1.SmtpData.port)
 }
 
-// bool use_start = 5 [json_name = "useStart"];
-inline void SmtpData::clear_use_start() {
-  use_start_ = false;
+// bool use_starttls = 5 [json_name = "useStarttls"];
+inline void SmtpData::clear_use_starttls() {
+  use_starttls_ = false;
 }
-inline bool SmtpData::_internal_use_start() const {
-  return use_start_;
+inline bool SmtpData::_internal_use_starttls() const {
+  return use_starttls_;
 }
-inline bool SmtpData::use_start() const {
-  // @@protoc_insertion_point(field_get:by.notificationemail.v1.SmtpData.use_start)
-  return _internal_use_start();
+inline bool SmtpData::use_starttls() const {
+  // @@protoc_insertion_point(field_get:by.notificationemail.v1.SmtpData.use_starttls)
+  return _internal_use_starttls();
 }
-inline void SmtpData::_internal_set_use_start(bool value) {
+inline void SmtpData::_internal_set_use_starttls(bool value) {
   
-  use_start_ = value;
+  use_starttls_ = value;
 }
-inline void SmtpData::set_use_start(bool value) {
-  _internal_set_use_start(value);
-  // @@protoc_insertion_point(field_set:by.notificationemail.v1.SmtpData.use_start)
+inline void SmtpData::set_use_starttls(bool value) {
+  _internal_set_use_starttls(value);
+  // @@protoc_insertion_point(field_set:by.notificationemail.v1.SmtpData.use_starttls)
 }
 
 // -------------------------------------------------------------------

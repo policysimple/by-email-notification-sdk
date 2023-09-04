@@ -76,7 +76,7 @@ private static final long serialVersionUID = 0L;
           }
           case 40: {
 
-            useStart_ = input.readBool();
+            useStarttls_ = input.readBool();
             break;
           }
           default: {
@@ -236,15 +236,15 @@ private static final long serialVersionUID = 0L;
     return port_;
   }
 
-  public static final int USE_START_FIELD_NUMBER = 5;
-  private boolean useStart_;
+  public static final int USE_STARTTLS_FIELD_NUMBER = 5;
+  private boolean useStarttls_;
   /**
-   * <code>bool use_start = 5 [json_name = "useStart"];</code>
-   * @return The useStart.
+   * <code>bool use_starttls = 5 [json_name = "useStarttls"];</code>
+   * @return The useStarttls.
    */
   @java.lang.Override
-  public boolean getUseStart() {
-    return useStart_;
+  public boolean getUseStarttls() {
+    return useStarttls_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -273,8 +273,8 @@ private static final long serialVersionUID = 0L;
     if (port_ != 0) {
       output.writeInt32(4, port_);
     }
-    if (useStart_ != false) {
-      output.writeBool(5, useStart_);
+    if (useStarttls_ != false) {
+      output.writeBool(5, useStarttls_);
     }
     unknownFields.writeTo(output);
   }
@@ -298,9 +298,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(4, port_);
     }
-    if (useStart_ != false) {
+    if (useStarttls_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(5, useStart_);
+        .computeBoolSize(5, useStarttls_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -325,8 +325,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getHost())) return false;
     if (getPort()
         != other.getPort()) return false;
-    if (getUseStart()
-        != other.getUseStart()) return false;
+    if (getUseStarttls()
+        != other.getUseStarttls()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -346,9 +346,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getHost().hashCode();
     hash = (37 * hash) + PORT_FIELD_NUMBER;
     hash = (53 * hash) + getPort();
-    hash = (37 * hash) + USE_START_FIELD_NUMBER;
+    hash = (37 * hash) + USE_STARTTLS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-        getUseStart());
+        getUseStarttls());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
 
       port_ = 0;
 
-      useStart_ = false;
+      useStarttls_ = false;
 
       return this;
     }
@@ -522,7 +522,7 @@ private static final long serialVersionUID = 0L;
       result.pass_ = pass_;
       result.host_ = host_;
       result.port_ = port_;
-      result.useStart_ = useStart_;
+      result.useStarttls_ = useStarttls_;
       onBuilt();
       return result;
     }
@@ -586,8 +586,8 @@ private static final long serialVersionUID = 0L;
       if (other.getPort() != 0) {
         setPort(other.getPort());
       }
-      if (other.getUseStart() != false) {
-        setUseStart(other.getUseStart());
+      if (other.getUseStarttls() != false) {
+        setUseStarttls(other.getUseStarttls());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -877,33 +877,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private boolean useStart_ ;
+    private boolean useStarttls_ ;
     /**
-     * <code>bool use_start = 5 [json_name = "useStart"];</code>
-     * @return The useStart.
+     * <code>bool use_starttls = 5 [json_name = "useStarttls"];</code>
+     * @return The useStarttls.
      */
     @java.lang.Override
-    public boolean getUseStart() {
-      return useStart_;
+    public boolean getUseStarttls() {
+      return useStarttls_;
     }
     /**
-     * <code>bool use_start = 5 [json_name = "useStart"];</code>
-     * @param value The useStart to set.
+     * <code>bool use_starttls = 5 [json_name = "useStarttls"];</code>
+     * @param value The useStarttls to set.
      * @return This builder for chaining.
      */
-    public Builder setUseStart(boolean value) {
+    public Builder setUseStarttls(boolean value) {
       
-      useStart_ = value;
+      useStarttls_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>bool use_start = 5 [json_name = "useStart"];</code>
+     * <code>bool use_starttls = 5 [json_name = "useStarttls"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearUseStart() {
+    public Builder clearUseStarttls() {
       
-      useStart_ = false;
+      useStarttls_ = false;
       onChanged();
       return this;
     }

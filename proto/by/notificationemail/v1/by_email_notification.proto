@@ -60,7 +60,7 @@ message SmtpData {
     string pass = 2;
     string host = 3;
     int32 port = 4;
-    bool use_start = 5;
+    bool use_starttls = 5;
 }
 
 //SendEmailCustomizedDomainRequest...

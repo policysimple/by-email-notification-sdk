@@ -77,7 +77,7 @@ constexpr SmtpData::SmtpData(
   , pass_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , host_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , port_(0)
-  , use_start_(false){}
+  , use_starttls_(false){}
 struct SmtpDataDefaultTypeInternal {
   constexpr SmtpDataDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -205,7 +205,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_by_2fnotificationemail_2fv1_2f
   PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SmtpData, pass_),
   PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SmtpData, host_),
   PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SmtpData, port_),
-  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SmtpData, use_start_),
+  PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SmtpData, use_starttls_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::by::notificationemail::v1::SendEmailWithCustomDomainRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -290,42 +290,42 @@ const char descriptor_table_protodef_by_2fnotificationemail_2fv1_2fby_5femail_5f
   "(\0132$.by.notificationemail.v1.EmailStruct"
   "R\007replyTo\022\030\n\007subject\030\006 \001(\tR\007subject\022\020\n\003t"
   "ag\030\007 \001(\tR\003tag\022\022\n\004text\030\010 \001(\tR\004text\022\022\n\004htm"
-  "l\030\t \001(\tR\004html\"w\n\010SmtpData\022\022\n\004user\030\001 \001(\tR"
+  "l\030\t \001(\tR\004html\"}\n\010SmtpData\022\022\n\004user\030\001 \001(\tR"
   "\004user\022\022\n\004pass\030\002 \001(\tR\004pass\022\022\n\004host\030\003 \001(\tR"
-  "\004host\022\022\n\004port\030\004 \001(\005R\004port\022\033\n\tuse_start\030\005"
-  " \001(\010R\010useStart\"\253\001\n SendEmailWithCustomDo"
-  "mainRequest\022G\n\nemail_data\030\001 \001(\0132(.by.not"
-  "ificationemail.v1.EmailDataParamsR\temail"
-  "Data\022>\n\tsmtp_data\030\002 \001(\0132!.by.notificatio"
-  "nemail.v1.SmtpDataR\010smtpData\"U\n\020SendEmai"
-  "lRequest\022A\n\nemail_data\030\001 \001(\0132\".by.notifi"
-  "cationemail.v1.EmailDataR\temailData\"+\n\025S"
-  "endEmailInfoResponse\022\022\n\004send\030\001 \001(\010R\004send"
-  "\"\237\001\n\021SendEmailResponse\022\026\n\006status\030\001 \001(\tR\006"
-  "status\022\030\n\007message\030\002 \001(\tR\007message\022B\n\004info"
-  "\030\003 \001(\0132..by.notificationemail.v1.SendEma"
-  "ilInfoResponseR\004info\022\024\n\005error\030\004 \001(\tR\005err"
-  "or\"\257\001\n!SendEmailWithCustomDomainResponse"
-  "\022\026\n\006status\030\001 \001(\tR\006status\022\030\n\007message\030\002 \001("
-  "\tR\007message\022B\n\004info\030\003 \001(\0132..by.notificati"
-  "onemail.v1.SendEmailInfoResponseR\004info\022\024"
-  "\n\005error\030\004 \001(\tR\005error2\226\002\n\033NotificationEma"
-  "ilAPIService\022b\n\tSendEmail\022).by.notificat"
-  "ionemail.v1.SendEmailRequest\032*.by.notifi"
-  "cationemail.v1.SendEmailResponse\022\222\001\n\031Sen"
-  "dEmailWithCustomDomain\0229.by.notification"
-  "email.v1.SendEmailWithCustomDomainReques"
-  "t\032:.by.notificationemail.v1.SendEmailWit"
-  "hCustomDomainResponseB\304\001\n\033com.by.notific"
-  "ationemail.v1B\035NotificationdataemailApiP"
-  "rotoP\001ZJgithub.com/cuemby/by-email-notif"
-  "ications-sdk/gen/go/by/notificationemail"
-  "v1\242\002\003ANX\252\002\027By.Notificationemail.V1\312\002\027By\\"
-  "Notificationemail\\V1b\006proto3"
+  "\004host\022\022\n\004port\030\004 \001(\005R\004port\022!\n\014use_starttl"
+  "s\030\005 \001(\010R\013useStarttls\"\253\001\n SendEmailWithCu"
+  "stomDomainRequest\022G\n\nemail_data\030\001 \001(\0132(."
+  "by.notificationemail.v1.EmailDataParamsR"
+  "\temailData\022>\n\tsmtp_data\030\002 \001(\0132!.by.notif"
+  "icationemail.v1.SmtpDataR\010smtpData\"U\n\020Se"
+  "ndEmailRequest\022A\n\nemail_data\030\001 \001(\0132\".by."
+  "notificationemail.v1.EmailDataR\temailDat"
+  "a\"+\n\025SendEmailInfoResponse\022\022\n\004send\030\001 \001(\010"
+  "R\004send\"\237\001\n\021SendEmailResponse\022\026\n\006status\030\001"
+  " \001(\tR\006status\022\030\n\007message\030\002 \001(\tR\007message\022B"
+  "\n\004info\030\003 \001(\0132..by.notificationemail.v1.S"
+  "endEmailInfoResponseR\004info\022\024\n\005error\030\004 \001("
+  "\tR\005error\"\257\001\n!SendEmailWithCustomDomainRe"
+  "sponse\022\026\n\006status\030\001 \001(\tR\006status\022\030\n\007messag"
+  "e\030\002 \001(\tR\007message\022B\n\004info\030\003 \001(\0132..by.noti"
+  "ficationemail.v1.SendEmailInfoResponseR\004"
+  "info\022\024\n\005error\030\004 \001(\tR\005error2\226\002\n\033Notificat"
+  "ionEmailAPIService\022b\n\tSendEmail\022).by.not"
+  "ificationemail.v1.SendEmailRequest\032*.by."
+  "notificationemail.v1.SendEmailResponse\022\222"
+  "\001\n\031SendEmailWithCustomDomain\0229.by.notifi"
+  "cationemail.v1.SendEmailWithCustomDomain"
+  "Request\032:.by.notificationemail.v1.SendEm"
+  "ailWithCustomDomainResponseB\304\001\n\033com.by.n"
+  "otificationemail.v1B\035Notificationdataema"
+  "ilApiProtoP\001ZJgithub.com/cuemby/by-email"
+  "-notifications-sdk/gen/go/by/notificatio"
+  "nemailv1\242\002\003ANX\252\002\027By.Notificationemail.V1"
+  "\312\002\027By\\Notificationemail\\V1b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto = {
-  false, false, 2108, descriptor_table_protodef_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto, "by/notificationemail/v1/by_email_notification.proto", 
+  false, false, 2114, descriptor_table_protodef_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto, "by/notificationemail/v1/by_email_notification.proto", 
   &descriptor_table_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto_once, nullptr, 0, 9,
   schemas, file_default_instances, TableStruct_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto::offsets,
   file_level_metadata_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto, file_level_enum_descriptors_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto, file_level_service_descriptors_by_2fnotificationemail_2fv1_2fby_5femail_5fnotification_2eproto,
@@ -1556,8 +1556,8 @@ SmtpData::SmtpData(const SmtpData& from)
       GetArenaForAllocation());
   }
   ::memcpy(&port_, &from.port_,
-    static_cast<size_t>(reinterpret_cast<char*>(&use_start_) -
-    reinterpret_cast<char*>(&port_)) + sizeof(use_start_));
+    static_cast<size_t>(reinterpret_cast<char*>(&use_starttls_) -
+    reinterpret_cast<char*>(&port_)) + sizeof(use_starttls_));
   // @@protoc_insertion_point(copy_constructor:by.notificationemail.v1.SmtpData)
 }
 
@@ -1567,8 +1567,8 @@ pass_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlready
 host_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&port_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&use_start_) -
-    reinterpret_cast<char*>(&port_)) + sizeof(use_start_));
+    0, static_cast<size_t>(reinterpret_cast<char*>(&use_starttls_) -
+    reinterpret_cast<char*>(&port_)) + sizeof(use_starttls_));
 }
 
 SmtpData::~SmtpData() {
@@ -1605,8 +1605,8 @@ void SmtpData::Clear() {
   pass_.ClearToEmpty();
   host_.ClearToEmpty();
   ::memset(&port_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&use_start_) -
-      reinterpret_cast<char*>(&port_)) + sizeof(use_start_));
+      reinterpret_cast<char*>(&use_starttls_) -
+      reinterpret_cast<char*>(&port_)) + sizeof(use_starttls_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1650,10 +1650,10 @@ const char* SmtpData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bool use_start = 5 [json_name = "useStart"];
+      // bool use_starttls = 5 [json_name = "useStarttls"];
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          use_start_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          use_starttls_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1722,10 +1722,10 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_port(), target);
   }
 
-  // bool use_start = 5 [json_name = "useStart"];
-  if (this->_internal_use_start() != 0) {
+  // bool use_starttls = 5 [json_name = "useStarttls"];
+  if (this->_internal_use_starttls() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_use_start(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_use_starttls(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1772,8 +1772,8 @@ size_t SmtpData::ByteSizeLong() const {
         this->_internal_port());
   }
 
-  // bool use_start = 5 [json_name = "useStart"];
-  if (this->_internal_use_start() != 0) {
+  // bool use_starttls = 5 [json_name = "useStarttls"];
+  if (this->_internal_use_starttls() != 0) {
     total_size += 1 + 1;
   }
 
@@ -1817,8 +1817,8 @@ void SmtpData::MergeFrom(const SmtpData& from) {
   if (from._internal_port() != 0) {
     _internal_set_port(from._internal_port());
   }
-  if (from._internal_use_start() != 0) {
-    _internal_set_use_start(from._internal_use_start());
+  if (from._internal_use_starttls() != 0) {
+    _internal_set_use_starttls(from._internal_use_starttls());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -1853,8 +1853,8 @@ void SmtpData::InternalSwap(SmtpData* other) {
       &other->host_, other->GetArenaForAllocation()
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SmtpData, use_start_)
-      + sizeof(SmtpData::use_start_)
+      PROTOBUF_FIELD_OFFSET(SmtpData, use_starttls_)
+      + sizeof(SmtpData::use_starttls_)
       - PROTOBUF_FIELD_OFFSET(SmtpData, port_)>(
           reinterpret_cast<char*>(&port_),
           reinterpret_cast<char*>(&other->port_));

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n\033com.by.notificationemail.v1B\035NotificationdataemailApiProtoP\001ZJgithub.com/cuemby/by-email-notifications-sdk/gen/go/by/notificationemailv1\242\002\003ANX\252\002\027By.Notificationemail.V1\312\002\027By\\Notificationemail\\V1',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n3by/notificationemail/v1/by_email_notification.proto\x12\x17\x62y.notificationemail.v1\"7\n\x0b\x45mailStruct\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x14\n\x05\x65mail\x18\x02 \x01(\tR\x05\x65mail\"\xc4\x02\n\tEmailData\x12\x34\n\x02to\x18\x01 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x02to\x12\x34\n\x02\x63\x63\x18\x02 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x02\x63\x63\x12\x36\n\x03\x62\x62\x63\x18\x03 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x03\x62\x62\x63\x12?\n\x08reply_to\x18\x04 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x07replyTo\x12\x18\n\x07subject\x18\x05 \x01(\tR\x07subject\x12\x10\n\x03tag\x18\x06 \x01(\tR\x03tag\x12\x12\n\x04text\x18\x07 \x01(\tR\x04text\x12\x12\n\x04html\x18\x08 \x01(\tR\x04html\"\x84\x03\n\x0f\x45mailDataParams\x12\x38\n\x04\x66rom\x18\x01 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x04\x66rom\x12\x34\n\x02to\x18\x02 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x02to\x12\x34\n\x02\x63\x63\x18\x03 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x02\x63\x63\x12\x36\n\x03\x62\x62\x63\x18\x04 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x03\x62\x62\x63\x12?\n\x08reply_to\x18\x05 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x07replyTo\x12\x18\n\x07subject\x18\x06 \x01(\tR\x07subject\x12\x10\n\x03tag\x18\x07 \x01(\tR\x03tag\x12\x12\n\x04text\x18\x08 \x01(\tR\x04text\x12\x12\n\x04html\x18\t \x01(\tR\x04html\"w\n\x08SmtpData\x12\x12\n\x04user\x18\x01 \x01(\tR\x04user\x12\x12\n\x04pass\x18\x02 \x01(\tR\x04pass\x12\x12\n\x04host\x18\x03 \x01(\tR\x04host\x12\x12\n\x04port\x18\x04 \x01(\x05R\x04port\x12\x1b\n\tuse_start\x18\x05 \x01(\x08R\x08useStart\"\xab\x01\n SendEmailWithCustomDomainRequest\x12G\n\nemail_data\x18\x01 \x01(\x0b\x32(.by.notificationemail.v1.EmailDataParamsR\temailData\x12>\n\tsmtp_data\x18\x02 \x01(\x0b\x32!.by.notificationemail.v1.SmtpDataR\x08smtpData\"U\n\x10SendEmailRequest\x12\x41\n\nemail_data\x18\x01 \x01(\x0b\x32\".by.notificationemail.v1.EmailDataR\temailData\"+\n\x15SendEmailInfoResponse\x12\x12\n\x04send\x18\x01 \x01(\x08R\x04send\"\x9f\x01\n\x11SendEmailResponse\x12\x16\n\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n\x07message\x18\x02 \x01(\tR\x07message\x12\x42\n\x04info\x18\x03 \x01(\x0b\x32..by.notificationemail.v1.SendEmailInfoResponseR\x04info\x12\x14\n\x05\x65rror\x18\x04 \x01(\tR\x05\x65rror\"\xaf\x01\n!SendEmailWithCustomDomainResponse\x12\x16\n\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n\x07message\x18\x02 \x01(\tR\x07message\x12\x42\n\x04info\x18\x03 \x01(\x0b\x32..by.notificationemail.v1.SendEmailInfoResponseR\x04info\x12\x14\n\x05\x65rror\x18\x04 \x01(\tR\x05\x65rror2\x96\x02\n\x1bNotificationEmailAPIService\x12\x62\n\tSendEmail\x12).by.notificationemail.v1.SendEmailRequest\x1a*.by.notificationemail.v1.SendEmailResponse\x12\x92\x01\n\x19SendEmailWithCustomDomain\x12\x39.by.notificationemail.v1.SendEmailWithCustomDomainRequest\x1a:.by.notificationemail.v1.SendEmailWithCustomDomainResponseB\xc4\x01\n\x1b\x63om.by.notificationemail.v1B\x1dNotificationdataemailApiProtoP\x01ZJgithub.com/cuemby/by-email-notifications-sdk/gen/go/by/notificationemailv1\xa2\x02\x03\x41NX\xaa\x02\x17\x42y.Notificationemail.V1\xca\x02\x17\x42y\\Notificationemail\\V1b\x06proto3'
+  serialized_pb=b'\n3by/notificationemail/v1/by_email_notification.proto\x12\x17\x62y.notificationemail.v1\"7\n\x0b\x45mailStruct\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x14\n\x05\x65mail\x18\x02 \x01(\tR\x05\x65mail\"\xc4\x02\n\tEmailData\x12\x34\n\x02to\x18\x01 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x02to\x12\x34\n\x02\x63\x63\x18\x02 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x02\x63\x63\x12\x36\n\x03\x62\x62\x63\x18\x03 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x03\x62\x62\x63\x12?\n\x08reply_to\x18\x04 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x07replyTo\x12\x18\n\x07subject\x18\x05 \x01(\tR\x07subject\x12\x10\n\x03tag\x18\x06 \x01(\tR\x03tag\x12\x12\n\x04text\x18\x07 \x01(\tR\x04text\x12\x12\n\x04html\x18\x08 \x01(\tR\x04html\"\x84\x03\n\x0f\x45mailDataParams\x12\x38\n\x04\x66rom\x18\x01 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x04\x66rom\x12\x34\n\x02to\x18\x02 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x02to\x12\x34\n\x02\x63\x63\x18\x03 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x02\x63\x63\x12\x36\n\x03\x62\x62\x63\x18\x04 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x03\x62\x62\x63\x12?\n\x08reply_to\x18\x05 \x03(\x0b\x32$.by.notificationemail.v1.EmailStructR\x07replyTo\x12\x18\n\x07subject\x18\x06 \x01(\tR\x07subject\x12\x10\n\x03tag\x18\x07 \x01(\tR\x03tag\x12\x12\n\x04text\x18\x08 \x01(\tR\x04text\x12\x12\n\x04html\x18\t \x01(\tR\x04html\"}\n\x08SmtpData\x12\x12\n\x04user\x18\x01 \x01(\tR\x04user\x12\x12\n\x04pass\x18\x02 \x01(\tR\x04pass\x12\x12\n\x04host\x18\x03 \x01(\tR\x04host\x12\x12\n\x04port\x18\x04 \x01(\x05R\x04port\x12!\n\x0cuse_starttls\x18\x05 \x01(\x08R\x0buseStarttls\"\xab\x01\n SendEmailWithCustomDomainRequest\x12G\n\nemail_data\x18\x01 \x01(\x0b\x32(.by.notificationemail.v1.EmailDataParamsR\temailData\x12>\n\tsmtp_data\x18\x02 \x01(\x0b\x32!.by.notificationemail.v1.SmtpDataR\x08smtpData\"U\n\x10SendEmailRequest\x12\x41\n\nemail_data\x18\x01 \x01(\x0b\x32\".by.notificationemail.v1.EmailDataR\temailData\"+\n\x15SendEmailInfoResponse\x12\x12\n\x04send\x18\x01 \x01(\x08R\x04send\"\x9f\x01\n\x11SendEmailResponse\x12\x16\n\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n\x07message\x18\x02 \x01(\tR\x07message\x12\x42\n\x04info\x18\x03 \x01(\x0b\x32..by.notificationemail.v1.SendEmailInfoResponseR\x04info\x12\x14\n\x05\x65rror\x18\x04 \x01(\tR\x05\x65rror\"\xaf\x01\n!SendEmailWithCustomDomainResponse\x12\x16\n\x06status\x18\x01 \x01(\tR\x06status\x12\x18\n\x07message\x18\x02 \x01(\tR\x07message\x12\x42\n\x04info\x18\x03 \x01(\x0b\x32..by.notificationemail.v1.SendEmailInfoResponseR\x04info\x12\x14\n\x05\x65rror\x18\x04 \x01(\tR\x05\x65rror2\x96\x02\n\x1bNotificationEmailAPIService\x12\x62\n\tSendEmail\x12).by.notificationemail.v1.SendEmailRequest\x1a*.by.notificationemail.v1.SendEmailResponse\x12\x92\x01\n\x19SendEmailWithCustomDomain\x12\x39.by.notificationemail.v1.SendEmailWithCustomDomainRequest\x1a:.by.notificationemail.v1.SendEmailWithCustomDomainResponseB\xc4\x01\n\x1b\x63om.by.notificationemail.v1B\x1dNotificationdataemailApiProtoP\x01ZJgithub.com/cuemby/by-email-notifications-sdk/gen/go/by/notificationemailv1\xa2\x02\x03\x41NX\xaa\x02\x17\x42y.Notificationemail.V1\xca\x02\x17\x42y\\Notificationemail\\V1b\x06proto3'
 )
 
 
@@ -270,12 +270,12 @@ _SMTPDATA = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, json_name='port', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='use_start', full_name='by.notificationemail.v1.SmtpData.use_start', index=4,
+      name='use_starttls', full_name='by.notificationemail.v1.SmtpData.use_starttls', index=4,
       number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, json_name='useStart', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, json_name='useStarttls', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -289,7 +289,7 @@ _SMTPDATA = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=855,
-  serialized_end=974,
+  serialized_end=980,
 )
 
 
@@ -327,8 +327,8 @@ _SENDEMAILWITHCUSTOMDOMAINREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=977,
-  serialized_end=1148,
+  serialized_start=983,
+  serialized_end=1154,
 )
 
 
@@ -359,8 +359,8 @@ _SENDEMAILREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1150,
-  serialized_end=1235,
+  serialized_start=1156,
+  serialized_end=1241,
 )
 
 
@@ -391,8 +391,8 @@ _SENDEMAILINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1237,
-  serialized_end=1280,
+  serialized_start=1243,
+  serialized_end=1286,
 )
 
 
@@ -444,8 +444,8 @@ _SENDEMAILRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1283,
-  serialized_end=1442,
+  serialized_start=1289,
+  serialized_end=1448,
 )
 
 
@@ -497,8 +497,8 @@ _SENDEMAILWITHCUSTOMDOMAINRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1445,
-  serialized_end=1620,
+  serialized_start=1451,
+  serialized_end=1626,
 )
 
 _EMAILDATA.fields_by_name['to'].message_type = _EMAILSTRUCT
@@ -599,8 +599,8 @@ _NOTIFICATIONEMAILAPISERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1623,
-  serialized_end=1901,
+  serialized_start=1629,
+  serialized_end=1907,
   methods=[
   _descriptor.MethodDescriptor(
     name='SendEmail',

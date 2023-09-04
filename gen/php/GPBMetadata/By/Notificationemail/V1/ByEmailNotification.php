@@ -16,7 +16,7 @@ class ByEmailNotification
         }
         $pool->internalAddGeneratedFile(
             '
-¼
+Â
 3by/notificationemail/v1/by_email_notification.protoby.notificationemail.v1"7
 EmailStruct
 name (	Rname
@@ -39,13 +39,13 @@ class ByEmailNotification
 subject (	Rsubject
 tag (	Rtag
 text (	Rtext
-html	 (	Rhtml"w
+html	 (	Rhtml"}
 SmtpData
 user (	Ruser
 pass (	Rpass
 host (	Rhost
-port (Rport
-	use_start (RuseStart"«
+port (Rport!
+use_starttls (RuseStarttls"«
  SendEmailWithCustomDomainRequestG
 
 email_data (2(.by.notificationemail.v1.EmailDataParamsR	emailData>

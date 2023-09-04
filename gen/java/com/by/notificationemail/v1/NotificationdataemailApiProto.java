@@ -89,38 +89,38 @@ public final class NotificationdataemailApiProto {
       "(\0132$.by.notificationemail.v1.EmailStruct" +
       "R\007replyTo\022\030\n\007subject\030\006 \001(\tR\007subject\022\020\n\003t" +
       "ag\030\007 \001(\tR\003tag\022\022\n\004text\030\010 \001(\tR\004text\022\022\n\004htm" +
-      "l\030\t \001(\tR\004html\"w\n\010SmtpData\022\022\n\004user\030\001 \001(\tR" +
+      "l\030\t \001(\tR\004html\"}\n\010SmtpData\022\022\n\004user\030\001 \001(\tR" +
       "\004user\022\022\n\004pass\030\002 \001(\tR\004pass\022\022\n\004host\030\003 \001(\tR" +
-      "\004host\022\022\n\004port\030\004 \001(\005R\004port\022\033\n\tuse_start\030\005" +
-      " \001(\010R\010useStart\"\253\001\n SendEmailWithCustomDo" +
-      "mainRequest\022G\n\nemail_data\030\001 \001(\0132(.by.not" +
-      "ificationemail.v1.EmailDataParamsR\temail" +
-      "Data\022>\n\tsmtp_data\030\002 \001(\0132!.by.notificatio" +
-      "nemail.v1.SmtpDataR\010smtpData\"U\n\020SendEmai" +
-      "lRequest\022A\n\nemail_data\030\001 \001(\0132\".by.notifi" +
-      "cationemail.v1.EmailDataR\temailData\"+\n\025S" +
-      "endEmailInfoResponse\022\022\n\004send\030\001 \001(\010R\004send" +
-      "\"\237\001\n\021SendEmailResponse\022\026\n\006status\030\001 \001(\tR\006" +
-      "status\022\030\n\007message\030\002 \001(\tR\007message\022B\n\004info" +
-      "\030\003 \001(\0132..by.notificationemail.v1.SendEma" +
-      "ilInfoResponseR\004info\022\024\n\005error\030\004 \001(\tR\005err" +
-      "or\"\257\001\n!SendEmailWithCustomDomainResponse" +
-      "\022\026\n\006status\030\001 \001(\tR\006status\022\030\n\007message\030\002 \001(" +
-      "\tR\007message\022B\n\004info\030\003 \001(\0132..by.notificati" +
-      "onemail.v1.SendEmailInfoResponseR\004info\022\024" +
-      "\n\005error\030\004 \001(\tR\005error2\226\002\n\033NotificationEma" +
-      "ilAPIService\022b\n\tSendEmail\022).by.notificat" +
-      "ionemail.v1.SendEmailRequest\032*.by.notifi" +
-      "cationemail.v1.SendEmailResponse\022\222\001\n\031Sen" +
-      "dEmailWithCustomDomain\0229.by.notification" +
-      "email.v1.SendEmailWithCustomDomainReques" +
-      "t\032:.by.notificationemail.v1.SendEmailWit" +
-      "hCustomDomainResponseB\304\001\n\033com.by.notific" +
-      "ationemail.v1B\035NotificationdataemailApiP" +
-      "rotoP\001ZJgithub.com/cuemby/by-email-notif" +
-      "ications-sdk/gen/go/by/notificationemail" +
-      "v1\242\002\003ANX\252\002\027By.Notificationemail.V1\312\002\027By\\" +
-      "Notificationemail\\V1b\006proto3"
+      "\004host\022\022\n\004port\030\004 \001(\005R\004port\022!\n\014use_starttl" +
+      "s\030\005 \001(\010R\013useStarttls\"\253\001\n SendEmailWithCu" +
+      "stomDomainRequest\022G\n\nemail_data\030\001 \001(\0132(." +
+      "by.notificationemail.v1.EmailDataParamsR" +
+      "\temailData\022>\n\tsmtp_data\030\002 \001(\0132!.by.notif" +
+      "icationemail.v1.SmtpDataR\010smtpData\"U\n\020Se" +
+      "ndEmailRequest\022A\n\nemail_data\030\001 \001(\0132\".by." +
+      "notificationemail.v1.EmailDataR\temailDat" +
+      "a\"+\n\025SendEmailInfoResponse\022\022\n\004send\030\001 \001(\010" +
+      "R\004send\"\237\001\n\021SendEmailResponse\022\026\n\006status\030\001" +
+      " \001(\tR\006status\022\030\n\007message\030\002 \001(\tR\007message\022B" +
+      "\n\004info\030\003 \001(\0132..by.notificationemail.v1.S" +
+      "endEmailInfoResponseR\004info\022\024\n\005error\030\004 \001(" +
+      "\tR\005error\"\257\001\n!SendEmailWithCustomDomainRe" +
+      "sponse\022\026\n\006status\030\001 \001(\tR\006status\022\030\n\007messag" +
+      "e\030\002 \001(\tR\007message\022B\n\004info\030\003 \001(\0132..by.noti" +
+      "ficationemail.v1.SendEmailInfoResponseR\004" +
+      "info\022\024\n\005error\030\004 \001(\tR\005error2\226\002\n\033Notificat" +
+      "ionEmailAPIService\022b\n\tSendEmail\022).by.not" +
+      "ificationemail.v1.SendEmailRequest\032*.by." +
+      "notificationemail.v1.SendEmailResponse\022\222" +
+      "\001\n\031SendEmailWithCustomDomain\0229.by.notifi" +
+      "cationemail.v1.SendEmailWithCustomDomain" +
+      "Request\032:.by.notificationemail.v1.SendEm" +
+      "ailWithCustomDomainResponseB\304\001\n\033com.by.n" +
+      "otificationemail.v1B\035Notificationdataema" +
+      "ilApiProtoP\001ZJgithub.com/cuemby/by-email" +
+      "-notifications-sdk/gen/go/by/notificatio" +
+      "nemailv1\242\002\003ANX\252\002\027By.Notificationemail.V1" +
+      "\312\002\027By\\Notificationemail\\V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -149,7 +149,7 @@ public final class NotificationdataemailApiProto {
     internal_static_by_notificationemail_v1_SmtpData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_by_notificationemail_v1_SmtpData_descriptor,
-        new java.lang.String[] { "User", "Pass", "Host", "Port", "UseStart", });
+        new java.lang.String[] { "User", "Pass", "Host", "Port", "UseStarttls", });
     internal_static_by_notificationemail_v1_SendEmailWithCustomDomainRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_by_notificationemail_v1_SendEmailWithCustomDomainRequest_fieldAccessorTable = new
