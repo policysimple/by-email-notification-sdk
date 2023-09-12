@@ -23,6 +23,7 @@ option php_namespace = "By\\Notificationemail\\V1";
 service NotificationEmailAPIService {
     // SendEmail ...
     rpc SendEmail (SendEmailRequest) returns (SendEmailResponse);
+    rpc SendEmailWithCustomDomain (SendEmailWithCustomDomainRequest) returns (SendEmailWithCustomDomainResponse);
 }
 
 // Email Data
@@ -42,6 +43,32 @@ message EmailData {
     string html = 8;
 }
 
+message EmailDataParams {
+    repeated EmailStruct from = 1;
+    repeated EmailStruct to = 2;
+    repeated EmailStruct cc = 3;
+    repeated EmailStruct bbc = 4;
+    repeated EmailStruct reply_to = 5;
+    string subject = 6;
+    string tag = 7;
+    string text = 8;
+    string html = 9;
+}
+
+message SmtpData {
+    string user = 1;
+    string pass = 2;
+    string host = 3;
+    int32 port = 4;
+    bool use_starttls = 5;
+}
+
+//SendEmailCustomizedDomainRequest...
+message SendEmailWithCustomDomainRequest {
+    EmailDataParams email_data = 1;
+    SmtpData smtp_data = 2;
+}
+
 // SendEmailRequest ...
 message SendEmailRequest {
     EmailData email_data = 1;
@@ -49,11 +76,19 @@ message SendEmailRequest {
 
 // SendEmailInfoResponse ...
 message SendEmailInfoResponse {
-    bool send = 1; 
+    bool send = 1;
 }
 
 // SendEmailResponse ...
 message SendEmailResponse {
+    string status = 1;
+    string message = 2;
+    SendEmailInfoResponse info = 3;
+    string error = 4;
+}
+
+// SendEmailWithCustomDomainResponse...
+message SendEmailWithCustomDomainResponse {
     string status = 1;
     string message = 2;
     SendEmailInfoResponse info = 3;

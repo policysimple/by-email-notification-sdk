@@ -35,6 +35,28 @@ function deserialize_by_notificationemail_v1_SendEmailResponse(buffer_arg) {
   return by_notificationemail_v1_by_email_notification_pb.SendEmailResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_by_notificationemail_v1_SendEmailWithCustomDomainRequest(arg) {
+  if (!(arg instanceof by_notificationemail_v1_by_email_notification_pb.SendEmailWithCustomDomainRequest)) {
+    throw new Error('Expected argument of type by.notificationemail.v1.SendEmailWithCustomDomainRequest');
+  }
+  return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_by_notificationemail_v1_SendEmailWithCustomDomainRequest(buffer_arg) {
+  return by_notificationemail_v1_by_email_notification_pb.SendEmailWithCustomDomainRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_by_notificationemail_v1_SendEmailWithCustomDomainResponse(arg) {
+  if (!(arg instanceof by_notificationemail_v1_by_email_notification_pb.SendEmailWithCustomDomainResponse)) {
+    throw new Error('Expected argument of type by.notificationemail.v1.SendEmailWithCustomDomainResponse');
+  }
+  return new Buffer(arg.serializeBinary());
+}
+
+function deserialize_by_notificationemail_v1_SendEmailWithCustomDomainResponse(buffer_arg) {
+  return by_notificationemail_v1_by_email_notification_pb.SendEmailWithCustomDomainResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 
 // NotificationEmailAPI ...
 var NotificationEmailAPIServiceService = exports.NotificationEmailAPIServiceService = {
@@ -49,6 +71,17 @@ var NotificationEmailAPIServiceService = exports.NotificationEmailAPIServiceServ
     requestDeserialize: deserialize_by_notificationemail_v1_SendEmailRequest,
     responseSerialize: serialize_by_notificationemail_v1_SendEmailResponse,
     responseDeserialize: deserialize_by_notificationemail_v1_SendEmailResponse,
+  },
+  sendEmailWithCustomDomain: {
+    path: '/by.notificationemail.v1.NotificationEmailAPIService/SendEmailWithCustomDomain',
+    requestStream: false,
+    responseStream: false,
+    requestType: by_notificationemail_v1_by_email_notification_pb.SendEmailWithCustomDomainRequest,
+    responseType: by_notificationemail_v1_by_email_notification_pb.SendEmailWithCustomDomainResponse,
+    requestSerialize: serialize_by_notificationemail_v1_SendEmailWithCustomDomainRequest,
+    requestDeserialize: deserialize_by_notificationemail_v1_SendEmailWithCustomDomainRequest,
+    responseSerialize: serialize_by_notificationemail_v1_SendEmailWithCustomDomainResponse,
+    responseDeserialize: deserialize_by_notificationemail_v1_SendEmailWithCustomDomainResponse,
   },
 };
 

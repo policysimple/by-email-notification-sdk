@@ -55,16 +55,26 @@ class NotificationEmailAPIService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::by::notificationemail::v1::SendEmailResponse>> PrepareAsyncSendEmail(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::by::notificationemail::v1::SendEmailResponse>>(PrepareAsyncSendEmailRaw(context, request, cq));
     }
+    virtual ::grpc::Status SendEmailWithCustomDomain(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest& request, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>> AsyncSendEmailWithCustomDomain(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>>(AsyncSendEmailWithCustomDomainRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>> PrepareAsyncSendEmailWithCustomDomain(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>>(PrepareAsyncSendEmailWithCustomDomainRaw(context, request, cq));
+    }
     class experimental_async_interface {
      public:
       virtual ~experimental_async_interface() {}
       // SendEmail ...
       virtual void SendEmail(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailRequest* request, ::by::notificationemail::v1::SendEmailResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SendEmailWithCustomDomain(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest* request, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse* response, std::function<void(::grpc::Status)>) = 0;
     };
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::by::notificationemail::v1::SendEmailResponse>* AsyncSendEmailRaw(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::by::notificationemail::v1::SendEmailResponse>* PrepareAsyncSendEmailRaw(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>* AsyncSendEmailWithCustomDomainRaw(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>* PrepareAsyncSendEmailWithCustomDomainRaw(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -76,10 +86,18 @@ class NotificationEmailAPIService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::by::notificationemail::v1::SendEmailResponse>> PrepareAsyncSendEmail(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::by::notificationemail::v1::SendEmailResponse>>(PrepareAsyncSendEmailRaw(context, request, cq));
     }
+    ::grpc::Status SendEmailWithCustomDomain(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest& request, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>> AsyncSendEmailWithCustomDomain(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>>(AsyncSendEmailWithCustomDomainRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>> PrepareAsyncSendEmailWithCustomDomain(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>>(PrepareAsyncSendEmailWithCustomDomainRaw(context, request, cq));
+    }
     class experimental_async final :
       public StubInterface::experimental_async_interface {
      public:
       void SendEmail(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailRequest* request, ::by::notificationemail::v1::SendEmailResponse* response, std::function<void(::grpc::Status)>) override;
+      void SendEmailWithCustomDomain(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest* request, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse* response, std::function<void(::grpc::Status)>) override;
      private:
       friend class Stub;
       explicit experimental_async(Stub* stub): stub_(stub) { }
@@ -93,7 +111,10 @@ class NotificationEmailAPIService final {
     class experimental_async async_stub_{this};
     ::grpc::ClientAsyncResponseReader< ::by::notificationemail::v1::SendEmailResponse>* AsyncSendEmailRaw(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::by::notificationemail::v1::SendEmailResponse>* PrepareAsyncSendEmailRaw(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>* AsyncSendEmailWithCustomDomainRaw(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>* PrepareAsyncSendEmailWithCustomDomainRaw(::grpc::ClientContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_SendEmail_;
+    const ::grpc::internal::RpcMethod rpcmethod_SendEmailWithCustomDomain_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -103,6 +124,7 @@ class NotificationEmailAPIService final {
     virtual ~Service();
     // SendEmail ...
     virtual ::grpc::Status SendEmail(::grpc::ServerContext* context, const ::by::notificationemail::v1::SendEmailRequest* request, ::by::notificationemail::v1::SendEmailResponse* response);
+    virtual ::grpc::Status SendEmailWithCustomDomain(::grpc::ServerContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest* request, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_SendEmail : public BaseClass {
@@ -124,7 +146,27 @@ class NotificationEmailAPIService final {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_SendEmail<Service > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_SendEmailWithCustomDomain : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_SendEmailWithCustomDomain() {
+      ::grpc::Service::MarkMethodAsync(1);
+    }
+    ~WithAsyncMethod_SendEmailWithCustomDomain() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendEmailWithCustomDomain(::grpc::ServerContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest* request, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSendEmailWithCustomDomain(::grpc::ServerContext* context, ::by::notificationemail::v1::SendEmailWithCustomDomainRequest* request, ::grpc::ServerAsyncResponseWriter< ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_SendEmail<WithAsyncMethod_SendEmailWithCustomDomain<Service > > AsyncService;
   template <class BaseClass>
   class WithGenericMethod_SendEmail : public BaseClass {
    private:
@@ -138,6 +180,23 @@ class NotificationEmailAPIService final {
     }
     // disable synchronous version of this method
     ::grpc::Status SendEmail(::grpc::ServerContext* context, const ::by::notificationemail::v1::SendEmailRequest* request, ::by::notificationemail::v1::SendEmailResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_SendEmailWithCustomDomain : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_SendEmailWithCustomDomain() {
+      ::grpc::Service::MarkMethodGeneric(1);
+    }
+    ~WithGenericMethod_SendEmailWithCustomDomain() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendEmailWithCustomDomain(::grpc::ServerContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest* request, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse* response) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -163,6 +222,26 @@ class NotificationEmailAPIService final {
     }
   };
   template <class BaseClass>
+  class WithRawMethod_SendEmailWithCustomDomain : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithRawMethod_SendEmailWithCustomDomain() {
+      ::grpc::Service::MarkMethodRaw(1);
+    }
+    ~WithRawMethod_SendEmailWithCustomDomain() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendEmailWithCustomDomain(::grpc::ServerContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest* request, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSendEmailWithCustomDomain(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithStreamedUnaryMethod_SendEmail : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
@@ -182,9 +261,29 @@ class NotificationEmailAPIService final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedSendEmail(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::by::notificationemail::v1::SendEmailRequest,::by::notificationemail::v1::SendEmailResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_SendEmail<Service > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_SendEmailWithCustomDomain : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_SendEmailWithCustomDomain() {
+      ::grpc::Service::MarkMethodStreamed(1,
+        new ::grpc::internal::StreamedUnaryHandler< ::by::notificationemail::v1::SendEmailWithCustomDomainRequest, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse>(std::bind(&WithStreamedUnaryMethod_SendEmailWithCustomDomain<BaseClass>::StreamedSendEmailWithCustomDomain, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_SendEmailWithCustomDomain() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status SendEmailWithCustomDomain(::grpc::ServerContext* context, const ::by::notificationemail::v1::SendEmailWithCustomDomainRequest* request, ::by::notificationemail::v1::SendEmailWithCustomDomainResponse* response) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedSendEmailWithCustomDomain(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::by::notificationemail::v1::SendEmailWithCustomDomainRequest,::by::notificationemail::v1::SendEmailWithCustomDomainResponse>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_SendEmail<WithStreamedUnaryMethod_SendEmailWithCustomDomain<Service > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_SendEmail<Service > StreamedService;
+  typedef WithStreamedUnaryMethod_SendEmail<WithStreamedUnaryMethod_SendEmailWithCustomDomain<Service > > StreamedService;
 };
 
 }  // namespace v1
