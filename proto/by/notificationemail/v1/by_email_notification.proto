@@ -47,7 +47,7 @@ message EmailDataParams {
     repeated EmailStruct from = 1;
     repeated EmailStruct to = 2;
     repeated EmailStruct cc = 3;
-    repeated EmailStruct bcc = 4;
+    repeated EmailStruct bbc = 4;
     repeated EmailStruct reply_to = 5;
     string subject = 6;
     string tag = 7;
