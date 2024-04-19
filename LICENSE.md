@@ -11,4 +11,4 @@ This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Inte
 - [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/)
 - [How to choose a Creative Commons license](https://creativecommons.org/choose/license/)
 
-by-email-notification-sdk © 2022 by Cuemby is licensed under Creative Commons Attribution-ShareAlike 4.0 International
+by-email-notification-sdk © 2024 by Cuemby is licensed under Creative Commons Attribution-ShareAlike 4.0 International
